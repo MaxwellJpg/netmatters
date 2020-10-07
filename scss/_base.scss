@@ -2,10 +2,11 @@
 
 //colors
 $white: #fff;
-$light: #f4f4f4;
+//$light: #f4f4f4;
 $grey-search: #e5e5e5;
 $dark: #333645;
 $darker: #2d303e;
+$btn-hov: #ebebeb;
 $service-colors: //service card colors
   ('1': #67809f,
   '2': #4083d7,
@@ -115,5 +116,6 @@ body {
   }
   .btn {
     margin-bottom: 2em;
+    font-size: 1em;
   }
 }
