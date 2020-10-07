@@ -270,23 +270,34 @@ footer h4 {
   text-transform: uppercase;
 }
 
-.news {
-  -ms-grid-rows: (minmax(150px, 1fr))[auto-fill];
-      grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
-}
-
 .news .card {
   padding: 0;
 }
 
-.news img {
+.news .card img {
   width: 100%;
   height: 250px;
 }
 
-.news .container {
+.news .card .container {
   text-align: left;
   padding: 1.5em;
+}
+
+.news .card:nth-child(2n + 1) h4 {
+  color: #4083d7;
+}
+
+.news .card:nth-child(2n + 1) .btn {
+  background-color: #4083d7;
+}
+
+.news .card:nth-child(2n) h4 {
+  color: #926fb1;
+}
+
+.news .card:nth-child(2n) .btn {
+  background-color: #926fb1;
 }
 
 #logo {

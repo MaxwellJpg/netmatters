@@ -32,12 +32,10 @@ header {
         border-radius: 50%;
         font-size: 1.3em;
     }
-
     h3 {
         margin: 0.35em 0 0;
         line-height: 1.25;
     }
-
     .btn {
         color: $white;
     }
@@ -54,19 +52,33 @@ footer {
     }
 }
 
-.news {
-    grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
-    
+.news { 
     .card {
         padding: 0;
-    }
-    img {
-        width: 100%;
-        height: 250px;
-    }
-    .container {
-        text-align: left;
-        padding: 1.5em;
+        img {
+            width: 100%;
+            height: 250px;
+        }
+        .container {
+            text-align: left;
+            padding: 1.5em;
+        }
+        &:nth-child(2n + 1) {
+            h4 {
+                color: map-get($service-colors, '2'); //blue
+            }
+            .btn {
+                background-color: map-get($service-colors, '2'); //blue
+            }
+        }
+        &:nth-child(2n ) {
+            h4 {
+                color: map-get($service-colors, '5'); //blue
+            }
+            .btn {
+                background-color: map-get($service-colors, '5'); //blue
+            }
+        }
     }
 }
 
