@@ -13,8 +13,184 @@ html {
 body {
   font-size: 1rem;
   line-height: 1.5;
-  font-family: 'Raleway', sans-serif;
   margin: 0;
+  font-family: Poppins, sans-serif;
+  font-size: 1rem;
+  letter-spacing: .4px;
+}
+
+.clearfix::after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+
+.service-list .card:nth-of-type(1) .service-icon {
+  color: #fff;
+  background-color: #67809f;
+}
+
+.service-list .card:nth-of-type(1) .btn {
+  background-color: #67809f;
+}
+
+.service-list .card:nth-of-type(1):hover {
+  background-color: #67809f;
+}
+
+.service-list .card:nth-of-type(1):hover .service-icon,
+.service-list .card:nth-of-type(1):hover .btn {
+  color: #67809f;
+  background-color: #fff;
+}
+
+.service-list .card:nth-of-type(1):hover h3,
+.service-list .card:nth-of-type(1):hover p {
+  color: white;
+}
+
+.service-list .card:nth-of-type(2) .service-icon {
+  color: #fff;
+  background-color: #4083d7;
+}
+
+.service-list .card:nth-of-type(2) .btn {
+  background-color: #4083d7;
+}
+
+.service-list .card:nth-of-type(2):hover {
+  background-color: #4083d7;
+}
+
+.service-list .card:nth-of-type(2):hover .service-icon,
+.service-list .card:nth-of-type(2):hover .btn {
+  color: #4083d7;
+  background-color: #fff;
+}
+
+.service-list .card:nth-of-type(2):hover h3,
+.service-list .card:nth-of-type(2):hover p {
+  color: white;
+}
+
+.service-list .card:nth-of-type(3) .service-icon {
+  color: #fff;
+  background-color: #2dcc71;
+}
+
+.service-list .card:nth-of-type(3) .btn {
+  background-color: #2dcc71;
+}
+
+.service-list .card:nth-of-type(3):hover {
+  background-color: #2dcc71;
+}
+
+.service-list .card:nth-of-type(3):hover .service-icon,
+.service-list .card:nth-of-type(3):hover .btn {
+  color: #2dcc71;
+  background-color: #fff;
+}
+
+.service-list .card:nth-of-type(3):hover h3,
+.service-list .card:nth-of-type(3):hover p {
+  color: white;
+}
+
+.service-list .card:nth-of-type(4) .service-icon {
+  color: #fff;
+  background-color: #d64541;
+}
+
+.service-list .card:nth-of-type(4) .btn {
+  background-color: #d64541;
+}
+
+.service-list .card:nth-of-type(4):hover {
+  background-color: #d64541;
+}
+
+.service-list .card:nth-of-type(4):hover .service-icon,
+.service-list .card:nth-of-type(4):hover .btn {
+  color: #d64541;
+  background-color: #fff;
+}
+
+.service-list .card:nth-of-type(4):hover h3,
+.service-list .card:nth-of-type(4):hover p {
+  color: white;
+}
+
+.service-list .card:nth-of-type(5) .service-icon {
+  color: #fff;
+  background-color: #926fb1;
+}
+
+.service-list .card:nth-of-type(5) .btn {
+  background-color: #926fb1;
+}
+
+.service-list .card:nth-of-type(5):hover {
+  background-color: #926fb1;
+}
+
+.service-list .card:nth-of-type(5):hover .service-icon,
+.service-list .card:nth-of-type(5):hover .btn {
+  color: #926fb1;
+  background-color: #fff;
+}
+
+.service-list .card:nth-of-type(5):hover h3,
+.service-list .card:nth-of-type(5):hover p {
+  color: white;
+}
+
+.service-list .card:nth-of-type(6) .service-icon {
+  color: #fff;
+  background-color: #f62559;
+}
+
+.service-list .card:nth-of-type(6) .btn {
+  background-color: #f62559;
+}
+
+.service-list .card:nth-of-type(6):hover {
+  background-color: #f62559;
+}
+
+.service-list .card:nth-of-type(6):hover .service-icon,
+.service-list .card:nth-of-type(6):hover .btn {
+  color: #f62559;
+  background-color: #fff;
+}
+
+.service-list .card:nth-of-type(6):hover h3,
+.service-list .card:nth-of-type(6):hover p {
+  color: white;
+}
+
+.service-list .card:nth-of-type(7) .service-icon {
+  color: #fff;
+  background-color: #926fb1;
+}
+
+.service-list .card:nth-of-type(7) .btn {
+  background-color: #926fb1;
+}
+
+.service-list .card:nth-of-type(7):hover {
+  background-color: #926fb1;
+}
+
+.service-list .card:nth-of-type(7):hover .service-icon,
+.service-list .card:nth-of-type(7):hover .btn {
+  color: #926fb1;
+  background-color: #fff;
+}
+
+.service-list .card:nth-of-type(7):hover h3,
+.service-list .card:nth-of-type(7):hover p {
+  color: white;
 }
 
 .info h2 {
@@ -27,12 +203,6 @@ body {
 
 .info .btn {
   margin-bottom: 2em;
-}
-
-.clearfix::after {
-  content: " ";
-  clear: both;
-  display: table;
 }
 
 header {
@@ -51,6 +221,10 @@ header {
   display: grid;
   grid-gap: 2em;
   margin: 5em 3%;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-flow: row;
+  justify-items: center;
 }
 
 .card {
@@ -59,10 +233,18 @@ header {
   border: 1px solid #cccccc;
   border-radius: 0.25em;
   text-align: center;
+  color: #333645;
+}
+
+.card .service-icon {
+  display: inline-block;
+  padding: 1em 1.2em;
+  margin-bottom: 0.5em;
+  border-radius: 50%;
+  font-size: 1.3em;
 }
 
 .card h3 {
-  color: #278da4;
   margin: 0.35em 0 0;
   line-height: 1.25;
 }
@@ -104,18 +286,25 @@ footer h4 {
   margin-left: 1em;
 }
 
+.search-wrap {
+  width: 95%;
+  display: inline-block;
+  margin: 0 auto 1.5em;
+  position: relative;
+}
+
 .search-input {
   width: 100%;
   padding: 0.75em;
   margin: 0.25em auto;
   font-size: 1em;
-  background-color: lightgrey;
-  border: 2px solid darkgrey;
-  border-right: none;
+  background-color: #e5e5e5;
+  border: 2px solid lightgrey;
 }
 
 .search-btn {
   background: none;
+  color: #333645;
   font-size: 1.5em;
   border: none;
   cursor: pointer;
@@ -124,12 +313,31 @@ footer h4 {
   top: 25%;
 }
 
-.search-wrap {
-  width: 95%;
-  display: inline-block;
-  margin: 0 auto 1.5em;
-  border: 1px solid red;
-  position: relative;
+.menu {
+  color: white;
+  background-color: #333645;
+  margin: 0.8em;
+  margin-left: auto;
+  padding: 0.3em 0.75em;
+  border-radius: 0.25em;
+  text-align: center;
+}
+
+.menu i {
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+}
+
+.menu h5 {
+  margin: 0;
+  padding: 0;
+}
+
+.telephone {
+  font-size: 2em;
+  margin-top: 0.7em;
+  margin-left: auto;
 }
 
 .carousel {
@@ -160,12 +368,37 @@ footer h4 {
   text-transform: uppercase;
   padding: 0.75em 1.5em;
   background-color: #278da4;
-  border-radius: 0.35em;
+  border-radius: 0.25em;
   display: inline-block;
   text-decoration: none;
 }
 
 .btn:hover {
   background-color: rgba(39, 141, 164, 0.8);
+}
+
+.bar {
+  border: 1px solid red;
+  padding: 0;
+}
+
+.bar h3 {
+  position: relative;
+  display: inline-block;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin: 1.5em 0 0 1.5em;
+  padding: 0 0 1.3em;
+  border: 1px solid orange;
+}
+
+.bar h3:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #333645;
+  height: 5px;
 }
 /*# sourceMappingURL=main.css.map */

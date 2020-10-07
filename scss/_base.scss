@@ -1,3 +1,32 @@
+//VARS
+
+//colors
+$white: #fff;
+$light: #f4f4f4;
+$grey-search: #e5e5e5;
+$dark: #333645;
+$darker: #2d303e;
+$service-colors: //service card colors
+  ('1': #67809f,
+  '2': #4083d7,
+  '3': #2dcc71,
+  '4': #d64541,
+  '5': #926fb1,
+  '6': #f62559,
+  '7': #926fb1);
+
+// Layout
+$max-width: 1000px;
+$gutter: 10px;
+
+//breakpoints
+$breakpoints: (
+  'xs': 575px,
+  'sm': 576px,
+  'med': 768px,
+  'lg': 992px,
+);
+
 
 html {
   box-sizing: border-box;
@@ -11,8 +40,70 @@ html {
 body {
   font-size: 1rem;
   line-height: 1.5;
-  font-family: 'Raleway', sans-serif;
   margin: 0;
+
+  font-family: Poppins, sans-serif;
+  font-size: 1rem;
+  letter-spacing: .4px;
+}
+
+.clearfix::after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+
+//media queries
+@mixin mq($break) {
+  $value: map-get($breakpoints, $break);
+  $sm: map-get($breakpoints, 'sm');
+    
+  @if $value == null {
+    @error "'#{$break}' is not a valid breakpoint name.";   
+  }
+            
+  @if $value < $sm {
+    @media only screen and (max-width: $value){
+       @content;
+    }
+   }
+  @else {
+     @media only screen and (min-width: $value){
+       @content;
+    }
+  }
+} 
+
+@for $i from 1 through 7 {
+  .service-list {
+    .card:nth-of-type(#{$i}) {
+      //CARD default state
+      .service-icon {
+        color: $white;
+        background-color: map-get($service-colors, #{$i});
+      }
+      .btn {
+        background-color: map-get($service-colors, #{$i});
+      }
+
+      //CARD hover state
+      &:hover {
+        & {
+          background-color: map-get($service-colors, #{$i});
+        }
+        .service-icon,
+        .btn {
+          color: map-get($service-colors, #{$i});
+          background-color: $white;
+        }
+        h3,
+        p {
+          color: white;
+        }
+      }
+    }
+  }
+        
 }
 
 .info {
@@ -25,10 +116,4 @@ body {
   .btn {
     margin-bottom: 2em;
   }
-}
-
-.clearfix::after {
-  content: " ";
-  clear: both;
-  display: table;
 }

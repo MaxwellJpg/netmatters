@@ -5,32 +5,59 @@
     //float: left;
 }
 
-.search-input {
-    width: 100%;
-    padding: 0.75em;
-    margin: 0.25em auto;
-    font-size: 1em;
-    background-color: lightgrey;
-    border: 2px solid darkgrey;
-    border-right: none;
+.search {
+    &-wrap{  //Search container
+        width: 95%;
+        display: inline-block;
+        margin: 0 auto 1.5em;
+        //border: 1px solid red;
+        position: relative;
+    }
+    &-input { //search input box
+        width: 100%;
+        padding: 0.75em;
+        margin: 0.25em auto;
+        font-size: 1em;
+        background-color: $grey-search;
+        border: 2px solid lightgrey;
+    }
+    
+    &-btn { //search icon and button
+        background: none;
+        color: $dark;
+        font-size: 1.5em;
+        border: none;
+        cursor: pointer;
+
+        position: absolute;
+        right: 0;
+        top: 25%;
+    }
 }
-  
-.search-btn {
-    background: none;
-    font-size: 1.5em;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    right: 0;
-    top: 25%;
+
+.menu {
+    color: white;
+    background-color: $dark;
+    margin: 0.8em; 
+    margin-left: auto;
+    padding: 0.3em 0.75em;
+    border-radius: 0.25em;
+    text-align: center;
+    i {
+        margin: 0;
+        padding: 0;
+        font-size: 2em;
+    }
+    h5 {
+        margin:0;
+        padding: 0;
+    }
 }
-  
-.search-wrap{
-    width: 95%;
-    display: inline-block;
-    margin: 0 auto 1.5em;
-    border: 1px solid red;
-    position: relative;
+
+.telephone {
+    font-size: 2em;
+    margin-top: 0.7em;
+    margin-left: auto;
 }
 
 .carousel {
@@ -38,9 +65,8 @@
     width: 100%;
     height: 500px;
     padding: 5em 2em 0;
-    color: #fff;
-    //background-image: url("https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-JQsO.webp");
-    background-color: #333645;
+    color: $white;
+    background-color: $dark;
     h2 {
         font-size: 3em;;
     }
@@ -59,10 +85,35 @@
     text-transform: uppercase;
     padding: 0.75em 1.5em;
     background-color: #278da4;
-    border-radius: 0.35em;
+    border-radius: 0.25em;
     display: inline-block;
     text-decoration: none;
 }
 .btn:hover {
     background-color: rgba(39, 141, 164, 0.8);
+}
+
+.bar {
+    border: 1px solid red;
+    padding: 0;
+    h3 {
+        position: relative;
+        display: inline-block;
+
+        font-size: 1.5em;
+        text-transform: uppercase;
+        margin: 1.5em 0 0 1.5em;
+        padding: 0 0 1.3em;
+        border: 1px solid orange;
+        
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #333645;
+            height: 5px;
+        }
+    }
 }

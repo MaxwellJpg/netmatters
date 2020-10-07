@@ -10,6 +10,9 @@ header {
     display: grid;
     grid-gap: 2em;
     margin: 5em 3%;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); //use this with media queries for screensize later
+    grid-auto-flow: row;
+    justify-items: center;
 }
 
 .card {
@@ -17,12 +20,21 @@ header {
     padding: 1.5em 1em;
     border: 1px solid rgb(204, 204, 204);
     border-radius: 0.25em;
-    text-align: center;
-  h3 {
-    color: #278da4; 
-    margin: 0.35em 0 0;
-    line-height: 1.25;
-  }
+    text-align: center; 
+    color: $dark;
+    
+    .service-icon {
+        display:inline-block;
+        padding: 1em 1.2em;
+        margin-bottom: 0.5em;
+        border-radius: 50%;
+        font-size: 1.3em;
+    }
+
+    h3 {
+        margin: 0.35em 0 0;
+        line-height: 1.25;
+    }
 }
 
 .info,
