@@ -17,6 +17,7 @@ body {
   font-family: Poppins, sans-serif;
   font-size: 1rem;
   letter-spacing: .4px;
+  background-color: #f2f2f2;
 }
 
 .clearfix::after {
@@ -214,6 +215,7 @@ header {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  background-color: #fff;
 }
 
 .service-list,
@@ -235,6 +237,7 @@ header {
   border-radius: 0.25em;
   text-align: center;
   color: #333645;
+  background-color: #fff;
 }
 
 .card .service-icon {
@@ -380,6 +383,10 @@ footer h4 {
 
 .btn:hover {
   opacity: 0.8;
+}
+
+.bar {
+  background-color: #fff;
 }
 
 .bar h3 {

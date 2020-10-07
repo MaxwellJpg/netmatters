@@ -3,6 +3,7 @@ header {
     display: -webkit-flex;
     flex-direction: row;
     flex-wrap: wrap;
+    background-color: $white;
 }
 
 .service-list,
@@ -22,6 +23,7 @@ header {
     border-radius: 0.25em;
     text-align: center; 
     color: $dark;
+    background-color: $white;
     
     .service-icon {
         display:inline-block;
