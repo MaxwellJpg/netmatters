@@ -7,6 +7,26 @@ header {
     align-items: center;
 }
 
+#logo {
+    margin: 1em 2em;
+    margin-right: 3em;
+    width: 30%;
+    flex-grow: 1;
+}
+//header right wrapper, flexbox for buttons, search and menu
+.hd-r-wrapper {
+    display: -webkit-inline-flex;
+    flex-grow: 3;
+    width: 50%;
+    height: 60px;
+
+    & > * {
+        margin-right: 1.7em;
+    }
+
+    border: 1px solid red;
+}
+
 //sevice list start
 .service-list{
     @include card-grid();
