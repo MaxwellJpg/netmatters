@@ -117,7 +117,23 @@ footer {
     }
 }
 
-footer {
+.ft { //contact //about //website //social
+    @include mq(med){
+        display: -webkit-flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        
+        .contact,
+        .about,
+        .ft-website {
+            flex-grow: 1;
+        }
+    }
+
+    .about {
+        border: 1px solid orange;
+    }
+
     h4 {
         text-transform: uppercase;
         font-weight: 400;

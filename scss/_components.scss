@@ -117,3 +117,18 @@
     }
     background-color: $white;
 }
+
+.sc-icns {
+    display: -webkit-flex;
+    .social-icon{
+        background-color: rgba(0,0,0,.25);
+        text-align: center;
+        font-size: 2em;
+        padding: 0.5em 1em; 
+        margin: 0.5em;
+        flex-grow: 1;
+    }
+    .social-icon:hover{
+        background-color: #3b5998;
+    }
+}

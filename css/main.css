@@ -432,23 +432,46 @@ footer h4 {
   background-color: #926fb1;
 }
 
-footer h4 {
+@media only screen and (min-width: 768px) {
+  .ft {
+    display: -webkit-flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .ft .contact,
+  .ft .about,
+  .ft .ft-website {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+.ft .about {
+  border: 1px solid orange;
+}
+
+.ft h4 {
   text-transform: uppercase;
   font-weight: 400;
 }
 
-footer p,
-footer ul {
+.ft p,
+.ft ul {
   font-size: 0.8em;
 }
 
-footer ul {
+.ft ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-footer a:hover {
+.ft a:hover {
   text-decoration: underline;
 }
 
@@ -568,5 +591,24 @@ footer a:hover {
   right: 0;
   background-color: #333645;
   height: 5px;
+}
+
+.sc-icns {
+  display: -webkit-flex;
+}
+
+.sc-icns .social-icon {
+  background-color: rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-size: 2em;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.sc-icns .social-icon:hover {
+  background-color: #3b5998;
 }
 /*# sourceMappingURL=main.css.map */
