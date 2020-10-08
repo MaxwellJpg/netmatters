@@ -5,6 +5,7 @@
     //float: left;
 }
 
+//seachbar start
 .search {
     &-wrap{  //Search container
         width: 95%;
@@ -33,7 +34,9 @@
         top: 25%;
     }
 }
+//seachbar end
 
+//menu start
 .menu {
     color: white;
     background-color: $dark;
@@ -52,13 +55,16 @@
         padding: 0;
     }
 }
+// menu end
 
+//header telephone icon
 .telephone {
     font-size: 2em;
     margin-top: 0.7em;
     margin-left: auto;
 }
 
+//carousel start
 .carousel {
     text-align: center;
     width: 100%;
@@ -77,7 +83,9 @@
         font-size: 1.1em;
     }
 }
+//carousel end
 
+//global button start
 .btn {
     padding: 0.75em 1.5em;
     border-radius: 0.25em;
@@ -91,7 +99,9 @@
         opacity: 0.8;
     }
 }
+//button end
 
+//latest bar above news
 .bar {
     h3 {
         position: relative;
@@ -117,7 +127,9 @@
     }
     background-color: $white;
 }
+//bar end
 
+//footer social icons
 .sc-icns {
     display: -webkit-flex;
     .social-icon{
@@ -132,3 +144,4 @@
         background-color: #3b5998;
     }
 }
+//social icons

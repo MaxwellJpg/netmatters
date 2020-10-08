@@ -17,7 +17,7 @@ $service-colors: //service card colors
   '6': #f62559,
   '7': #926fb1);
 
-// Layout
+// Layout //not used yet
 $max-width: 1000px;
 $gutter: 10px;
 
@@ -90,7 +90,9 @@ $breakpoints: (
   url(https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLCz7Z1xlEA.ttf)
   format("truetype")
 }
+//font end
 
+//global
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -121,6 +123,7 @@ body {
   display: table;
 }
 
+//resets
 h2 {
   text-transform: uppercase;
   font-weight: 500;
@@ -130,8 +133,10 @@ a {
   color: inherit;
   cursor: pointer;
 }
-
-//media queries
+//===================
+//mixins
+//===================
+//screensize mediaquery
 @mixin mq($break) {
   $value: map-get($breakpoints, $break);
   $sm: map-get($breakpoints, 'sm');
@@ -152,6 +157,8 @@ a {
   }
 } 
 
+//global properties for card grid and items
+//used by service-cards and news articles
 @mixin card-grid () {
     display: grid;
     grid-gap: 2em;
@@ -173,6 +180,7 @@ a {
     }
 }
 
+//loop used for styling the service cards
 @for $i from 1 through 7 {
   .service-list {
     .card:nth-of-type(#{$i}) {

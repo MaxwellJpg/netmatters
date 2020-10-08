@@ -6,6 +6,7 @@ header {
     background-color: $white;
 }
 
+//sevice list start
 .service-list{
     @include card-grid();
     .service-icon {
@@ -39,10 +40,16 @@ header {
     .btn {
         color: $white;
     }
-
 }
+//services end
 
+//info pane
 .info {
+    margin-top: 3em;
+    padding: 1em 1em;
+    color: #fff;
+    background-color: #333645;
+
     h2 {
       font-size: 2.2em;
     }
@@ -58,18 +65,9 @@ header {
       font-size: 1em;
     }
   }
+//info pane end
 
-.info,
-footer {
-    margin-top: 3em;
-    padding: 1em 1em;
-    color: #fff;
-    background-color: #333645;
-   h4 {
-        text-transform: uppercase;
-    }
-}
-
+//news article start
 .news { 
     @include card-grid();
 
@@ -116,13 +114,21 @@ footer {
         }
     }
 }
+//news end
 
-.ft { //contact //about //website //social
+//footer start
+.ft {
+    //contact //about //ft-website //social
+    margin-top: 3em;
+    padding: 1em 1em;
+    color: #fff;
+    background-color: #333645;
+
     @include mq(med){
         display: -webkit-flex;
         flex-wrap: wrap;
         flex-direction: row;
-        
+
         .contact,
         .about,
         .ft-website {

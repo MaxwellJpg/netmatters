@@ -328,6 +328,13 @@ header {
   color: #fff;
 }
 
+.info {
+  margin-top: 3em;
+  padding: 1em 1em;
+  color: #fff;
+  background-color: #333645;
+}
+
 .info h2 {
   font-size: 2.2em;
 }
@@ -344,19 +351,6 @@ header {
   margin-top: 1em;
   margin-bottom: 2em;
   font-size: 1em;
-}
-
-.info,
-footer {
-  margin-top: 3em;
-  padding: 1em 1em;
-  color: #fff;
-  background-color: #333645;
-}
-
-.info h4,
-footer h4 {
-  text-transform: uppercase;
 }
 
 .news {
@@ -430,6 +424,13 @@ footer h4 {
 
 .news .card:nth-child(2n) .btn {
   background-color: #926fb1;
+}
+
+.ft {
+  margin-top: 3em;
+  padding: 1em 1em;
+  color: #fff;
+  background-color: #333645;
 }
 
 @media only screen and (min-width: 768px) {
