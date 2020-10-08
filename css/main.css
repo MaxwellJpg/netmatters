@@ -255,13 +255,10 @@ a {
 
 header {
   display: -webkit-flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   background-color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .service-list {
@@ -443,7 +440,7 @@ header {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .ft .contact,
+  .ft .ft-contact,
   .ft .about,
   .ft .ft-website {
     -webkit-box-flex: 1;
@@ -477,62 +474,138 @@ header {
 }
 
 #logo {
-  margin-top: 1em;
-  margin-left: 1em;
+  margin: 1em 2em;
+  margin-right: 3em;
+  width: 30%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
-.search-wrap {
-  width: 95%;
-  display: inline-block;
-  margin: 0 auto 1.5em;
-  position: relative;
+.hd-r-wrapper {
+  display: -webkit-inline-flex;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  width: 50%;
+  height: 60px;
+  border: 1px solid red;
 }
 
-.search-input {
-  width: 100%;
-  padding: 0.75em;
-  margin: 0.25em auto;
-  font-size: 1em;
-  background-color: #e5e5e5;
-  border: 2px solid lightgrey;
+.hd-r-wrapper > * {
+  margin-right: 1.7em;
 }
 
-.search-btn {
-  background: none;
-  color: #333645;
-  font-size: 1.5em;
+.support,
+.contact {
+  color: #fff;
   border: none;
-  cursor: pointer;
-  position: absolute;
-  right: 0;
-  top: 25%;
+  border-radius: 5px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.support h4,
+.contact h4 {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+.support i,
+.contact i {
+  font-size: 1.6em;
+}
+
+.support {
+  background-color: #4183d7;
+}
+
+.support:hover {
+  background-color: #2a6ec6;
+}
+
+.contact {
+  background-color: #999aa2;
+}
+
+.contact:hover {
+  background-color: #84858f;
+}
+
+@media only screen and (min-width: 992px) {
+  .search-wrap {
+    width: 25%;
+    -webkit-box-flex: 4;
+        -ms-flex-positive: 4;
+            flex-grow: 4;
+  }
+  .searchbar {
+    width: 100%;
+    height: 100%;
+    display: -webkit-inline-flex;
+  }
+  .search-input {
+    width: 4em;
+    -webkit-box-flex: 4;
+        -ms-flex-positive: 4;
+            flex-grow: 4;
+    padding: 0.75em;
+    font-size: 1em;
+    background-color: #fff;
+    border: 1px solid lightgrey;
+  }
+  .search-btn {
+    border: none;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    width: 1em;
+    background: #84858F;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1.5em;
+  }
 }
 
 .menu {
   color: white;
   background-color: #333645;
-  margin: 0.8em;
-  margin-left: auto;
-  padding: 0.3em 0.75em;
+  padding: 0.2em 0.75em;
   border-radius: 0.25em;
   text-align: center;
+  vertical-align: center;
+  float: right;
 }
 
 .menu i {
   margin: 0;
   padding: 0;
   font-size: 2em;
+  font-weight: 400;
 }
 
 .menu h5 {
   margin: 0;
   padding: 0;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .telephone {
   font-size: 2em;
   margin-top: 0.7em;
   margin-left: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .telephone {
+    display: none;
+  }
 }
 
 .carousel {
