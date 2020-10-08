@@ -1,4 +1,52 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Poppins Italic"), local("Poppins-Italic"), url(https://fonts.gstatic.com/s/poppins/v12/pxiGyp8kv8JHgFVrJJLucHtF.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Poppins SemiBold Italic"), local("Poppins-SemiBoldItalic"), url(https://fonts.gstatic.com/s/poppins/v12/pxiDyp8kv8JHgFVrJJLmr19VF9eL.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Poppins;
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Poppins Bold Italic"), local("Poppins-BoldItalic"), url(https://fonts.gstatic.com/s/poppins/v12/pxiDyp8kv8JHgFVrJJLmy15VF9eL.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Poppins Regular"), local("Poppins-Regular"), url(https://fonts.gstatic.com/s/poppins/v12/pxiEyp8kv8JHgFVrJJfedw.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Poppins SemiBold"), local("Poppins-SemiBold"), url(https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLEj6Z1xlEA.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Poppins Bold"), local("Poppins-Bold"), url(https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLCz7Z1xlEA.ttf) format("truetype");
+}
+
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -24,6 +72,17 @@ body {
   content: " ";
   clear: both;
   display: table;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .service-list .card:nth-of-type(1) .service-icon {
@@ -194,19 +253,6 @@ body {
   color: white;
 }
 
-.info h2 {
-  font-size: 2em;
-}
-
-.info p {
-  font-size: 1.1em;
-}
-
-.info .btn {
-  margin-bottom: 2em;
-  font-size: 1em;
-}
-
 header {
   display: -webkit-flex;
   -webkit-box-orient: horizontal;
@@ -218,8 +264,7 @@ header {
   background-color: #fff;
 }
 
-.service-list,
-.news {
+.service-list {
   display: -ms-grid;
   display: grid;
   grid-gap: 2em;
@@ -229,17 +274,16 @@ header {
 }
 
 @media only screen and (min-width: 768px) {
-  .service-list,
-  .news {
+  .service-list {
     -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-auto-flow: row;
   }
 }
 
-.card {
+.service-list .card {
   display: inline-block;
-  padding: 1.5em 1em;
+  padding: 1.5em 1.2em;
   border: 1px solid #cccccc;
   border-radius: 0.25em;
   text-align: center;
@@ -247,7 +291,7 @@ header {
   background-color: #fff;
 }
 
-.card .service-icon {
+.service-list .service-icon {
   display: inline-block;
   padding: 1em 1.2em;
   margin-bottom: 0.5em;
@@ -255,13 +299,51 @@ header {
   font-size: 1.3em;
 }
 
-.card h3 {
+.service-list h3 {
+  position: relative;
   margin: 0.35em 0 0;
   line-height: 1.25;
+  font-weight: 400;
+  margin-bottom: 2em;
 }
 
-.card .btn {
+.service-list h3:after {
+  content: "";
+  position: absolute;
+  -webkit-transform-origin: 50%;
+          transform-origin: 50%;
+  width: 6%;
+  bottom: -1em;
+  left: 47%;
+  right: 0;
+  background-color: #333645;
+  height: 3px;
+}
+
+.service-list p {
+  font-size: .8em;
+}
+
+.service-list .btn {
   color: #fff;
+}
+
+.info h2 {
+  font-size: 2.2em;
+}
+
+.info p {
+  font-size: 1em;
+}
+
+.info p:first-of-type {
+  font-weight: 600;
+}
+
+.info .btn {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  font-size: 1em;
 }
 
 .info,
@@ -278,7 +360,30 @@ footer h4 {
 }
 
 .news {
-  border: 1px solid red;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2em;
+  margin: 5em 3%;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+@media only screen and (min-width: 768px) {
+  .news {
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-flow: row;
+  }
+}
+
+.news .card {
+  display: inline-block;
+  padding: 1.5em 1.2em;
+  border: 1px solid #cccccc;
+  border-radius: 0.25em;
+  text-align: center;
+  color: #333645;
+  background-color: #fff;
 }
 
 .news .card {
@@ -295,6 +400,22 @@ footer h4 {
   padding: 1.5em;
 }
 
+.news .card .container .btn {
+  color: #fff;
+}
+
+.news .card .container h4 {
+  font-weight: 600;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.news .card .container p {
+  font-size: 0.8em;
+  color: #666;
+  padding-bottom: 1em;
+}
+
 .news .card:nth-child(2n + 1) h4 {
   color: #4083d7;
 }
@@ -309,6 +430,26 @@ footer h4 {
 
 .news .card:nth-child(2n) .btn {
   background-color: #926fb1;
+}
+
+footer h4 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+footer p,
+footer ul {
+  font-size: 0.8em;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 #logo {
@@ -374,7 +515,7 @@ footer h4 {
   text-align: center;
   width: 100%;
   height: 500px;
-  padding: 5em 2em 0;
+  padding: 5em 10% 0;
   color: #fff;
   background-color: #333645;
 }
@@ -384,20 +525,18 @@ footer h4 {
 }
 
 .carousel p {
-  font-size: 1.5em;
+  font-size: 1.3em;
+  font-weight: 400;
 }
 
 .carousel .btn {
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 .btn {
   padding: 0.75em 1.5em;
   border-radius: 0.25em;
   display: inline-block;
-  text-decoration: none;
-  font-size: 0.85em;
-  font-weight: bold;
   text-transform: uppercase;
   color: #333645;
   background-color: #fff;
@@ -414,10 +553,11 @@ footer h4 {
 .bar h3 {
   position: relative;
   display: inline-block;
-  font-size: 1.5em;
-  text-transform: uppercase;
   margin: 1.5em 0 0 1.5em;
-  padding: 0 0 1.3em;
+  padding: 0 0 1.5em;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .bar h3:after {

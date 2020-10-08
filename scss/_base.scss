@@ -4,6 +4,7 @@
 $white: #fff;
 //$light: #f4f4f4;
 $grey-search: #e5e5e5;
+$lighter: #666;
 $dark: #333645;
 $darker: #2d303e;
 $btn-hov: #ebebeb;
@@ -28,6 +29,67 @@ $breakpoints: (
   'lg': 992px,
 );
 
+
+//font weights 700 600 400
+@font-face{
+  font-family:Poppins;
+  font-style:italic;
+  font-weight:400;
+  font-display:swap;
+  src:local("Poppins Italic"),local("Poppins-Italic"),
+  url(https://fonts.gstatic.com/s/poppins/v12/pxiGyp8kv8JHgFVrJJLucHtF.ttf) 
+  format("truetype")
+}
+@font-face {
+  font-family:Poppins;
+  font-style:italic;
+  font-weight:600;
+  font-display:swap;
+  src:local("Poppins SemiBold Italic"),
+  local("Poppins-SemiBoldItalic"),
+  url(https://fonts.gstatic.com/s/poppins/v12/pxiDyp8kv8JHgFVrJJLmr19VF9eL.ttf) 
+  format("truetype")
+}
+@font-face {
+  font-family:Poppins;
+  font-style:italic;
+  font-weight:700;
+  font-display:swap;
+  src:local("Poppins Bold Italic"),
+  local("Poppins-BoldItalic"),
+  url(https://fonts.gstatic.com/s/poppins/v12/pxiDyp8kv8JHgFVrJJLmy15VF9eL.ttf) 
+  format("truetype")
+}
+@font-face {
+  font-family:Poppins;
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+  src:local("Poppins Regular"), 
+  local("Poppins-Regular"),
+  url(https://fonts.gstatic.com/s/poppins/v12/pxiEyp8kv8JHgFVrJJfedw.ttf)
+  format("truetype")
+}
+@font-face { 
+  font-family:Poppins;
+  font-style:normal;
+  font-weight:600;
+  font-display:swap;
+  src:local("Poppins SemiBold"),
+  local("Poppins-SemiBold"),
+  url(https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLEj6Z1xlEA.ttf)
+  format("truetype")
+}
+@font-face {
+  font-family:Poppins;
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+  src:local("Poppins Bold"),
+  local("Poppins-Bold"),
+  url(https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLCz7Z1xlEA.ttf)
+  format("truetype")
+}
 
 html {
   -webkit-box-sizing: border-box;
@@ -59,6 +121,16 @@ body {
   display: table;
 }
 
+h2 {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 //media queries
 @mixin mq($break) {
   $value: map-get($breakpoints, $break);
@@ -79,6 +151,27 @@ body {
     }
   }
 } 
+
+@mixin card-grid () {
+    display: grid;
+    grid-gap: 2em;
+    margin: 5em 3%;
+    grid-template-columns: 1fr; //sm screen layout
+
+    @include mq(med) {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); //use this with media queries for screensize later
+        grid-auto-flow: row;
+    }
+    .card {
+        display: inline-block;
+        padding: 1.5em 1.2em;
+        border: 1px solid rgb(204, 204, 204);
+        border-radius: 0.25em;
+        text-align: center; 
+        color: $dark;
+        background-color: $white;
+    }
+}
 
 @for $i from 1 through 7 {
   .service-list {
@@ -110,17 +203,4 @@ body {
     }
   }
         
-}
-
-.info {
-  h2 {
-    font-size: 2em;
-  }
-  p {
-    font-size: 1.1em;
-  }
-  .btn {
-    margin-bottom: 2em;
-    font-size: 1em;
-  }
 }

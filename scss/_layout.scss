@@ -6,29 +6,8 @@ header {
     background-color: $white;
 }
 
-.service-list,
-.news {
-    display: grid;
-    grid-gap: 2em;
-    margin: 5em 3%;
-    grid-template-columns: 1fr; //sm screen layout
-
-    @include mq(med) {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); //use this with media queries for screensize later
-        grid-auto-flow: row;
-    }
-    
-}
-
-.card {
-    display: inline-block;
-    padding: 1.5em 1em;
-    border: 1px solid rgb(204, 204, 204);
-    border-radius: 0.25em;
-    text-align: center; 
-    color: $dark;
-    background-color: $white;
-    
+.service-list{
+    @include card-grid();
     .service-icon {
         display:inline-block;
         padding: 1em 1.2em;
@@ -37,13 +16,48 @@ header {
         font-size: 1.3em;
     }
     h3 {
+        position: relative;
         margin: 0.35em 0 0;
         line-height: 1.25;
+        font-weight: 400;
+        margin-bottom: 2em;
+        &:after {
+            content: "";
+            position: absolute;
+            transform-origin: 50% ;
+            width: 6%;
+            bottom: -1em;
+            left: 47%;
+            right: 0;
+            background-color: #333645;
+            height: 3px;
+        }
     }
+    p {
+            font-size: .8em;
+        }
     .btn {
         color: $white;
     }
+
 }
+
+.info {
+    h2 {
+      font-size: 2.2em;
+    }
+    p {
+      font-size: 1em;
+    }
+    p:first-of-type {
+      font-weight: 600;
+    }
+    .btn {
+      margin-top: 1em;
+      margin-bottom: 2em;
+      font-size: 1em;
+    }
+  }
 
 .info,
 footer {
@@ -57,7 +71,7 @@ footer {
 }
 
 .news { 
-    border: 1px solid red;
+    @include card-grid();
 
     .card {
         padding: 0;
@@ -68,6 +82,21 @@ footer {
         .container {
             text-align: left;
             padding: 1.5em;
+
+            .btn {
+                color: $white;
+            }
+            h4 {
+                font-weight: 600;
+                margin-top: 0;
+                padding-top: 0;
+            }
+            p {
+                font-size: 0.8em;
+                color: $lighter;
+                padding-bottom: 1em;
+            }
+
         }
         &:nth-child(2n + 1) {
             h4 {
@@ -88,3 +117,21 @@ footer {
     }
 }
 
+footer {
+    h4 {
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+    p,
+    ul {
+        font-size: 0.8em;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
