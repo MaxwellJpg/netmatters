@@ -29,7 +29,6 @@ header {
     @include mq(med){
         flex-basis: 45%;
     }
-
 }
 
 //sevice list start
@@ -145,15 +144,31 @@ header {
                 background-color: map-get($service-colors, '2'); //blue
             }
         }
-        &:nth-child(2n ) {
+        &:nth-child(2) {
             h4 {
-                color: map-get($service-colors, '5'); //blue
+                color: map-get($service-colors, '5'); //purple
             }
             .btn {
-                background-color: map-get($service-colors, '5'); //blue
+                background-color: map-get($service-colors, '5'); //purple
             }
         }
     }
+    //News card layout
+    @include mq(lg){
+        .card:nth-child(3) {
+            display: none;
+
+            @include mq(xlg) {
+                display: block;
+            }
+        }
+        grid-template-columns: 1fr 1fr;
+
+        @include mq(xlg) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    
 }
 //news end
 
@@ -169,6 +184,7 @@ header {
         display: -webkit-flex;
         flex-wrap: wrap;
         flex-direction: row;
+        gap: 3em;
 
         .ft-contact,
         .about,
