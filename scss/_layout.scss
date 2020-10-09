@@ -1,30 +1,44 @@
 
 header {
-    display: -webkit-flex;
+    //display: -webkit-flex;
     //flex-direction: row;
     //flex-wrap: wrap;
     background-color: $white;
-    align-items: center;
+    //align-items: center;
 }
 
-#logo {
-    margin: 1em 2em;
-    margin-right: 3em;
-    width: 30%;
-    flex-grow: 1;
-}
-//header right wrapper, flexbox for buttons, search and menu
+//header flex wrapper, for logo, buttons, search and menu
 .hd-r-wrapper {
     display: -webkit-inline-flex;
-    flex-grow: 3;
-    width: 50%;
-    height: 60px;
+    flex-wrap: wrap;
+    @include mq(med) {
+        flex-wrap: nowrap;
+    }
+    align-items: center;
+    width: 100%;
+    //height: 60px;
 
     & > * {
         margin-right: 1.7em;
     }
 
     border: 1px solid red;
+}
+
+// .hd-hold {
+//     width: 50%;
+//     height: 60px;
+//     border: 1px dotted red;
+//     display: -webkit-inline-flex;
+//    align-items: center;
+// }
+
+#logo {
+    margin: 1em 0;
+    //margin-right: 3em;
+    width: 200px;
+    flex-grow: 1;
+    max-width: 400px;
 }
 
 //sevice list start

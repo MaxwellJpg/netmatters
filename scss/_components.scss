@@ -9,6 +9,7 @@
     border:none;
     border-radius: 5px;
     flex-grow: 1;
+    height: 3.75em;
     h4 {
         display: inline;
         padding: 0;
@@ -23,6 +24,7 @@
 }
 
 .support {
+    // order: 1;
     background-color: #4183d7;
     &:hover{
         background-color: #2a6ec6;
@@ -30,6 +32,7 @@
 }
 
 .contact {
+    // order: 2;
     background-color: #999aa2;
     &:hover{
         background-color: #84858f;
@@ -38,44 +41,55 @@
 
 //seachbar start
 .search {
-//     &-wrap{  //Search container
-//         width: 95%;
-//         display: inline-block;
-//         margin: 0 auto 1.5em;
-//         position: relative;
-//     }
-//     &-input { //search input box
-//         //width: 100%;
-//         padding: 0.75em;
-//         margin: 0.25em auto;
-//         font-size: 1em;
-//         background-color: $grey-search;
-//         border: 2px solid lightgrey;
-//     }
-    
-//     &-btn { //search icon and button
-//         background: none;
-//         color: $dark;
-//         font-size: 1.5em;
-//         border: none;
-//         cursor: pointer;
-
-//         position: absolute;
-//         right: 0;
-//         top: 25%;
-//     }
+    &-wrap{  //Search container
+        flex-basis: 95%; 
+        margin-left: 1.5em;
+        margin-bottom: 2em;
+        height: 2.8em;
+        flex-grow: 4;
+        order: 5;
+    }
+    &bar {
+        width:100%;
+        height: 100%;
+        display: -webkit-inline-flex;
+        border: 2px solid lightgrey;
+    }
+    &-input { //search input box
+        width: 4em;
+        flex-grow: 10;
+        padding: 0.75em;
+        font-size: 1em;
+        background-color: $grey-search;
+        border: none;
+    }
+    &-btn { //search icon and button
+        border: none;
+        flex-grow: 1;
+        width: 1em;
+        font-size: 1.5em;
+        background: $grey-search;
+        color: $dark;
+        cursor: pointer;
+    }
 }
+
 @include mq(med) {
     .search {
         &-wrap{  //Search container
-            width: 25%; 
-            flex-grow: 4;
+            order: 3;
+            height: 3.75em;
+            flex-basis: 25%; 
+
+            margin:0;
+
+            //flex-grow: 4;
             @include mq(lg) { //from bar to button
-                flex-grow: 1;
-                width:5%;
+                width: 60px;
+                flex-grow: 0;
                 @include mq(xlg) { //button to bar
                     display: block;
-                    flex-grow: 4;
+                    //flex-grow: 4;
                 }
             }
         }
@@ -83,6 +97,7 @@
             width:100%;
             height: 100%;
             display: -webkit-inline-flex;
+            border: none;
         }
         &-input { //search input box
             width: 4em;
@@ -113,15 +128,16 @@
 
 //menu start
 .menu {
-    color: white;
-    background-color: $dark;
+    order: 4;
     //margin: 1.6em;
     //margin-right: 2em;
+    height: 3.75em;
     padding: 0.2em 0.75em;
     border-radius: 0.25em;
     text-align: center;
     vertical-align: center;
-    float: right;
+    color: white;
+    background-color: $dark;
 
     i {
         margin: 0;
