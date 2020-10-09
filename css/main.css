@@ -787,6 +787,132 @@ header {
   }
 }
 
+.drop-nav {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .drop-nav {
+    display: block;
+    height: 100px;
+    background-color: #333645;
+    color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.drop-nav .dn-container {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .drop-nav .dn-container {
+    display: block;
+    width: 60em;
+    height: 100%;
+    margin: auto;
+  }
+  .drop-nav .dn-container .web i {
+    color: #926fb1;
+  }
+  .drop-nav .dn-container .web small::after {
+    display: block;
+    content: "Design";
+  }
+  .drop-nav .dn-container .web:hover {
+    background-color: #926fb1;
+  }
+  .drop-nav .dn-container .it i {
+    color: #4083d7;
+  }
+  .drop-nav .dn-container .it small::after {
+    display: block;
+    content: "Support";
+  }
+  .drop-nav .dn-container .it:hover {
+    background-color: #4083d7;
+  }
+  .drop-nav .dn-container .telecoms i {
+    color: #d64541;
+  }
+  .drop-nav .dn-container .telecoms small::after {
+    display: block;
+    content: "Services";
+  }
+  .drop-nav .dn-container .software i {
+    color: #67809f;
+  }
+  .drop-nav .dn-container .software small::after {
+    display: block;
+    content: "Software";
+  }
+  .drop-nav .dn-container .software:hover {
+    background-color: #67809f;
+  }
+  .drop-nav .dn-container .digital i {
+    color: #2dcc71;
+  }
+  .drop-nav .dn-container .digital small::after {
+    display: block;
+    content: "Marketing";
+  }
+  .drop-nav .dn-container .digital:hover {
+    background-color: #2dcc71;
+  }
+  .drop-nav .dn-container .security i {
+    color: #f62559;
+  }
+  .drop-nav .dn-container .security small::after {
+    display: block;
+    content: "Security";
+  }
+  .drop-nav .dn-container .security:hover {
+    background-color: #f62559;
+  }
+  .drop-nav .dn-container ul {
+    display: -webkit-inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+    width: 100%;
+    height: inherit;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.25);
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  .drop-nav .dn-container li {
+    padding: 19px 18px;
+    border-left: 1px solid rgba(0, 0, 0, 0.25);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    max-width: 10em;
+    cursor: pointer;
+  }
+  .drop-nav .dn-container li i {
+    font-size: 1.3em;
+  }
+  .drop-nav .dn-container li small {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.7em;
+  }
+  .drop-nav .dn-container li small::after {
+    font-size: 1.4em;
+  }
+  .drop-nav .dn-container li:hover i {
+    color: #fff;
+  }
+}
+
 .carousel {
   text-align: center;
   width: 100%;

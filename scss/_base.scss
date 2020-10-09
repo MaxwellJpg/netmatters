@@ -9,14 +9,22 @@ $lighter: #666;
 $dark: #333645;
 $darker: #2d303e;
 $btn-hov: #ebebeb;
-$service-colors: //service card colors
-  ('1': #67809f,
+$service-colors: ( //service card colors
+  '1': #67809f,
   '2': #4083d7,
   '3': #2dcc71,
   '4': #d64541,
   '5': #926fb1,
   '6': #f62559,
   '7': #926fb1);
+
+  $color-key:(
+    'web': 5,
+    'it': 2,
+    'telecoms': 4,
+    'software': 1,
+    'digital': 3,
+    'security': 6);
 
 // Layout //not used yet
 $max-width: 1000px;
@@ -218,4 +226,107 @@ a {
       }
     }
   }     
+}
+
+@mixin print-color() {
+  .web {
+    i {
+      color: get-color(web);
+    }
+    small {
+        &::after {
+          display: block;
+          content: "Design";
+      }
+    }
+    &:hover {
+      background-color: get-color(web);
+    }
+  }
+
+  .it {
+    i {
+      color: get-color(it);
+    }
+    small {
+      &::after {
+        display: block;
+        content: "Support";
+      }
+    }
+    &:hover {
+      background-color: get-color(it);
+    }
+  }
+
+  .telecoms {
+    i {
+      color: get-color(telecoms);
+    }
+    small {
+      &::after {
+        display: block;
+        content: "Services";
+      }
+    }
+    &:hover {
+      background-color: get-color(telcoms);
+    }
+  }
+
+  .software {
+    i {
+      color: get-color(software);
+    }
+    small {
+      &::after {
+        display: block;
+        content: "Software";
+      }
+    }
+    &:hover {
+      background-color: get-color(software);
+    }
+  }
+
+  .digital {
+    i {
+      color: get-color(digital);
+    }
+    small {
+      &::after {
+        display: block;
+        content: "Marketing";
+      }
+    }
+    &:hover {
+      background-color: get-color(digital);
+    }
+  }
+
+  .security {
+    i {
+      color: get-color(security);
+    }
+    small {
+      &::after {
+        display: block;
+        content: "Security";
+      }
+    }
+    &:hover {
+      background-color: get-color(security);
+    }
+  }
+}
+
+//===============
+//FUNCTIONS
+//===============
+
+//retrieve color from code
+@function get-color($name) {
+  $i:  map-get($color-key, $name);
+  
+  @return map-get($service-colors, #{$i});
 }
