@@ -66,6 +66,21 @@ header {
     .btn {
         color: $white;
     }
+    //layout of responsive service grid
+    @include mq(lg) {
+        grid-template-columns: none;
+  
+        grid-template-areas: 
+        "s1 s1 s2 s2 s3 s3"
+        "s4 s4 s4 s5 s5 s5"
+        "s6 s6 s6 s7 s7 s7";
+    
+        @include mq(xlg) {
+            grid-template-areas: 
+            "s1 s1 s1 s1 s2 s2 s2 s2 s3 s3 s3 s3"
+            "s4 s4 s4 s5 s5 s5 s6 s6 s6 s7 s7 s7";
+        }
+    }
 }
 //services end
 
@@ -160,10 +175,6 @@ header {
         .ft-website {
             flex-grow: 1;
         }
-    }
-
-    .about {
-        border: 1px solid orange;
     }
 
     h4 {

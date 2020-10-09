@@ -137,6 +137,7 @@ a {
   color: inherit;
   cursor: pointer;
 }
+
 //===================
 //mixins
 //===================
@@ -168,14 +169,11 @@ a {
     grid-gap: 2em;
     margin: 5em 3%;
     grid-template-columns: 1fr; //sm screen layout
+    //justify-content: center;
 
-    @include mq(med) {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); //use this with media queries for screensize later
-        grid-auto-flow: row;
-    }
     .card {
-        display: inline-block;
-        padding: 1.5em 1.2em;
+        //display: inline-block;
+        padding: 30px;
         border: 1px solid rgb(204, 204, 204);
         border-radius: 0.25em;
         text-align: center; 
@@ -184,10 +182,16 @@ a {
     }
 }
 
+
 //loop used for styling the service cards
 @for $i from 1 through 7 {
   .service-list {
     .card:nth-of-type(#{$i}) {
+      //Naming cards for positioning in grid
+      @include mq(lg) {
+        grid-area: s#{$i};
+      }
+
       //CARD default state
       .service-icon {
         color: $white;
@@ -213,6 +217,5 @@ a {
         }
       }
     }
-  }
-        
+  }     
 }
