@@ -157,7 +157,7 @@
     }
 }
 
-.drop-nav {
+.drop-nav { //needs a max width of 1200/16 em
     display: none;
     @include mq(lg) {
         display: block;
