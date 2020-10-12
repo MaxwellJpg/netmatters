@@ -165,12 +165,12 @@ a {
   }
             
   @if $value < $sm {
-    @media only screen and (max-width: $value){
+    @media only screen and (max-width: $value) {
        @content;
     }
    }
   @else {
-     @media only screen and (min-width: $value){
+     @media only screen and (min-width: $value) {
        @content;
     }
   }
@@ -180,13 +180,14 @@ a {
 //used by service-cards and news articles
 @mixin card-grid () {
     display: grid;
-    //display: -ms-grid;
-    //display: -moz-grid;
+    display: -ms-grid;
+
     width: 100%;
     grid-gap: 2em;
     margin: 5em 0;
+    
     grid-template-columns: 1fr; //sm screen layout
-    //-ms-grid-columns: 1fr;
+    -ms-grid-columns: 1fr;
 
     .card {
         //display: inline-block;

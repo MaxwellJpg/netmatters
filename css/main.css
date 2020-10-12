@@ -370,17 +370,16 @@ header {
 }
 
 .service-list {
-  display: -ms-grid;
   display: grid;
+  display: -ms-grid;
   width: 100%;
   grid-gap: 2em;
   margin: 5em 0;
+  grid-template-columns: 1fr;
   -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
 }
 
 .service-list .card {
-  display: inline-block;
   padding: 30px;
   border: 1px solid #cccccc;
   border-radius: 0.25em;
@@ -490,17 +489,16 @@ header {
 }
 
 .news {
-  display: -ms-grid;
   display: grid;
+  display: -ms-grid;
   width: 100%;
   grid-gap: 2em;
   margin: 5em 0;
+  grid-template-columns: 1fr;
   -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
 }
 
 .news .card {
-  display: inline-block;
   padding: 30px;
   border: 1px solid #cccccc;
   border-radius: 0.25em;
