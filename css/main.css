@@ -409,6 +409,12 @@ header {
   padding-left: 1em;
 }
 
+.service-list .card .author .details strong, .service-list .card .author .details p {
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
+}
+
 .service-list .service-icon {
   display: inline-block;
   padding: 1em 1.2em;
@@ -467,6 +473,15 @@ header {
   background-color: #333645;
 }
 
+@media only screen and (min-width: 992px) {
+  .info {
+    background-image: url("../img/nm-brand-bg.png");
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: auto 100%;
+  }
+}
+
 @media only screen and (min-width: 1260px) {
   .info-text {
     margin: 0;
@@ -480,7 +495,8 @@ header {
 }
 
 .info-text p {
-  font-size: 1em;
+  font-size: 1.1em;
+  padding-top: 1em;
 }
 
 .info-text p:first-of-type {
@@ -531,6 +547,12 @@ header {
 .news .card .author .details {
   display: inline-block;
   padding-left: 1em;
+}
+
+.news .card .author .details strong, .news .card .author .details p {
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
 }
 
 .news .card {
@@ -1001,7 +1023,7 @@ footer .ft a:hover {
   background-image: linear-gradient(270deg, transparent 25%, #000), url("https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-3wAI.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .carousel-content h2 {

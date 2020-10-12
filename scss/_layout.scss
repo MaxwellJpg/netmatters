@@ -89,6 +89,12 @@ header {
     padding: 1em 1em;
     color: #fff;
     background-color: #333645;
+    @include mq (lg) {
+        background-image: url('../img/nm-brand-bg.png');
+        background-repeat: no-repeat;
+        background-position: 100%;
+        background-size: auto 100%
+    }
 
     &-text {
         @include mq(xlg) {
@@ -98,18 +104,19 @@ header {
         }
 
         h2 {
-        font-size: 2.2em;
+            font-size: 2.2em;
         }
         p {
-        font-size: 1em;
+            font-size: 1.1em;
+            padding-top: 1em;
         }
         p:first-of-type {
-        font-weight: 600;
+            font-weight: 600;
         }
         .btn {
-        margin-top: 1em;
-        margin-bottom: 2em;
-        font-size: 1em;
+            margin-top: 1em;
+            margin-bottom: 2em;
+            font-size: 1em;
         }
     }
   }
