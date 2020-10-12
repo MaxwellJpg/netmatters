@@ -180,7 +180,7 @@ a {
 @mixin card-grid () {
     display: grid;
     grid-gap: 2em;
-    margin: 5em auto;
+    margin: 5em 0;
     grid-template-columns: 1fr; //sm screen layout
 
     .card {
@@ -191,15 +191,38 @@ a {
         text-align: center; 
         color: $dark;
         background-color: $white;
+
+        //for news articles
+        .author {
+            text-align: left;
+            margin-top: 2em;
+            padding-top: 2em;
+            border-top: 1px solid rgb(204, 204, 204);
+            .avatar {
+                img {
+                    width: 3em;
+                    height: 3em;
+                }
+                border-radius: 50%;
+                display: inline-block;
+            }
+            .details {
+                display: inline-block;
+                padding-left: 1em;
+            }
+        }
+
     }
 }
 
-
-
 .wrap {
-    margin: 0 auto;
+    margin: 0 1em;
+    
+
+    border: 1px solid red;
 
     @include mq(med){
+        margin: 0 auto;
         max-width: 750px;
 
         @include mq(lg) {

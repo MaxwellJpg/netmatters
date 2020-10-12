@@ -90,11 +90,13 @@ a {
 }
 
 .wrap {
-  margin: 0 auto;
+  margin: 0 1em;
+  border: 1px solid red;
 }
 
 @media only screen and (min-width: 768px) {
   .wrap {
+    margin: 0 auto;
     max-width: 750px;
   }
 }
@@ -372,7 +374,7 @@ header {
   display: -ms-grid;
   display: grid;
   grid-gap: 2em;
-  margin: 5em auto;
+  margin: 5em 0;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
 }
@@ -384,6 +386,28 @@ header {
   text-align: center;
   color: #333645;
   background-color: #fff;
+}
+
+.service-list .card .author {
+  text-align: left;
+  margin-top: 2em;
+  padding-top: 2em;
+  border-top: 1px solid #cccccc;
+}
+
+.service-list .card .author .avatar {
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.service-list .card .author .avatar img {
+  width: 3em;
+  height: 3em;
+}
+
+.service-list .card .author .details {
+  display: inline-block;
+  padding-left: 1em;
 }
 
 .service-list .service-icon {
@@ -474,7 +498,7 @@ header {
   display: -ms-grid;
   display: grid;
   grid-gap: 2em;
-  margin: 5em auto;
+  margin: 5em 0;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
 }
@@ -486,6 +510,28 @@ header {
   text-align: center;
   color: #333645;
   background-color: #fff;
+}
+
+.news .card .author {
+  text-align: left;
+  margin-top: 2em;
+  padding-top: 2em;
+  border-top: 1px solid #cccccc;
+}
+
+.news .card .author .avatar {
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.news .card .author .avatar img {
+  width: 3em;
+  height: 3em;
+}
+
+.news .card .author .details {
+  display: inline-block;
+  padding-left: 1em;
 }
 
 .news .card {
@@ -512,6 +558,13 @@ header {
   padding-top: 0;
 }
 
+@media only screen and (min-width: 768px) {
+  .news .card .container h4 {
+    display: inline-block;
+    height: 3em;
+  }
+}
+
 .news .card .container p {
   font-size: 0.8em;
   color: #666;
@@ -534,7 +587,7 @@ header {
   background-color: #926fb1;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .news {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -544,13 +597,13 @@ header {
   }
 }
 
-@media only screen and (min-width: 992px) and (min-width: 1260px) {
+@media only screen and (min-width: 768px) and (min-width: 1260px) {
   .news .card:nth-child(3) {
     display: block;
   }
 }
 
-@media only screen and (min-width: 992px) and (min-width: 1260px) {
+@media only screen and (min-width: 768px) and (min-width: 1260px) {
   .news {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
