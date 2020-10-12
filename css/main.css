@@ -89,6 +89,28 @@ a {
   cursor: pointer;
 }
 
+.wrap {
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrap {
+    max-width: 750px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-width: 992px) {
+  .wrap {
+    max-width: 970px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1260px) {
+  .wrap {
+    max-width: 1200px;
+  }
+}
+
 @media only screen and (min-width: 992px) {
   .service-list .card:nth-of-type(1) {
     grid-area: s1;
@@ -350,7 +372,7 @@ header {
   display: -ms-grid;
   display: grid;
   grid-gap: 2em;
-  margin: 5em 3%;
+  margin: 5em auto;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
 }
@@ -444,7 +466,7 @@ header {
   display: -ms-grid;
   display: grid;
   grid-gap: 2em;
-  margin: 5em 3%;
+  margin: 5em auto;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
 }
@@ -527,7 +549,7 @@ header {
   }
 }
 
-.ft {
+footer {
   margin-top: 3em;
   padding: 1em 1em;
   color: #fff;
@@ -535,7 +557,7 @@ header {
 }
 
 @media only screen and (min-width: 768px) {
-  .ft {
+  footer .ft {
     display: -webkit-flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -545,32 +567,32 @@ header {
             flex-direction: row;
     gap: 3em;
   }
-  .ft .ft-contact,
-  .ft .about,
-  .ft .ft-website {
+  footer .ft .ft-contact,
+  footer .ft .about,
+  footer .ft .ft-website {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
   }
 }
 
-.ft h4 {
+footer .ft h4 {
   text-transform: uppercase;
   font-weight: 400;
 }
 
-.ft p,
-.ft ul {
+footer .ft p,
+footer .ft ul {
   font-size: 0.8em;
 }
 
-.ft ul {
+footer .ft ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.ft a:hover {
+footer .ft a:hover {
   text-decoration: underline;
 }
 
@@ -812,7 +834,6 @@ header {
 @media only screen and (min-width: 992px) {
   .drop-nav .dn-container {
     display: block;
-    width: 60em;
     height: 100%;
     margin: auto;
   }
@@ -875,13 +896,6 @@ header {
   }
   .drop-nav .dn-container ul {
     display: -webkit-inline-flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: stretch;
-        -ms-flex-pack: stretch;
-            justify-content: stretch;
     width: 100%;
     height: inherit;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
@@ -898,7 +912,6 @@ header {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    max-width: 10em;
     cursor: pointer;
   }
   .drop-nav .dn-container li i {

@@ -150,6 +150,7 @@ a {
   cursor: pointer;
 }
 
+
 //===================
 //mixins
 //===================
@@ -179,10 +180,8 @@ a {
 @mixin card-grid () {
     display: grid;
     grid-gap: 2em;
-    margin: 5em 3%;
+    margin: 5em auto;
     grid-template-columns: 1fr; //sm screen layout
-    //justify-content: center;
-    max-width: 1200px;
 
     .card {
         //display: inline-block;
@@ -194,6 +193,26 @@ a {
         background-color: $white;
     }
 }
+
+
+
+.wrap {
+    margin: 0 auto;
+
+    @include mq(med){
+        max-width: 750px;
+
+        @include mq(lg) {
+            max-width: 970px;
+
+             @include mq(xlg) {
+                max-width: 1200px;
+            }
+        }
+    }
+    
+}
+
 
 
 //loop used for styling the service cards
