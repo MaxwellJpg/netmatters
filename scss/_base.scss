@@ -18,7 +18,7 @@ $service-colors: ( //service card colors
   '6': #f62559,
   '7': #926fb1);
 
-  $color-key:(
+$color-key:(
     'web': 5,
     'it': 2,
     'telecoms': 4,
@@ -26,6 +26,7 @@ $service-colors: ( //service card colors
     'digital': 3,
     'security': 6);
 
+    
 // Layout //not used yet
 $max-width: 1000px;
 $gutter: 10px;
@@ -179,9 +180,13 @@ a {
 //used by service-cards and news articles
 @mixin card-grid () {
     display: grid;
+    //display: -ms-grid;
+    //display: -moz-grid;
+    width: 100%;
     grid-gap: 2em;
     margin: 5em 0;
     grid-template-columns: 1fr; //sm screen layout
+    //-ms-grid-columns: 1fr;
 
     .card {
         //display: inline-block;
@@ -191,38 +196,6 @@ a {
         text-align: center; 
         color: $dark;
         background-color: $white;
-
-        //for news articles
-        .author {
-            text-align: left;
-            margin-top: 2em;
-            padding-top: 2em;
-            border-top: 1px solid rgb(204, 204, 204);
-        
-            .avatar {
-                img {
-                    width: 3em;
-                    height: 3em;
-                }
-
-                border-radius: 50%;
-                display: inline-block;        
-            }
-            .details {
-                display: inline-block;
-                padding-left: 1em;
-                strong, p {
-                    font-size: 0.9rem;
-                    margin:0;
-                    padding:0;
-                }
-                p {
-                    //margin: 0 auto 0;
-                }
-            }
-            
-        }
-
     }
 }
 
@@ -241,17 +214,15 @@ a {
             }
         }
     }
-    
 }
-
-
 
 //loop used for styling the service cards
 @for $i from 1 through 7 {
   .service-list {
     .card:nth-of-type(#{$i}) {
-      //Naming cards for positioning in grid
-      @include mq(lg) {
+
+      //Naming cards for positioning in grid from med screen size and up
+      @include mq(med) {
         grid-area: s#{$i};
       }
 
@@ -325,7 +296,7 @@ a {
       }
     }
     &:hover {
-      background-color: get-color(telcoms);
+      background-color: get-color(telecoms);
     }
   }
 

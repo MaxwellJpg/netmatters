@@ -65,19 +65,28 @@ header {
     .btn {
         color: $white;
     }
+
     //layout of responsive service grid
-    @include mq(lg) {
-        grid-template-columns: none;
-  
-        grid-template-areas: 
-        "s1 s1 s2 s2 s3 s3"
-        "s4 s4 s4 s5 s5 s5"
-        "s6 s6 s6 s7 s7 s7";
-    
-        @include mq(xlg) {
+    @include mq(med) {
+       grid-template-columns: none;
+       grid-template-areas: 
+        "s1 s1"
+        "s2 s2"
+        "s3 s3"
+        "s4 s5"
+        "s6 s7";
+       
+        @include mq(lg) {
             grid-template-areas: 
-            "s1 s1 s1 s1 s2 s2 s2 s2 s3 s3 s3 s3"
-            "s4 s4 s4 s5 s5 s5 s6 s6 s6 s7 s7 s7";
+            "s1 s1 s2 s2 s3 s3"
+            "s4 s4 s4 s5 s5 s5"
+            "s6 s6 s6 s7 s7 s7";
+        
+            @include mq(xlg) {
+                grid-template-areas: 
+                "s1 s1 s1 s1 s2 s2 s2 s2 s3 s3 s3 s3"
+                "s4 s4 s4 s5 s5 s5 s6 s6 s6 s7 s7 s7";
+            }
         }
     }
 }
@@ -171,7 +180,35 @@ header {
                 background-color: map-get($service-colors, '5'); //purple
             }
         }
+        
+        .author {
+            text-align: left;
+            margin-top: 2em;
+            padding-top: 2em;
+            border-top: 1px solid rgb(204, 204, 204);
+
+            .avatar {
+                img {
+                    width: 3em;
+                    height: 3em;
+                }
+
+                border-radius: 50%;
+                display: inline-block;        
+            }
+            .details {
+                display: inline-block;
+                padding-left: 1em;
+                strong, p {
+                    font-size: 0.9rem;
+                    margin:0;
+                    padding:0;
+                }
+            }
+            
+        }
     }
+
     //News card layout
     @include mq(med){
         .card:nth-child(3) {

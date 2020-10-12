@@ -112,7 +112,7 @@ a {
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .service-list .card:nth-of-type(1) {
     grid-area: s1;
   }
@@ -142,7 +142,7 @@ a {
   color: white;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .service-list .card:nth-of-type(2) {
     grid-area: s2;
   }
@@ -172,7 +172,7 @@ a {
   color: white;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .service-list .card:nth-of-type(3) {
     grid-area: s3;
   }
@@ -202,7 +202,7 @@ a {
   color: white;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .service-list .card:nth-of-type(4) {
     grid-area: s4;
   }
@@ -232,7 +232,7 @@ a {
   color: white;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .service-list .card:nth-of-type(5) {
     grid-area: s5;
   }
@@ -262,7 +262,7 @@ a {
   color: white;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .service-list .card:nth-of-type(6) {
     grid-area: s6;
   }
@@ -292,7 +292,7 @@ a {
   color: white;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .service-list .card:nth-of-type(7) {
     grid-area: s7;
   }
@@ -372,6 +372,7 @@ header {
 .service-list {
   display: -ms-grid;
   display: grid;
+  width: 100%;
   grid-gap: 2em;
   margin: 5em 0;
   -ms-grid-columns: 1fr;
@@ -379,40 +380,13 @@ header {
 }
 
 .service-list .card {
+  display: inline-block;
   padding: 30px;
   border: 1px solid #cccccc;
   border-radius: 0.25em;
   text-align: center;
   color: #333645;
   background-color: #fff;
-}
-
-.service-list .card .author {
-  text-align: left;
-  margin-top: 2em;
-  padding-top: 2em;
-  border-top: 1px solid #cccccc;
-}
-
-.service-list .card .author .avatar {
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.service-list .card .author .avatar img {
-  width: 3em;
-  height: 3em;
-}
-
-.service-list .card .author .details {
-  display: inline-block;
-  padding-left: 1em;
-}
-
-.service-list .card .author .details strong, .service-list .card .author .details p {
-  font-size: 0.9rem;
-  margin: 0;
-  padding: 0;
 }
 
 .service-list .service-icon {
@@ -452,15 +426,21 @@ header {
   color: #fff;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .service-list {
     -ms-grid-columns: none;
         grid-template-columns: none;
+        grid-template-areas: "s1 s1" "s2 s2" "s3 s3" "s4 s5" "s6 s7";
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-width: 992px) {
+  .service-list {
         grid-template-areas: "s1 s1 s2 s2 s3 s3" "s4 s4 s4 s5 s5 s5" "s6 s6 s6 s7 s7 s7";
   }
 }
 
-@media only screen and (min-width: 992px) and (min-width: 1260px) {
+@media only screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1260px) {
   .service-list {
         grid-template-areas: "s1 s1 s1 s1 s2 s2 s2 s2 s3 s3 s3 s3" "s4 s4 s4 s5 s5 s5 s6 s6 s6 s7 s7 s7";
   }
@@ -512,6 +492,7 @@ header {
 .news {
   display: -ms-grid;
   display: grid;
+  width: 100%;
   grid-gap: 2em;
   margin: 5em 0;
   -ms-grid-columns: 1fr;
@@ -519,40 +500,13 @@ header {
 }
 
 .news .card {
+  display: inline-block;
   padding: 30px;
   border: 1px solid #cccccc;
   border-radius: 0.25em;
   text-align: center;
   color: #333645;
   background-color: #fff;
-}
-
-.news .card .author {
-  text-align: left;
-  margin-top: 2em;
-  padding-top: 2em;
-  border-top: 1px solid #cccccc;
-}
-
-.news .card .author .avatar {
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.news .card .author .avatar img {
-  width: 3em;
-  height: 3em;
-}
-
-.news .card .author .details {
-  display: inline-block;
-  padding-left: 1em;
-}
-
-.news .card .author .details strong, .news .card .author .details p {
-  font-size: 0.9rem;
-  margin: 0;
-  padding: 0;
 }
 
 .news .card {
@@ -606,6 +560,34 @@ header {
 
 .news .card:nth-child(2) .btn {
   background-color: #926fb1;
+}
+
+.news .card .author {
+  text-align: left;
+  margin-top: 2em;
+  padding-top: 2em;
+  border-top: 1px solid #cccccc;
+}
+
+.news .card .author .avatar {
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.news .card .author .avatar img {
+  width: 3em;
+  height: 3em;
+}
+
+.news .card .author .details {
+  display: inline-block;
+  padding-left: 1em;
+}
+
+.news .card .author .details strong, .news .card .author .details p {
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -945,6 +927,9 @@ footer .ft a:hover {
   .drop-nav .dn-container .telecoms small::after {
     display: block;
     content: "Services";
+  }
+  .drop-nav .dn-container .telecoms:hover {
+    background-color: #d64541;
   }
   .drop-nav .dn-container .software i {
     color: #67809f;
