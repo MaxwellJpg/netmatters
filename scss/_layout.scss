@@ -92,9 +92,9 @@ header {
 
     &-text {
         @include mq(xlg) {
+            margin: 0;
             text-align: left;
             width: 570px;
-            margin: 0;
         }
 
         h2 {

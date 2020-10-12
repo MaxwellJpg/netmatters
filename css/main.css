@@ -91,7 +91,6 @@ a {
 
 .wrap {
   margin: 0 1em;
-  border: 1px solid red;
 }
 
 @media only screen and (min-width: 768px) {
@@ -470,9 +469,9 @@ header {
 
 @media only screen and (min-width: 1260px) {
   .info-text {
+    margin: 0;
     text-align: left;
     width: 570px;
-    margin: 0;
   }
 }
 
@@ -995,24 +994,37 @@ footer .ft a:hover {
   text-align: center;
   width: 100%;
   height: 500px;
-  padding: 5em 10% 0;
+  padding-top: 5em;
   color: #fff;
   background-color: #333645;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(25%, transparent), to(#000)), url("https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-3wAI.jpg");
+  background-image: linear-gradient(270deg, transparent 25%, #000), url("https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-3wAI.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
 
-.carousel h2 {
+.carousel-content h2 {
   font-size: 3em;
+  margin-bottom: 0;
 }
 
-.carousel p {
-  font-size: 1.3em;
+.carousel-content p {
+  font-size: 1.2em;
   font-weight: 400;
+  margin-bottom: 2em;
 }
 
-.carousel .btn {
-  font-size: 1.1em;
+.carousel-content .btn {
+  font-size: 1.3em;
   color: #fff;
   background-color: #926fb1;
+}
+
+@media only screen and (min-width: 992px) {
+  .carousel-content {
+    text-align: left;
+  }
 }
 
 .btn {

@@ -230,20 +230,35 @@
     text-align: center;
     width: 100%;
     height: 500px;
-    padding: 5em 10% 0;
+    padding-top: 5em ;
     color: $white;
     background-color: $dark;
-    h2 {
-        font-size: 3em;
-    }
-    p {
-        font-size: 1.3em;
-        font-weight: 400;
-    }
-    .btn {
-        font-size: 1.1em;
-        color: $white;
-        background-color:  get-color(web);
+    background-image: linear-gradient(270deg,transparent 25%,#000), 
+                    url("https://www.netmatters.co.uk/assets/images/thumbnails/full_height_slideshow/home-3wAI.jpg");
+    background-repeat: no-repeat;
+   // background: linear-gradient(270deg,transparent 25%,#000);
+    background-position: center;
+    background-size: 100%;
+
+    &-content {
+        h2 {
+            font-size: 3em;
+            margin-bottom: 0;
+        }
+        p {
+            font-size: 1.2em;
+            font-weight: 400;
+            margin-bottom: 2em;
+        }
+        .btn {
+            font-size: 1.3em;
+            color: $white;
+            background-color: get-color(web);
+        }
+
+        @include mq(lg) {
+            text-align: left;
+        }
     }
 }
 //carousel end
