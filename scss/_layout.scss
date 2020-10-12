@@ -5,7 +5,7 @@ header {
 
 .center-hd {
     width: 95%;
-    margin: 0 auto 2em;
+    margin: 0.5em auto 2em;
 }
 
 //header flex wrapper, for logo, buttons, search and menu
@@ -90,19 +90,27 @@ header {
     color: #fff;
     background-color: #333645;
 
-    h2 {
-      font-size: 2.2em;
-    }
-    p {
-      font-size: 1em;
-    }
-    p:first-of-type {
-      font-weight: 600;
-    }
-    .btn {
-      margin-top: 1em;
-      margin-bottom: 2em;
-      font-size: 1em;
+    &-text {
+        @include mq(xlg) {
+            text-align: left;
+            width: 570px;
+            margin: 0;
+        }
+
+        h2 {
+        font-size: 2.2em;
+        }
+        p {
+        font-size: 1em;
+        }
+        p:first-of-type {
+        font-weight: 600;
+        }
+        .btn {
+        margin-top: 1em;
+        margin-bottom: 2em;
+        font-size: 1em;
+        }
     }
   }
 //info pane end
