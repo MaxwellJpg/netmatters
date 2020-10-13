@@ -69,7 +69,10 @@
     &bar {
         width:100%;
         height: 100%;
-        display: -webkit-inline-flex;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        
         border: 2px solid lightgrey;
 
         @include mq(med) {
@@ -176,13 +179,14 @@
             //width: 100%;
             height: 100%;
             margin: auto;
-            @include print-color();
+            @include nav-style();
 
             ul {
-                display: -webkit-inline-flex;
-                // display: flex;
-                // flex-direction: row;
-                // justify-content: center;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+
                 width: 100%;
                 height: inherit;
 
@@ -198,7 +202,6 @@
                 border-left: 1px solid rgba(0,0,0,.25);
                 border-right: 1px solid hsla(0,0%,100%,.1);
                 flex-grow: 1;
-                //max-width: 10em;
                 cursor: pointer;
 
                 i {

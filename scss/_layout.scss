@@ -10,8 +10,11 @@ header {
 
 //header flex wrapper, for logo, buttons, search and menu
 .hd-wrapper {
-    display: -webkit-inline-flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     flex-wrap: wrap;
+
     @include mq(med) {
         flex-wrap: nowrap;
     }
@@ -69,6 +72,7 @@ header {
     //layout of responsive service grid
     @include mq(med) {
        grid-template-columns: none;
+       @include service-name();
        grid-template-areas: 
         "s1 s1"
         "s2 s2"
@@ -89,6 +93,8 @@ header {
             }
         }
     }
+    //IE support for layout
+    @include ie-service-card-layout();
 }
 //services end
 

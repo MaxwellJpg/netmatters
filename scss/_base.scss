@@ -176,6 +176,201 @@ a {
   }
 } 
 
+//Naming serivce cards and positioning for IE
+@mixin service-name() {
+        .software {
+            grid-area: s1;
+            @include mq(sm) {
+                -ms-grid-column: 1;
+                -ms-grid-row: 1;
+                @include mq(med) { //2x5
+                    -ms-grid-column: 1;
+                    -ms-grid-row: 1;
+                    -ms-grid-column-span: 2;
+
+                    @include mq(lg) { //6x3
+                        -ms-grid-column: 1;
+                        -ms-grid-row: 1;
+                        -ms-grid-column-span: 2;
+
+                        @include mq(xlg) { //12x2
+                            -ms-grid-column: 1;
+                            -ms-grid-row: 1;
+                            -ms-grid-column-span: 4;
+                        }
+                    }
+                }
+            }
+        }
+        .it {
+            grid-area: s2;
+
+            @include mq(sm) {
+                -ms-grid-column: 1;
+                -ms-grid-row: 2;
+                @include mq(med) {
+                    -ms-grid-column: 1;
+                    -ms-grid-row: 2;
+                    -ms-grid-column-span: 2;
+
+                    @include mq(lg) { //6x3
+                        -ms-grid-column: 3;
+                        -ms-grid-row: 1;
+                        -ms-grid-column-span: 2;
+
+                        @include mq(xlg) { //12x2
+                            -ms-grid-column: 5;
+                            -ms-grid-row: 1;
+                            -ms-grid-column-span: 4;
+                        }
+                    }
+                }
+            }
+        }
+        .digital {
+            grid-area: s3;
+            @include mq(sm) {
+                -ms-grid-column: 1;
+                -ms-grid-row: 3;
+                @include mq(med) {
+                    -ms-grid-column: 1;
+                    -ms-grid-row: 3;
+                    -ms-grid-column-span: 2;
+
+                    @include mq(lg) { //6x3
+                        -ms-grid-column: 5;
+                        -ms-grid-row: 1;
+                        -ms-grid-column-span: 2;
+
+                        @include mq(xlg) { //12x2
+                            -ms-grid-column: 9;
+                            -ms-grid-row: 1;
+                            -ms-grid-column-span: 4;
+                        }
+                    }
+                }}
+            }
+            .telecoms {
+                grid-area: s4;
+    @include mq(sm) {
+                -ms-grid-column: 1;
+                -ms-grid-row: 4;
+                @include mq(med) {
+                    -ms-grid-column: 1;
+                    -ms-grid-row: 4;
+
+                    @include mq(lg) { //6x3
+                        -ms-grid-column: 1;
+                        -ms-grid-row: 2;
+                        -ms-grid-column-span: 3;
+
+                        @include mq(xlg) { //12x2
+                            -ms-grid-column: 1;
+                            -ms-grid-row: 2;
+                            -ms-grid-column-span: 3;
+                        }
+                    }
+                }
+            }
+        }
+        .web {
+            grid-area: s5;
+            @include mq(sm) {
+                -ms-grid-column: 1;
+                -ms-grid-row: 5;
+                @include mq(med) {
+                    -ms-grid-column: 2;
+                    -ms-grid-row: 4;
+
+                    @include mq(lg) { //6x3
+                        -ms-grid-column: 4;
+                        -ms-grid-row: 2;
+                        -ms-grid-column-span: 3;
+
+                        @include mq(xlg) { //12x2
+                            -ms-grid-column: 4;
+                            -ms-grid-row: 2;
+                            -ms-grid-column-span: 3;
+                        }
+                    }
+                }
+            }
+        }
+        .security {
+            grid-area: s6;
+            @include mq(sm) {
+                -ms-grid-column: 1;
+                -ms-grid-row: 6;
+                @include mq(med) {
+                    -ms-grid-column: 1;
+                    -ms-grid-row: 5;
+
+                    @include mq(lg) { //6x3
+                        -ms-grid-column: 1;
+                        -ms-grid-row: 3;
+                        -ms-grid-column-span: 3;
+
+                        @include mq(xlg) { //12x2
+                            -ms-grid-column: 7;
+                            -ms-grid-row: 2;
+                            -ms-grid-column-span: 3;
+                        }
+                    }
+                }
+            }
+        }
+        .web-training {
+            grid-area: s7;
+
+            @include mq(sm) {
+                -ms-grid-column: 1;
+                -ms-grid-row: 7;
+                @include mq(med) {
+                    -ms-grid-column: 2;
+                    -ms-grid-row: 5;
+
+                    @include mq(lg) { //6x3
+                        -ms-grid-column: 4;
+                        -ms-grid-row: 3;
+                        -ms-grid-column-span: 3;
+
+                        @include mq(xlg) { //12x2
+                            -ms-grid-column: 10;
+                            -ms-grid-row: 2;
+                            -ms-grid-column-span: 3;
+                        }
+                    }
+                }
+            }
+        }
+   
+}
+@mixin ie-service-card-layout() {
+    //sm screen 1x7
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    //med 2x5
+    @include mq(med) {
+        -ms-grid-columns: 1fr 1fr;
+        -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+
+        //lg 6x3
+        @include mq(lg) {
+            -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            -ms-grid-rows: 1fr 1fr 1fr;
+
+            //xlg 12x2
+            @include mq(xlg) {
+                -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                -ms-grid-rows: 1fr 1fr;
+            }
+
+        }
+
+    }
+
+}
 //global properties for card grid and items
 //used by service-cards and news articles
 @mixin card-grid () {
@@ -187,7 +382,6 @@ a {
     margin: 5em 0;
     
     grid-template-columns: 1fr; //sm screen layout
-    -ms-grid-columns: 1fr;
 
     .card {
         //display: inline-block;
@@ -222,11 +416,6 @@ a {
   .service-list {
     .card:nth-of-type(#{$i}) {
 
-      //Naming cards for positioning in grid from med screen size and up
-      @include mq(med) {
-        grid-area: s#{$i};
-      }
-
       //CARD default state
       .service-icon {
         color: $white;
@@ -255,96 +444,96 @@ a {
   }     
 }
 
-@mixin print-color() {
-  .web {
-    i {
-      color: get-color(web);
+@mixin nav-style() {
+    .web {
+        i {
+            color: get-color(web);
+        }
+        small {
+            &::after {
+                display: block;
+                content: "Design";
+            }
+        }
+        &:hover {
+            background-color: get-color(web);
+        }
     }
-    small {
-        &::after {
-          display: block;
-          content: "Design";
-      }
-    }
-    &:hover {
-      background-color: get-color(web);
-    }
-  }
 
-  .it {
-    i {
-      color: get-color(it);
+    .it {
+        i {
+            color: get-color(it);
+        }
+        small {
+            &::after {
+                display: block;
+                content: "Support";
+            }
+        }
+        &:hover {
+            background-color: get-color(it);
+        }
     }
-    small {
-      &::after {
-        display: block;
-        content: "Support";
-      }
-    }
-    &:hover {
-      background-color: get-color(it);
-    }
-  }
 
-  .telecoms {
-    i {
-      color: get-color(telecoms);
+    .telecoms {
+        i {
+            color: get-color(telecoms);
+        }
+        small {
+            &::after {
+                display: block;
+                content: "Services";
+            }
+        }
+        &:hover {
+            background-color: get-color(telecoms);
+        }
     }
-    small {
-      &::after {
-        display: block;
-        content: "Services";
-      }
-    }
-    &:hover {
-      background-color: get-color(telecoms);
-    }
-  }
 
-  .software {
-    i {
-      color: get-color(software);
+    .software {
+        i {
+            color: get-color(software);
+        }
+        small {
+            &::after {
+                display: block;
+                content: "Software";
+            }
+        }
+        &:hover {
+            background-color: get-color(software);
+        }
     }
-    small {
-      &::after {
-        display: block;
-        content: "Software";
-      }
-    }
-    &:hover {
-      background-color: get-color(software);
-    }
-  }
 
-  .digital {
-    i {
-      color: get-color(digital);
+    .digital {
+        i {
+            color: get-color(digital);
+        }
+        small {
+            &::after {
+                display: block;
+                content: "Marketing";
+            }
+        }
+        &:hover {
+            background-color: get-color(digital);
+        }
     }
-    small {
-      &::after {
-        display: block;
-        content: "Marketing";
-      }
-    }
-    &:hover {
-      background-color: get-color(digital);
-    }
-  }
 
-  .security {
-    i {
-      color: get-color(security);
+    .security {
+        i {
+            color: get-color(security);
+        }
+        small {
+            &::after {
+                display: block;
+                content: "Security";
+            }
+        }
+        &:hover {
+            background-color: get-color(security);
+        }
     }
-    small {
-      &::after {
-        display: block;
-        content: "Security";
-      }
-    }
-    &:hover {
-      background-color: get-color(security);
-    }
-  }
 }
 
 //===============
