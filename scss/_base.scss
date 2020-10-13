@@ -177,174 +177,155 @@ a {
 } 
 
 //Naming serivce cards and positioning for IE
-@mixin service-name() {
-        .software {
-            grid-area: s1;
-            @include mq(sm) {
+@mixin ie-service-card-positioning() {
+    .software {
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+        
+        @include mq(med) { //2x5
+            -ms-grid-column: 1;
+            -ms-grid-row: 1;
+            -ms-grid-column-span: 2;
+
+            @include mq(lg) { //6x3
                 -ms-grid-column: 1;
                 -ms-grid-row: 1;
-                @include mq(med) { //2x5
+                -ms-grid-column-span: 2;
+
+                @include mq(xlg) { //12x2
                     -ms-grid-column: 1;
                     -ms-grid-row: 1;
-                    -ms-grid-column-span: 2;
-
-                    @include mq(lg) { //6x3
-                        -ms-grid-column: 1;
-                        -ms-grid-row: 1;
-                        -ms-grid-column-span: 2;
-
-                        @include mq(xlg) { //12x2
-                            -ms-grid-column: 1;
-                            -ms-grid-row: 1;
-                            -ms-grid-column-span: 4;
-                        }
-                    }
+                    -ms-grid-column-span: 4;
                 }
             }
         }
-        .it {
-            grid-area: s2;
+    }
+    .it {
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
 
-            @include mq(sm) {
+        @include mq(med) {
+            -ms-grid-column: 1;
+            -ms-grid-row: 2;
+            -ms-grid-column-span: 2;
+
+            @include mq(lg) { //6x3
+                -ms-grid-column: 3;
+                -ms-grid-row: 1;
+                -ms-grid-column-span: 2;
+
+                @include mq(xlg) { //12x2
+                    -ms-grid-column: 5;
+                    -ms-grid-row: 1;
+                    -ms-grid-column-span: 4;
+                }
+            }
+        }
+    }
+    .digital {
+        -ms-grid-column: 1;
+        -ms-grid-row: 3;
+
+        @include mq(med) {
+            -ms-grid-column: 1;
+            -ms-grid-row: 3;
+            -ms-grid-column-span: 2;
+
+            @include mq(lg) { //6x3
+                -ms-grid-column: 5;
+                -ms-grid-row: 1;
+                -ms-grid-column-span: 2;
+
+                @include mq(xlg) { //12x2
+                    -ms-grid-column: 9;
+                    -ms-grid-row: 1;
+                    -ms-grid-column-span: 4;
+                }
+            }
+        }
+    }
+    .telecoms {
+        -ms-grid-column: 1;
+        -ms-grid-row: 4;
+        @include mq(med) {
+            -ms-grid-column: 1;
+            -ms-grid-row: 4;
+
+            @include mq(lg) { //6x3
                 -ms-grid-column: 1;
                 -ms-grid-row: 2;
-                @include mq(med) {
+                -ms-grid-column-span: 3;
+
+                @include mq(xlg) { //12x2
                     -ms-grid-column: 1;
                     -ms-grid-row: 2;
-                    -ms-grid-column-span: 2;
-
-                    @include mq(lg) { //6x3
-                        -ms-grid-column: 3;
-                        -ms-grid-row: 1;
-                        -ms-grid-column-span: 2;
-
-                        @include mq(xlg) { //12x2
-                            -ms-grid-column: 5;
-                            -ms-grid-row: 1;
-                            -ms-grid-column-span: 4;
-                        }
-                    }
+                    -ms-grid-column-span: 3;
                 }
             }
         }
-        .digital {
-            grid-area: s3;
-            @include mq(sm) {
+    }
+    .web {
+        -ms-grid-column: 1;
+        -ms-grid-row: 5;
+        @include mq(med) {
+            -ms-grid-column: 2;
+            -ms-grid-row: 4;
+
+            @include mq(lg) { //6x3
+                -ms-grid-column: 4;
+                -ms-grid-row: 2;
+                -ms-grid-column-span: 3;
+
+                @include mq(xlg) { //12x2
+                    -ms-grid-column: 4;
+                    -ms-grid-row: 2;
+                    -ms-grid-column-span: 3;
+                }
+            }
+        }
+    }
+    .security {
+        -ms-grid-column: 1;
+        -ms-grid-row: 6;
+        @include mq(med) {
+            -ms-grid-column: 1;
+            -ms-grid-row: 5;
+
+            @include mq(lg) { //6x3
                 -ms-grid-column: 1;
                 -ms-grid-row: 3;
-                @include mq(med) {
-                    -ms-grid-column: 1;
-                    -ms-grid-row: 3;
-                    -ms-grid-column-span: 2;
+                -ms-grid-column-span: 3;
 
-                    @include mq(lg) { //6x3
-                        -ms-grid-column: 5;
-                        -ms-grid-row: 1;
-                        -ms-grid-column-span: 2;
-
-                        @include mq(xlg) { //12x2
-                            -ms-grid-column: 9;
-                            -ms-grid-row: 1;
-                            -ms-grid-column-span: 4;
-                        }
-                    }
-                }}
-            }
-            .telecoms {
-                grid-area: s4;
-    @include mq(sm) {
-                -ms-grid-column: 1;
-                -ms-grid-row: 4;
-                @include mq(med) {
-                    -ms-grid-column: 1;
-                    -ms-grid-row: 4;
-
-                    @include mq(lg) { //6x3
-                        -ms-grid-column: 1;
-                        -ms-grid-row: 2;
-                        -ms-grid-column-span: 3;
-
-                        @include mq(xlg) { //12x2
-                            -ms-grid-column: 1;
-                            -ms-grid-row: 2;
-                            -ms-grid-column-span: 3;
-                        }
-                    }
+                @include mq(xlg) { //12x2
+                    -ms-grid-column: 7;
+                    -ms-grid-row: 2;
+                    -ms-grid-column-span: 3;
                 }
             }
         }
-        .web {
-            grid-area: s5;
-            @include mq(sm) {
-                -ms-grid-column: 1;
-                -ms-grid-row: 5;
-                @include mq(med) {
-                    -ms-grid-column: 2;
-                    -ms-grid-row: 4;
+    }
+    .web-training {
+        -ms-grid-column: 1;
+        -ms-grid-row: 7;
+        @include mq(med) {
+            -ms-grid-column: 2;
+            -ms-grid-row: 5;
 
-                    @include mq(lg) { //6x3
-                        -ms-grid-column: 4;
-                        -ms-grid-row: 2;
-                        -ms-grid-column-span: 3;
+            @include mq(lg) { //6x3
+                -ms-grid-column: 4;
+                -ms-grid-row: 3;
+                -ms-grid-column-span: 3;
 
-                        @include mq(xlg) { //12x2
-                            -ms-grid-column: 4;
-                            -ms-grid-row: 2;
-                            -ms-grid-column-span: 3;
-                        }
-                    }
+                @include mq(xlg) { //12x2
+                    -ms-grid-column: 10;
+                    -ms-grid-row: 2;
+                    -ms-grid-column-span: 3;
                 }
             }
         }
-        .security {
-            grid-area: s6;
-            @include mq(sm) {
-                -ms-grid-column: 1;
-                -ms-grid-row: 6;
-                @include mq(med) {
-                    -ms-grid-column: 1;
-                    -ms-grid-row: 5;
-
-                    @include mq(lg) { //6x3
-                        -ms-grid-column: 1;
-                        -ms-grid-row: 3;
-                        -ms-grid-column-span: 3;
-
-                        @include mq(xlg) { //12x2
-                            -ms-grid-column: 7;
-                            -ms-grid-row: 2;
-                            -ms-grid-column-span: 3;
-                        }
-                    }
-                }
-            }
-        }
-        .web-training {
-            grid-area: s7;
-
-            @include mq(sm) {
-                -ms-grid-column: 1;
-                -ms-grid-row: 7;
-                @include mq(med) {
-                    -ms-grid-column: 2;
-                    -ms-grid-row: 5;
-
-                    @include mq(lg) { //6x3
-                        -ms-grid-column: 4;
-                        -ms-grid-row: 3;
-                        -ms-grid-column-span: 3;
-
-                        @include mq(xlg) { //12x2
-                            -ms-grid-column: 10;
-                            -ms-grid-row: 2;
-                            -ms-grid-column-span: 3;
-                        }
-                    }
-                }
-            }
-        }
-   
+    }
 }
+
 @mixin ie-service-card-layout() {
     //sm screen 1x7
     -ms-grid-columns: 1fr;
@@ -365,12 +346,54 @@ a {
                 -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
                 -ms-grid-rows: 1fr 1fr;
             }
-
         }
-
     }
 
+    @include ie-service-card-positioning();
 }
+
+@mixin ie-news-card-layout() {
+    //sm screen 1x3
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+
+    //med 2x1
+    @include mq(med) {
+        -ms-grid-columns: 1fr 1fr;
+        -ms-grid-rows: 1fr;
+
+        //xlg 3x1
+        @include mq(xlg) {
+            -ms-grid-columns: 1fr 1fr 1fr;
+            -ms-grid-rows: 1fr;
+        }
+    }
+
+    .news1 {
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+
+    }
+    .news2 {
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
+
+        @include mq(med) {
+            -ms-grid-column: 2;
+            -ms-grid-row: 1;
+        }
+    }
+    .news3 {
+        -ms-grid-column: 1;
+        -ms-grid-row: 3;
+
+        @include mq(xlg) {
+            -ms-grid-column: 3;
+            -ms-grid-row: 1;
+        }
+    }
+}
+
 //global properties for card grid and items
 //used by service-cards and news articles
 @mixin card-grid () {
@@ -381,7 +404,7 @@ a {
     grid-gap: 2em;
     margin: 5em 0;
     
-    grid-template-columns: 1fr; //sm screen layout
+    //grid-template-columns: 1fr; //sm screen layout
 
     .card {
         //display: inline-block;
@@ -413,35 +436,39 @@ a {
 
 //loop used for styling the service cards
 @for $i from 1 through 7 {
-  .service-list {
-    .card:nth-of-type(#{$i}) {
+    .service-list {
+        .card:nth-of-type(#{$i}) {
 
-      //CARD default state
-      .service-icon {
-        color: $white;
-        background-color: map-get($service-colors, #{$i});
-      }
-      .btn {
-        background-color: map-get($service-colors, #{$i});
-      }
+           @include mq(med){
+               grid-area: s#{$i};
+           } 
 
-      //CARD hover state
-      &:hover {
-        & {
-          background-color: map-get($service-colors, #{$i});
+            //CARD default state
+            .service-icon {
+                color: $white;
+                background-color: map-get($service-colors, #{$i});
+            }
+            .btn {
+                background-color: map-get($service-colors, #{$i});
+            }
+
+            //CARD hover state
+            &:hover {
+                & {
+                    background-color: map-get($service-colors, #{$i});
+                }
+                    
+                .btn {
+                    color: map-get($service-colors, #{$i});
+                    background-color: $white;
+                }
+                h3,
+                p {
+                    color: white;
+                }
+            }
         }
-        .service-icon,
-        .btn {
-          color: map-get($service-colors, #{$i});
-          background-color: $white;
-        }
-        h3,
-        p {
-          color: white;
-        }
-      }
-    }
-  }     
+    }     
 }
 
 @mixin nav-style() {
