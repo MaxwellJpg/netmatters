@@ -860,9 +860,9 @@ footer {
 
 @media only screen and (min-width: 768px) {
   footer .ft {
-    display: -webkit-flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    display: flex;
+    display: -ms-flexbox;
+    flex-flow: row wrap;
     gap: 3em;
   }
   footer .ft .ft-contact,

@@ -231,7 +231,7 @@ header {
             grid-template-columns: 1fr 1fr 1fr;
         }
     }
-    
+
     @include ie-news-card-layout();
 }
 //news end
@@ -246,9 +246,11 @@ footer {
     .ft {
         //contact //about //ft-website //social
         @include mq(med){
+            display: flex;
             display: -webkit-flex;
-            flex-wrap: wrap;
-            flex-direction: row;
+            display: -ms-flexbox;
+            flex-flow: row wrap;
+            -ms-flex-flow: row wrap;
             gap: 3em;
 
             .ft-contact,
