@@ -66,7 +66,6 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;
-  margin-top: -8px;
   font-family: Poppins, sans-serif;
   font-size: 1rem;
   letter-spacing: .4px;
@@ -322,7 +321,14 @@ header {
 
 .center-hd {
   width: 95%;
-  margin: 0.5em auto 2em;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 992px) {
+  .center-hd {
+    height: 5.6em;
+  }
 }
 
 .hd-wrapper {
@@ -362,6 +368,12 @@ header {
   #logo {
     -ms-flex-preferred-size: 45%;
         flex-basis: 45%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-width: 992px) {
+  #logo {
+    margin-right: 3em;
   }
 }
 
@@ -928,6 +940,9 @@ footer .ft a:hover {
           flex-grow: 1;
   height: 3.75em;
   margin: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.1em;
 }
 
 @media only screen and (min-width: 992px) {
@@ -937,19 +952,10 @@ footer .ft a:hover {
   }
 }
 
-.support h4,
-.contact h4 {
-  display: inline;
-  padding: 0;
-  margin: 0;
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: 1.2em;
-}
-
 .support i,
 .contact i {
-  font-size: 1.6em;
+  font-size: 1.3em;
+  padding-right: 0.5em;
 }
 
 .support {
@@ -1075,7 +1081,7 @@ footer .ft a:hover {
   .search-btn {
     background: #84858F;
     color: #fff;
-    border-radius: 4px;
+    border-radius: 0 4px 4px 0;
     font-size: 1.5em;
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
@@ -1089,11 +1095,13 @@ footer .ft a:hover {
   .search-btn {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    border-radius: 4px;
   }
 }
 
 @media only screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1260px) {
   .search-btn {
+    border-radius: 0 4px 4px 0;
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
   }

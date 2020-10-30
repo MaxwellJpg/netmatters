@@ -5,7 +5,11 @@ header {
 
 .center-hd {
     width: 95%;
-    margin: 0.5em auto 2em;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    @include mq(lg) {
+        height: 5.6em;
+    }
 }
 
 //header flex wrapper, for logo, buttons, search and menu
@@ -31,6 +35,9 @@ header {
     max-width: 400px;
     @include mq(med){
         flex-basis: 45%;
+        @include mq(lg) {
+            margin-right: 3em;
+        }
     }
 }
 
