@@ -217,6 +217,7 @@ button {
             -ms-grid-column: 1;
             -ms-grid-row: 2;
             -ms-grid-column-span: 2;
+            margin: 1em;
 
             @include mq(lg) { //6x3
                 -ms-grid-column: 3;
@@ -357,8 +358,8 @@ button {
             }
         }
     }
-
     @include ie-service-card-positioning();
+    
 }
 
 @mixin ie-news-card-layout() {

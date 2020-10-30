@@ -28,3 +28,9 @@ new Mmenu( "#side-nav", {
 // );
 
 $('.sub').prepend('<i class="fa fa-angle-double-right" aria-hidden="true"></i>');
+
+//IE check
+if (window.document.documentMode) {
+    alert('Please consider using a different browser');
+    $('.service-list').addClass('ie-service-grid');
+}

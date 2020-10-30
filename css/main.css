@@ -414,9 +414,9 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  height: 100%;
   -webkit-column-gap: 1em;
           column-gap: 1em;
-  height: 100%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -426,23 +426,37 @@ header {
   }
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .hd-wrapper {
+    /* IE10+ CSS */
+  }
+  .hd-wrapper .support,
+  .hd-wrapper .contact,
+  .hd-wrapper .search-wrap,
+  .hd-wrapper .menu {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+}
+
 #logo {
   width: 200px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   max-width: 400px;
-  height: 100%;
-  padding-bottom: 0.5em;
+  height: 70px;
+  margin-bottom: 0.5em;
   cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
   #logo {
+    height: 100%;
     -ms-flex-preferred-size: 45%;
         flex-basis: 45%;
-    padding-bottom: 0;
-    padding-right: 2em;
+    margin-bottom: 0;
+    margin-right: 2em;
   }
 }
 
@@ -458,8 +472,6 @@ header {
   width: 100%;
   grid-gap: 2em;
   margin: 5em 0;
-  -ms-grid-columns: 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .service-list .card {
@@ -533,34 +545,39 @@ header {
   }
 }
 
+.ie-service-grid {
+  -ms-grid-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
 @media only screen and (min-width: 768px) {
-  .service-list {
+  .ie-service-grid {
     -ms-grid-columns: 1fr 1fr;
     -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
   }
 }
 
 @media only screen and (min-width: 768px) and (min-width: 992px) {
-  .service-list {
+  .ie-service-grid {
     -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     -ms-grid-rows: 1fr 1fr 1fr;
   }
 }
 
 @media only screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1260px) {
-  .service-list {
+  .ie-service-grid {
     -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     -ms-grid-rows: 1fr 1fr;
   }
 }
 
-.service-list .software {
+.ie-service-grid .software {
   -ms-grid-column: 1;
   -ms-grid-row: 1;
 }
 
 @media only screen and (min-width: 768px) {
-  .service-list .software {
+  .ie-service-grid .software {
     -ms-grid-column: 1;
     -ms-grid-row: 1;
     -ms-grid-column-span: 2;
@@ -568,7 +585,7 @@ header {
 }
 
 @media only screen and (min-width: 768px) and (min-width: 992px) {
-  .service-list .software {
+  .ie-service-grid .software {
     -ms-grid-column: 1;
     -ms-grid-row: 1;
     -ms-grid-column-span: 2;
@@ -576,28 +593,29 @@ header {
 }
 
 @media only screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1260px) {
-  .service-list .software {
+  .ie-service-grid .software {
     -ms-grid-column: 1;
     -ms-grid-row: 1;
     -ms-grid-column-span: 4;
   }
 }
 
-.service-list .it {
+.ie-service-grid .it {
   -ms-grid-column: 1;
   -ms-grid-row: 2;
 }
 
 @media only screen and (min-width: 768px) {
-  .service-list .it {
+  .ie-service-grid .it {
     -ms-grid-column: 1;
     -ms-grid-row: 2;
     -ms-grid-column-span: 2;
+    margin: 1em;
   }
 }
 
 @media only screen and (min-width: 768px) and (min-width: 992px) {
-  .service-list .it {
+  .ie-service-grid .it {
     -ms-grid-column: 3;
     -ms-grid-row: 1;
     -ms-grid-column-span: 2;
@@ -605,20 +623,20 @@ header {
 }
 
 @media only screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1260px) {
-  .service-list .it {
+  .ie-service-grid .it {
     -ms-grid-column: 5;
     -ms-grid-row: 1;
     -ms-grid-column-span: 4;
   }
 }
 
-.service-list .digital {
+.ie-service-grid .digital {
   -ms-grid-column: 1;
   -ms-grid-row: 3;
 }
 
 @media only screen and (min-width: 768px) {
-  .service-list .digital {
+  .ie-service-grid .digital {
     -ms-grid-column: 1;
     -ms-grid-row: 3;
     -ms-grid-column-span: 2;
@@ -626,7 +644,7 @@ header {
 }
 
 @media only screen and (min-width: 768px) and (min-width: 992px) {
-  .service-list .digital {
+  .ie-service-grid .digital {
     -ms-grid-column: 5;
     -ms-grid-row: 1;
     -ms-grid-column-span: 2;
@@ -634,27 +652,27 @@ header {
 }
 
 @media only screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1260px) {
-  .service-list .digital {
+  .ie-service-grid .digital {
     -ms-grid-column: 9;
     -ms-grid-row: 1;
     -ms-grid-column-span: 4;
   }
 }
 
-.service-list .telecoms {
+.ie-service-grid .telecoms {
   -ms-grid-column: 1;
   -ms-grid-row: 4;
 }
 
 @media only screen and (min-width: 768px) {
-  .service-list .telecoms {
+  .ie-service-grid .telecoms {
     -ms-grid-column: 1;
     -ms-grid-row: 4;
   }
 }
 
 @media only screen and (min-width: 768px) and (min-width: 992px) {
-  .service-list .telecoms {
+  .ie-service-grid .telecoms {
     -ms-grid-column: 1;
     -ms-grid-row: 2;
     -ms-grid-column-span: 3;
@@ -662,27 +680,27 @@ header {
 }
 
 @media only screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1260px) {
-  .service-list .telecoms {
+  .ie-service-grid .telecoms {
     -ms-grid-column: 1;
     -ms-grid-row: 2;
     -ms-grid-column-span: 3;
   }
 }
 
-.service-list .web {
+.ie-service-grid .web {
   -ms-grid-column: 1;
   -ms-grid-row: 5;
 }
 
 @media only screen and (min-width: 768px) {
-  .service-list .web {
+  .ie-service-grid .web {
     -ms-grid-column: 2;
     -ms-grid-row: 4;
   }
 }
 
 @media only screen and (min-width: 768px) and (min-width: 992px) {
-  .service-list .web {
+  .ie-service-grid .web {
     -ms-grid-column: 4;
     -ms-grid-row: 2;
     -ms-grid-column-span: 3;
@@ -690,27 +708,27 @@ header {
 }
 
 @media only screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1260px) {
-  .service-list .web {
+  .ie-service-grid .web {
     -ms-grid-column: 4;
     -ms-grid-row: 2;
     -ms-grid-column-span: 3;
   }
 }
 
-.service-list .security {
+.ie-service-grid .security {
   -ms-grid-column: 1;
   -ms-grid-row: 6;
 }
 
 @media only screen and (min-width: 768px) {
-  .service-list .security {
+  .ie-service-grid .security {
     -ms-grid-column: 1;
     -ms-grid-row: 5;
   }
 }
 
 @media only screen and (min-width: 768px) and (min-width: 992px) {
-  .service-list .security {
+  .ie-service-grid .security {
     -ms-grid-column: 1;
     -ms-grid-row: 3;
     -ms-grid-column-span: 3;
@@ -718,27 +736,27 @@ header {
 }
 
 @media only screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1260px) {
-  .service-list .security {
+  .ie-service-grid .security {
     -ms-grid-column: 7;
     -ms-grid-row: 2;
     -ms-grid-column-span: 3;
   }
 }
 
-.service-list .web-training {
+.ie-service-grid .web-training {
   -ms-grid-column: 1;
   -ms-grid-row: 7;
 }
 
 @media only screen and (min-width: 768px) {
-  .service-list .web-training {
+  .ie-service-grid .web-training {
     -ms-grid-column: 2;
     -ms-grid-row: 5;
   }
 }
 
 @media only screen and (min-width: 768px) and (min-width: 992px) {
-  .service-list .web-training {
+  .ie-service-grid .web-training {
     -ms-grid-column: 4;
     -ms-grid-row: 3;
     -ms-grid-column-span: 3;
@@ -746,7 +764,7 @@ header {
 }
 
 @media only screen and (min-width: 768px) and (min-width: 992px) and (min-width: 1260px) {
-  .service-list .web-training {
+  .ie-service-grid .web-training {
     -ms-grid-column: 10;
     -ms-grid-row: 2;
     -ms-grid-column-span: 3;

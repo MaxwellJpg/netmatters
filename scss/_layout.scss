@@ -30,21 +30,33 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    column-gap: 1em;
     height:100%;
+
+    //gap in header
+    column-gap: 1em;
+    @include ie() {
+        .support,
+        .contact,
+        .search-wrap,
+        .menu {
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+        }
+    }
 }
 
 #logo {
     width: 200px;
     flex-grow: 1;
     max-width: 400px;
-    height: 100%;
-    padding-bottom: 0.5em;
+    height: 70px;
+    margin-bottom: 0.5em;
     cursor: pointer;
     @include mq(med){
+        height: 100%;
         flex-basis: 45%;
-        padding-bottom: 0;
-        padding-right: 2em;
+        margin-bottom: 0;
+        margin-right: 2em;
         @include mq(lg) {
             margin-right: 3em;
         }
@@ -115,9 +127,13 @@ header {
             }
         }
     }
-    //IE support for layout
+}
+
+//IE support for layout
+.ie-service-grid {
     @include ie-service-card-layout();
 }
+
 //services end
 
 //info pane
