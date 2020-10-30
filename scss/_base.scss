@@ -151,7 +151,9 @@ a {
   color: inherit;
   cursor: pointer;
 }
-
+button {
+    cursor: pointer;
+}
 
 //===================
 //mixins
@@ -415,6 +417,10 @@ a {
         text-align: center; 
         color: $dark;
         background-color: $white;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 

@@ -89,6 +89,10 @@ a {
   cursor: pointer;
 }
 
+button {
+  cursor: pointer;
+}
+
 .wrap {
   margin: 0 1em;
 }
@@ -362,6 +366,7 @@ header {
       -ms-flex-positive: 1;
           flex-grow: 1;
   max-width: 400px;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
@@ -394,6 +399,10 @@ header {
   text-align: center;
   color: #333645;
   background-color: #fff;
+}
+
+.service-list .card:hover {
+  cursor: pointer;
 }
 
 .service-list .service-icon {
@@ -733,6 +742,10 @@ header {
   text-align: center;
   color: #333645;
   background-color: #fff;
+}
+
+.news .card:hover {
+  cursor: pointer;
 }
 
 .news .card {
@@ -1372,6 +1385,7 @@ footer .ft a:hover {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  cursor: pointer;
 }
 
 .sc-icns .social-icon:hover {
