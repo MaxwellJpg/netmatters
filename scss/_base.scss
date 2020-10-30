@@ -190,6 +190,7 @@ button {
     .software {
         -ms-grid-column: 1;
         -ms-grid-row: 1;
+        margin-bottom: 1em;
         
         @include mq(med) { //2x5
             -ms-grid-column: 1;
@@ -200,6 +201,7 @@ button {
                 -ms-grid-column: 1;
                 -ms-grid-row: 1;
                 -ms-grid-column-span: 2;
+                margin-right: 1em;
 
                 @include mq(xlg) { //12x2
                     -ms-grid-column: 1;
@@ -212,17 +214,19 @@ button {
     .it {
         -ms-grid-column: 1;
         -ms-grid-row: 2;
+        margin: 1em 0;
 
         @include mq(med) {
             -ms-grid-column: 1;
             -ms-grid-row: 2;
             -ms-grid-column-span: 2;
-            margin: 1em;
+            margin: 1em 0;
 
             @include mq(lg) { //6x3
                 -ms-grid-column: 3;
                 -ms-grid-row: 1;
                 -ms-grid-column-span: 2;
+                margin: 0 1em 1em;
 
                 @include mq(xlg) { //12x2
                     -ms-grid-column: 5;
@@ -235,6 +239,7 @@ button {
     .digital {
         -ms-grid-column: 1;
         -ms-grid-row: 3;
+        margin: 1em 0;
 
         @include mq(med) {
             -ms-grid-column: 1;
@@ -245,6 +250,7 @@ button {
                 -ms-grid-column: 5;
                 -ms-grid-row: 1;
                 -ms-grid-column-span: 2;
+                margin: 0 0 1em 1em;
 
                 @include mq(xlg) { //12x2
                     -ms-grid-column: 9;
@@ -257,9 +263,12 @@ button {
     .telecoms {
         -ms-grid-column: 1;
         -ms-grid-row: 4;
+        margin: 1em 0;
+
         @include mq(med) {
             -ms-grid-column: 1;
             -ms-grid-row: 4;
+            margin-right: 1em;
 
             @include mq(lg) { //6x3
                 -ms-grid-column: 1;
@@ -270,6 +279,7 @@ button {
                     -ms-grid-column: 1;
                     -ms-grid-row: 2;
                     -ms-grid-column-span: 3;
+                    margin-bottom: 0;
                 }
             }
         }
@@ -277,9 +287,12 @@ button {
     .web {
         -ms-grid-column: 1;
         -ms-grid-row: 5;
+        margin: 1em 0;
+
         @include mq(med) {
             -ms-grid-column: 2;
             -ms-grid-row: 4;
+            margin-left: 1em;
 
             @include mq(lg) { //6x3
                 -ms-grid-column: 4;
@@ -290,6 +303,8 @@ button {
                     -ms-grid-column: 4;
                     -ms-grid-row: 2;
                     -ms-grid-column-span: 3;
+                    margin-bottom: 0;
+                    margin-right: 1em;
                 }
             }
         }
@@ -297,9 +312,12 @@ button {
     .security {
         -ms-grid-column: 1;
         -ms-grid-row: 6;
+        margin: 1em 0;
+
         @include mq(med) {
             -ms-grid-column: 1;
             -ms-grid-row: 5;
+            margin: 1em 1em 0 0;
 
             @include mq(lg) { //6x3
                 -ms-grid-column: 1;
@@ -310,6 +328,7 @@ button {
                     -ms-grid-column: 7;
                     -ms-grid-row: 2;
                     -ms-grid-column-span: 3;
+                    margin-left: 1em;
                 }
             }
         }
@@ -317,9 +336,12 @@ button {
     .web-training {
         -ms-grid-column: 1;
         -ms-grid-row: 7;
+        margin-top: 1em;
+
         @include mq(med) {
             -ms-grid-column: 2;
             -ms-grid-row: 5;
+            margin-left: 1em;
 
             @include mq(lg) { //6x3
                 -ms-grid-column: 4;
