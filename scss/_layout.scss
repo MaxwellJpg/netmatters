@@ -156,9 +156,18 @@ header {
 
     .card {
         padding: 0;
-        img {
-            width: 100%;
-            height: 250px;
+        .img {
+            &-container {
+                overflow: hidden;
+                height:250px;
+                img {
+                    width: 100%;
+                    height: 250px;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
         }
         .container {
             text-align: left;
