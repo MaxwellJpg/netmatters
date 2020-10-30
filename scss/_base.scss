@@ -417,10 +417,6 @@ button {
         text-align: center; 
         color: $dark;
         background-color: $white;
-
-        &:hover {
-            cursor: pointer;
-        }
     }
 }
 
@@ -461,6 +457,7 @@ button {
 
             //CARD hover state
             &:hover {
+                cursor: pointer;
                 & {
                     background-color: map-get($service-colors, #{$i});
                 }
@@ -472,6 +469,10 @@ button {
                 h3,
                 p {
                     color: white;
+                }
+                .service-icon {
+                    color: map-get($service-colors, #{$i});
+                    background-color: $white;
                 }
             }
         }

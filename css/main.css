@@ -132,6 +132,10 @@ button {
 }
 
 .service-list .card:nth-of-type(1):hover {
+  cursor: pointer;
+}
+
+.service-list .card:nth-of-type(1):hover {
   background-color: #67809f;
 }
 
@@ -143,6 +147,11 @@ button {
 .service-list .card:nth-of-type(1):hover h3,
 .service-list .card:nth-of-type(1):hover p {
   color: white;
+}
+
+.service-list .card:nth-of-type(1):hover .service-icon {
+  color: #67809f;
+  background-color: #fff;
 }
 
 @media only screen and (min-width: 768px) {
@@ -161,6 +170,10 @@ button {
 }
 
 .service-list .card:nth-of-type(2):hover {
+  cursor: pointer;
+}
+
+.service-list .card:nth-of-type(2):hover {
   background-color: #4083d7;
 }
 
@@ -172,6 +185,11 @@ button {
 .service-list .card:nth-of-type(2):hover h3,
 .service-list .card:nth-of-type(2):hover p {
   color: white;
+}
+
+.service-list .card:nth-of-type(2):hover .service-icon {
+  color: #4083d7;
+  background-color: #fff;
 }
 
 @media only screen and (min-width: 768px) {
@@ -190,6 +208,10 @@ button {
 }
 
 .service-list .card:nth-of-type(3):hover {
+  cursor: pointer;
+}
+
+.service-list .card:nth-of-type(3):hover {
   background-color: #2dcc71;
 }
 
@@ -201,6 +223,11 @@ button {
 .service-list .card:nth-of-type(3):hover h3,
 .service-list .card:nth-of-type(3):hover p {
   color: white;
+}
+
+.service-list .card:nth-of-type(3):hover .service-icon {
+  color: #2dcc71;
+  background-color: #fff;
 }
 
 @media only screen and (min-width: 768px) {
@@ -219,6 +246,10 @@ button {
 }
 
 .service-list .card:nth-of-type(4):hover {
+  cursor: pointer;
+}
+
+.service-list .card:nth-of-type(4):hover {
   background-color: #d64541;
 }
 
@@ -230,6 +261,11 @@ button {
 .service-list .card:nth-of-type(4):hover h3,
 .service-list .card:nth-of-type(4):hover p {
   color: white;
+}
+
+.service-list .card:nth-of-type(4):hover .service-icon {
+  color: #d64541;
+  background-color: #fff;
 }
 
 @media only screen and (min-width: 768px) {
@@ -248,6 +284,10 @@ button {
 }
 
 .service-list .card:nth-of-type(5):hover {
+  cursor: pointer;
+}
+
+.service-list .card:nth-of-type(5):hover {
   background-color: #926fb1;
 }
 
@@ -259,6 +299,11 @@ button {
 .service-list .card:nth-of-type(5):hover h3,
 .service-list .card:nth-of-type(5):hover p {
   color: white;
+}
+
+.service-list .card:nth-of-type(5):hover .service-icon {
+  color: #926fb1;
+  background-color: #fff;
 }
 
 @media only screen and (min-width: 768px) {
@@ -277,6 +322,10 @@ button {
 }
 
 .service-list .card:nth-of-type(6):hover {
+  cursor: pointer;
+}
+
+.service-list .card:nth-of-type(6):hover {
   background-color: #f62559;
 }
 
@@ -288,6 +337,11 @@ button {
 .service-list .card:nth-of-type(6):hover h3,
 .service-list .card:nth-of-type(6):hover p {
   color: white;
+}
+
+.service-list .card:nth-of-type(6):hover .service-icon {
+  color: #f62559;
+  background-color: #fff;
 }
 
 @media only screen and (min-width: 768px) {
@@ -306,6 +360,10 @@ button {
 }
 
 .service-list .card:nth-of-type(7):hover {
+  cursor: pointer;
+}
+
+.service-list .card:nth-of-type(7):hover {
   background-color: #926fb1;
 }
 
@@ -317,6 +375,11 @@ button {
 .service-list .card:nth-of-type(7):hover h3,
 .service-list .card:nth-of-type(7):hover p {
   color: white;
+}
+
+.service-list .card:nth-of-type(7):hover .service-icon {
+  color: #926fb1;
+  background-color: #fff;
 }
 
 header {
@@ -401,16 +464,17 @@ header {
   background-color: #fff;
 }
 
-.service-list .card:hover {
-  cursor: pointer;
-}
-
 .service-list .service-icon {
   display: inline-block;
-  padding: 1em 1.2em;
+  width: 60px;
+  height: 60px;
   margin-bottom: 0.5em;
   border-radius: 50%;
+}
+
+.service-list .service-icon i {
   font-size: 1.3em;
+  margin-top: 20px;
 }
 
 .service-list h3 {
@@ -744,10 +808,6 @@ header {
   background-color: #fff;
 }
 
-.news .card:hover {
-  cursor: pointer;
-}
-
 .news .card {
   padding: 0;
 }
@@ -897,9 +957,12 @@ header {
 
 footer {
   margin-top: 3em;
-  padding: 1em 1em;
   color: #fff;
   background-color: #333645;
+}
+
+footer .ft {
+  padding: 2em;
 }
 
 @media only screen and (min-width: 768px) {
