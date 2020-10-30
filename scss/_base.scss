@@ -105,11 +105,6 @@ $breakpoints: (
 }
 //font end
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /* IE10+ CSS */
-
-  
-}
 
 //global
 html {
@@ -138,7 +133,7 @@ body {
 }
 
 .clearfix::after {
-  content: " ";
+  content: "";
   clear: both;
   display: table;
 }
@@ -160,6 +155,15 @@ button {
 //===================
 //mixins
 //===================
+
+//IE mediaquery
+@mixin ie() {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        /* IE10+ CSS */
+        @content;
+    }
+}
+
 //screensize mediaquery
 @mixin mq($break) {
   $value: map-get($breakpoints, $break);

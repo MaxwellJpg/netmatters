@@ -1,14 +1,19 @@
-
+//header - centerhd - hdwrapper // Header container order (out to in)
 header {
     background-color: $white;
+    padding-top: 1em;
 }
 
 .center-hd {
     width: 95%;
     margin: 0 auto;
     margin-bottom: 1em;
-    @include mq(lg) {
-        height: 5.6em;
+
+    @include mq(med){
+        height: 4.1em;
+        @include mq(lg) {
+            height: 4.4em;
+        }
     }
 }
 
@@ -18,24 +23,28 @@ header {
     display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
-
     @include mq(med) {
         flex-wrap: nowrap;
     }
+
     justify-content: space-between;
     align-items: center;
     width: 100%;
     column-gap: 1em;
+    height:100%;
 }
 
 #logo {
-    margin: 1em 0;
     width: 200px;
     flex-grow: 1;
     max-width: 400px;
+    height: 100%;
+    padding-bottom: 0.5em;
     cursor: pointer;
     @include mq(med){
         flex-basis: 45%;
+        padding-bottom: 0;
+        padding-right: 2em;
         @include mq(lg) {
             margin-right: 3em;
         }

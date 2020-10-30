@@ -47,10 +47,6 @@
   src: local("Poppins Bold"), local("Poppins-Bold"), url(https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLCz7Z1xlEA.ttf) format("truetype");
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /* IE10+ CSS */
-}
-
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -73,7 +69,7 @@ body {
 }
 
 .clearfix::after {
-  content: " ";
+  content: "";
   clear: both;
   display: table;
 }
@@ -384,6 +380,7 @@ button {
 
 header {
   background-color: #fff;
+  padding-top: 1em;
 }
 
 .center-hd {
@@ -392,9 +389,15 @@ header {
   margin-bottom: 1em;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .center-hd {
-    height: 5.6em;
+    height: 4.1em;
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-width: 992px) {
+  .center-hd {
+    height: 4.4em;
   }
 }
 
@@ -413,6 +416,7 @@ header {
   width: 100%;
   -webkit-column-gap: 1em;
           column-gap: 1em;
+  height: 100%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -423,12 +427,13 @@ header {
 }
 
 #logo {
-  margin: 1em 0;
   width: 200px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   max-width: 400px;
+  height: 100%;
+  padding-bottom: 0.5em;
   cursor: pointer;
 }
 
@@ -436,6 +441,8 @@ header {
   #logo {
     -ms-flex-preferred-size: 45%;
         flex-basis: 45%;
+    padding-bottom: 0;
+    padding-right: 2em;
   }
 }
 

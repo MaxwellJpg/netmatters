@@ -1,4 +1,5 @@
 Mmenu.configs.offCanvas.page.selector = ".wrapper";
+
 new Mmenu( "#side-nav", {
     // options
     "slidingSubmenus": false,
