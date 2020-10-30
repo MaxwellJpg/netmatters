@@ -33,4 +33,5 @@ $('.sub').prepend('<i class="fa fa-angle-double-right" aria-hidden="true"></i>')
 if (window.document.documentMode) {
     alert('Please consider using a different browser');
     $('.service-list').addClass('ie-service-grid');
+    $('.news').addClass('ie-news-grid');
 }

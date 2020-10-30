@@ -277,7 +277,10 @@ header {
             grid-template-columns: 1fr 1fr 1fr;
         }
     }
+}
 
+//IE support for layout
+.ie-news-grid {
     @include ie-news-card-layout();
 }
 //news end

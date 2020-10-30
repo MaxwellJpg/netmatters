@@ -404,24 +404,36 @@ button {
     .news1 {
         -ms-grid-column: 1;
         -ms-grid-row: 1;
+        margin-bottom: 1em;
 
+        @include mq(med) {
+            margin: 0 1em 0 0;
+        }
     }
     .news2 {
         -ms-grid-column: 1;
         -ms-grid-row: 2;
+        margin: 1em 0;
 
         @include mq(med) {
             -ms-grid-column: 2;
             -ms-grid-row: 1;
+            margin: 0 0 0 1em;
+
+            @include mq(xlg) {
+                margin-right: 1em;
+            }
         }
     }
     .news3 {
         -ms-grid-column: 1;
         -ms-grid-row: 3;
+        margin-top: 1em;
 
         @include mq(xlg) {
             -ms-grid-column: 3;
             -ms-grid-row: 1;
+            margin: 0 0 0 1em;
         }
     }
 }
