@@ -10,12 +10,12 @@ $dark: #333645;
 $darker: #2d303e;
 $btn-hov: #ebebeb;
 $service-colors: ( //service card colors
-  '1': #67809f,
-  '2': #4083d7,
-  '3': #2dcc71,
-  '4': #d64541,
-  '5': #926fb1,
-  '6': #f62559,
+  '1': #67809f, //software
+  '2': #4083d7, //it
+  '3': #2dcc71, //digital
+  '4': #d64541, //telecoms
+  '5': #926fb1, //web
+  '6': #f62559, //security
   '7': #926fb1);
 
 $color-key:(
@@ -127,6 +127,7 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;
+  margin-top: -8px; //Unknown why there is a 8px gap at top of page, all margins are 0 => -8px fixes this
 
   font-family: Poppins, sans-serif;
   font-size: 1rem;
