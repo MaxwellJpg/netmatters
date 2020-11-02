@@ -207,6 +207,7 @@ header {
                      transition: transform 0.2s;
                     &:hover {
                         transform: scale(1.1);
+                        cursor: pointer;
                     }
                 }
             }
@@ -307,7 +308,6 @@ header {
 
 //footer start
 footer {
-    //margin-top: 3em;
     color: #fff;
     background-color: #333645;
 
@@ -323,11 +323,6 @@ footer {
             justify-content: space-between;
             gap: 3em;
 
-            .ft-contact,
-            .about,
-            .ft-website {
-                //flex-grow: 1;
-            }
         }
 
         h4 {
