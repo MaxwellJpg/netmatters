@@ -1482,13 +1482,66 @@ footer .ft a:hover {
     flex-flow: row nowrap;
     justify-content: space-between;
   }
-  .clients .container .list .item img {
+  .clients .container .list .item {
+    position: relative;
     filter: grayscale(100%);
+  }
+  .clients .container .list .item .tooltip {
+    visibility: hidden;
+    z-index: 1;
+    position: absolute;
+    bottom: 100%;
+    left: -200px;
+    right: -200px;
+  }
+  .clients .container .list .item .tooltip .box {
+    background-color: #333645;
+    color: #fff;
+    padding: 20px;
+    font-size: .875rem;
+    max-width: 260px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+  .clients .container .list .item .tooltip .box h3 {
+    position: relative;
+    padding-bottom: 0.8em;
+  }
+  .clients .container .list .item .tooltip .box h3:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 28px;
+    height: 3px;
+    display: block;
+    background-color: #fff;
+  }
+  .clients .container .list .item .tooltip .box .arrow {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -36px;
+  }
+  .clients .container .list .item .tooltip .box .arrow:after {
+    content: "";
+    margin: auto;
+    display: inline-block;
+    border-color: #333645 transparent transparent;
+    border-style: solid;
+    border-width: 35px 36px 0;
+  }
+  .clients .container .list .item:hover {
+    filter: grayscale(0%);
+  }
+  .clients .container .list .item:hover .tooltip {
+    visibility: visible;
+  }
+  .clients .container .list .item img {
     width: 90%;
     height: auto;
-  }
-  .clients .container .list .item img:hover {
-    filter: grayscale(0%);
   }
 }
 

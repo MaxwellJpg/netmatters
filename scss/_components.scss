@@ -362,15 +362,67 @@
                 justify-content: space-between;
 
                 .item {
+                    position: relative;
+                    .tooltip {
+                        visibility: hidden;
+                        z-index: 1;
+                        position: absolute;
+                        bottom: 100%;
+                        left: -200px;
+                        right: -200px;
+
+                        .box {
+                            background-color: $dark;
+                            color: $white;
+                            padding: 20px;
+                            font-size: .875rem;
+                            max-width: 260px;
+                            margin: 0 auto 50px;
+                            text-align: center;
+
+                            h3 {
+                                position: relative;
+                                padding-bottom: 0.8em;
+                                &:after {
+                                    content: "";
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    right: 0;
+                                    margin: auto;
+                                    width: 28px;
+                                    height: 3px;
+                                    display: block;
+                                    background-color: $white;
+                                }
+                            }
+                            .arrow {
+                                position: absolute;
+                                bottom: 10px;
+                                left: 50%;
+                                margin-left: -36px;
+                                &:after {
+                                    content: "";
+                                    margin: auto;
+                                    display: inline-block;
+                                    border-color: #333645 transparent transparent;
+                                    border-style: solid;
+                                    border-width: 35px 36px 0;
+                                }
+                            }
+                        }
+                    }
+                    filter: grayscale(100%);
+                    &:hover {
+                        filter: grayscale(0%);
+                        .tooltip {
+                        visibility: visible;
+                        }
+                    }
+
                     img {
-                        filter: grayscale(100%);
                         width: 90%;
                         height: auto;
-
-                        &:hover {
-                            filter: grayscale(0%);
-                        }
-
                         @include mq(lg) {
                             width: 100%;
                         }
