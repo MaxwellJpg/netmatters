@@ -278,7 +278,7 @@
                         
                         &:not(:last-child) a:after  {
                             content: "-";
-                            padding-left: 15px;
+                            padding-left: 20px;
                             @include mq(xlg) {
                                 padding-left: 30px;
                             }

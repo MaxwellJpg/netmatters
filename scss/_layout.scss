@@ -186,6 +186,7 @@ header {
                 overflow: hidden;
                 height:250px;
                 position: relative;
+               
                 .category {
                     position: absolute;
                     top: 10px;
@@ -203,6 +204,7 @@ header {
                 img {
                     width: 100%;
                     height: 250px;
+                     transition: transform 0.2s;
                     &:hover {
                         transform: scale(1.1);
                     }
@@ -318,12 +320,13 @@ footer {
             display: -ms-flexbox;
             flex-flow: row wrap;
             -ms-flex-flow: row wrap;
+            justify-content: space-between;
             gap: 3em;
 
             .ft-contact,
             .about,
             .ft-website {
-                flex-grow: 1;
+                //flex-grow: 1;
             }
         }
 
