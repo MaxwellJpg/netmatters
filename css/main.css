@@ -840,6 +840,20 @@ header {
 .news .card .img-container {
   overflow: hidden;
   height: 250px;
+  position: relative;
+}
+
+.news .card .img-container .category {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  z-index: 1;
+  font-size: .75rem;
+  padding: 0 10px;
+  line-height: 1.438rem;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #333645;
 }
 
 .news .card .img-container img {
@@ -883,7 +897,8 @@ header {
   color: #4083d7;
 }
 
-.news .card:nth-child(2n + 1) .btn {
+.news .card:nth-child(2n + 1) .btn,
+.news .card:nth-child(2n + 1) .category {
   background-color: #4083d7;
 }
 
@@ -891,7 +906,8 @@ header {
   color: #926fb1;
 }
 
-.news .card:nth-child(2) .btn {
+.news .card:nth-child(2) .btn,
+.news .card:nth-child(2) .category {
   background-color: #926fb1;
 }
 
@@ -1268,7 +1284,10 @@ footer .ft a:hover {
     display: block;
     content: "Design";
   }
-  .drop-nav .dn-container .web:hover {
+  .drop-nav .dn-container .web:hover,
+  .drop-nav .dn-container .web .dd-menu,
+  .drop-nav .dn-container .web .dd-menu:before,
+  .drop-nav .dn-container .web .dd-menu:after {
     background-color: #926fb1;
   }
   .drop-nav .dn-container .it i {
@@ -1278,7 +1297,10 @@ footer .ft a:hover {
     display: block;
     content: "Support";
   }
-  .drop-nav .dn-container .it:hover {
+  .drop-nav .dn-container .it:hover,
+  .drop-nav .dn-container .it .dd-menu,
+  .drop-nav .dn-container .it .dd-menu:before,
+  .drop-nav .dn-container .it .dd-menu:after {
     background-color: #4083d7;
   }
   .drop-nav .dn-container .telecoms i {
@@ -1288,7 +1310,10 @@ footer .ft a:hover {
     display: block;
     content: "Services";
   }
-  .drop-nav .dn-container .telecoms:hover {
+  .drop-nav .dn-container .telecoms:hover,
+  .drop-nav .dn-container .telecoms .dd-menu,
+  .drop-nav .dn-container .telecoms .dd-menu:before,
+  .drop-nav .dn-container .telecoms .dd-menu:after {
     background-color: #d64541;
   }
   .drop-nav .dn-container .software i {
@@ -1298,7 +1323,10 @@ footer .ft a:hover {
     display: block;
     content: "Software";
   }
-  .drop-nav .dn-container .software:hover {
+  .drop-nav .dn-container .software:hover,
+  .drop-nav .dn-container .software .dd-menu,
+  .drop-nav .dn-container .software .dd-menu:before,
+  .drop-nav .dn-container .software .dd-menu:after {
     background-color: #67809f;
   }
   .drop-nav .dn-container .digital i {
@@ -1308,7 +1336,10 @@ footer .ft a:hover {
     display: block;
     content: "Marketing";
   }
-  .drop-nav .dn-container .digital:hover {
+  .drop-nav .dn-container .digital:hover,
+  .drop-nav .dn-container .digital .dd-menu,
+  .drop-nav .dn-container .digital .dd-menu:before,
+  .drop-nav .dn-container .digital .dd-menu:after {
     background-color: #2dcc71;
   }
   .drop-nav .dn-container .security i {
@@ -1318,7 +1349,10 @@ footer .ft a:hover {
     display: block;
     content: "Security";
   }
-  .drop-nav .dn-container .security:hover {
+  .drop-nav .dn-container .security:hover,
+  .drop-nav .dn-container .security .dd-menu,
+  .drop-nav .dn-container .security .dd-menu:before,
+  .drop-nav .dn-container .security .dd-menu:after {
     background-color: #f62559;
   }
   .drop-nav .dn-container ul {
@@ -1331,6 +1365,7 @@ footer .ft a:hover {
     text-align: center;
     padding: 0;
     margin: 0;
+    position: relative;
   }
   .drop-nav .dn-container li {
     padding: 19px 18px;
@@ -1352,6 +1387,67 @@ footer .ft a:hover {
   }
   .drop-nav .dn-container li:hover i {
     color: #fff;
+  }
+  .drop-nav .dn-container li:hover .dd-menu {
+    visibility: visible;
+  }
+  .drop-nav .dn-container li .dd-menu {
+    visibility: hidden;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    right: -1px;
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: #1d1f28;
+  }
+  .drop-nav .dn-container li .dd-menu:before, .drop-nav .dn-container li .dd-menu:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #1d1f28;
+  }
+  .drop-nav .dn-container li .dd-menu:before {
+    left: 100%;
+    width: 2000px;
+  }
+  .drop-nav .dn-container li .dd-menu:after {
+    right: 100%;
+    width: 2000px;
+  }
+  .drop-nav .dn-container li .dd-menu li {
+    border: none;
+    text-transform: uppercase;
+    height: 45px;
+    padding-top: 0.8em;
+    padding-left: 0;
+    font-size: .8125rem;
+  }
+}
+
+@media only screen and (min-width: 992px) and (min-width: 1260px) {
+  .drop-nav .dn-container li .dd-menu li {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .drop-nav .dn-container li .dd-menu li:not(:last-child) a:after {
+    content: "-";
+    padding-left: 15px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (min-width: 1260px) {
+  .drop-nav .dn-container li .dd-menu li:not(:last-child) a:after {
+    padding-left: 30px;
   }
 }
 

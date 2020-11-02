@@ -531,7 +531,10 @@ button {
                 content: "Design";
             }
         }
-        &:hover {
+        &:hover,
+        .dd-menu,
+        .dd-menu:before,
+        .dd-menu:after {
             background-color: get-color(web);
         }
     }
@@ -546,7 +549,10 @@ button {
                 content: "Support";
             }
         }
-        &:hover {
+        &:hover,
+        .dd-menu,
+        .dd-menu:before,
+        .dd-menu:after {
             background-color: get-color(it);
         }
     }
@@ -561,7 +567,10 @@ button {
                 content: "Services";
             }
         }
-        &:hover {
+        &:hover,
+        .dd-menu,
+        .dd-menu:before,
+        .dd-menu:after {
             background-color: get-color(telecoms);
         }
     }
@@ -576,7 +585,10 @@ button {
                 content: "Software";
             }
         }
-        &:hover {
+        &:hover,
+        .dd-menu,
+        .dd-menu:before,
+        .dd-menu:after {
             background-color: get-color(software);
         }
     }
@@ -591,7 +603,10 @@ button {
                 content: "Marketing";
             }
         }
-        &:hover {
+        &:hover,
+        .dd-menu,
+        .dd-menu:before,
+        .dd-menu:after {
             background-color: get-color(digital);
         }
     }
@@ -606,7 +621,10 @@ button {
                 content: "Security";
             }
         }
-        &:hover {
+        &:hover,
+        .dd-menu,
+        .dd-menu:before,
+        .dd-menu:after {
             background-color: get-color(security);
         }
     }
