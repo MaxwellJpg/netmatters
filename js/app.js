@@ -2,6 +2,7 @@
 //IE check
 if (window.document.documentMode) {
     alert('Please consider using a different browser');
+    $('.hd-wrapper').addClass('ie-hd-style');
     $('.service-list').addClass('ie-service-grid');
     $('.news').addClass('ie-news-grid');
 }
