@@ -41,5 +41,13 @@ new Mmenu("#side-nav", {
 //
 $('.sub').prepend('<i class="fa fa-angle-double-right" aria-hidden="true"></i>');
 
-
+$(function () {
+    $('.carousel').square1({
+        theme: 'light',
+        animation: 'slide',
+        gestures: true,
+        keyboard: false,
+        background: 'linear-gradient(270deg, transparent 25%, #000)'
+    });
+});
 
