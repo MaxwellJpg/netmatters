@@ -1449,6 +1449,102 @@ footer .ft a:hover {
   }
 }
 
+#side-nav .web i {
+  color: #926fb1;
+}
+
+#side-nav .web small::after {
+  display: block;
+  content: "Design";
+}
+
+#side-nav .web:hover,
+#side-nav .web .dd-menu,
+#side-nav .web .dd-menu:before,
+#side-nav .web .dd-menu:after {
+  background-color: #926fb1;
+}
+
+#side-nav .it i {
+  color: #4083d7;
+}
+
+#side-nav .it small::after {
+  display: block;
+  content: "Support";
+}
+
+#side-nav .it:hover,
+#side-nav .it .dd-menu,
+#side-nav .it .dd-menu:before,
+#side-nav .it .dd-menu:after {
+  background-color: #4083d7;
+}
+
+#side-nav .telecoms i {
+  color: #d64541;
+}
+
+#side-nav .telecoms small::after {
+  display: block;
+  content: "Services";
+}
+
+#side-nav .telecoms:hover,
+#side-nav .telecoms .dd-menu,
+#side-nav .telecoms .dd-menu:before,
+#side-nav .telecoms .dd-menu:after {
+  background-color: #d64541;
+}
+
+#side-nav .software i {
+  color: #67809f;
+}
+
+#side-nav .software small::after {
+  display: block;
+  content: "Software";
+}
+
+#side-nav .software:hover,
+#side-nav .software .dd-menu,
+#side-nav .software .dd-menu:before,
+#side-nav .software .dd-menu:after {
+  background-color: #67809f;
+}
+
+#side-nav .digital i {
+  color: #2dcc71;
+}
+
+#side-nav .digital small::after {
+  display: block;
+  content: "Marketing";
+}
+
+#side-nav .digital:hover,
+#side-nav .digital .dd-menu,
+#side-nav .digital .dd-menu:before,
+#side-nav .digital .dd-menu:after {
+  background-color: #2dcc71;
+}
+
+#side-nav .security i {
+  color: #f62559;
+}
+
+#side-nav .security small::after {
+  display: block;
+  content: "Security";
+}
+
+#side-nav .security:hover,
+#side-nav .security .dd-menu,
+#side-nav .security .dd-menu:before,
+#side-nav .security .dd-menu:after {
+  background-color: #f62559;
+}
+
 #side-nav .sub {
   background-color: #262834;
 }
@@ -1457,7 +1553,55 @@ footer .ft a:hover {
   padding: 0.9em;
 }
 
+#side-nav .l1 {
+  width: 90%;
+  margin: 1.5em auto;
+  padding: 0.44em 0;
+  text-align: center;
+  border: 1px solid rgba(140, 130, 115, 0.25);
+  text-transform: uppercase;
+  color: #fff;
+}
+
+#side-nav .l1 .contactnav {
+  font-size: 1.125rem;
+}
+
+#side-nav .l1 i {
+  display: block;
+  font-size: 1.3rem;
+  padding-bottom: .5rem;
+}
+
+#side-nav .l1 small {
+  font-size: .8em;
+}
+
+#side-nav .l1 small:after {
+  font-size: 1.125rem;
+}
+
+#side-nav .l2 {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(140, 130, 115, 0.25);
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #2d303e;
+}
+
+@media only screen and (min-width: 992px) {
+  #side-nav .l1,
+  #side-nav .l2 {
+    display: none;
+  }
+}
+
 .mm-menu {
+  --mm-color-border: rgba(140, 130, 115, 0.25);
   --mm-color-background: #333645;
   --mm-color-text: #fff;
   font-size: 0.9em;
@@ -1466,6 +1610,8 @@ footer .ft a:hover {
 
 .mm-divider {
   font-size: 1.2em;
+  border-bottom: 1px solid rgba(140, 130, 115, 0.25);
+  border-top: 1px solid rgba(140, 130, 115, 0.25);
 }
 
 .carousel {

@@ -294,15 +294,60 @@
 
 //SIDE NAV
 #side-nav {
+    @include nav-style();
     .sub {
         background-color: #262834;
         i {
             padding: 0.9em;
         }
     }
+    
+    .l1 {
+        width: 90%;
+        margin: 1.5em auto;
+        padding: 0.44em 0;
+        text-align: center;
+        border: 1px solid rgba(140, 130, 115, 0.25);
+        text-transform: uppercase;
+        color: $white;
+
+        .contactnav {
+            font-size: 1.125rem;
+        }
+        i {
+            display: block;
+            font-size: 1.3rem;
+            padding-bottom: .5rem;
+        }
+        small {
+            font-size: .8em;
+            &:after {
+                font-size: 1.125rem;
+            }
+        }
+    }
+
+    .l2 {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(140, 130, 115, 0.25);
+        text-transform: uppercase;
+        font-size: 1rem;
+        color: $white;
+        background-color: $darker;
+    }
+    @include mq(lg) {
+        .l1,
+        .l2 {
+            display: none;
+        }
+    }
 }
 .mm {
     &-menu {
+        --mm-color-border: rgba(140, 130, 115, 0.25);
         --mm-color-background: #333645;
         --mm-color-text: #fff;
         font-size: 0.9em;
@@ -311,6 +356,8 @@
 
     &-divider {
         font-size: 1.2em;
+        border-bottom: 1px solid rgba(140, 130, 115, 0.25);
+        border-top: 1px solid rgba(140, 130, 115, 0.25);
     }
 }
 //SIDE NAV end
