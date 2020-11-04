@@ -1873,4 +1873,73 @@ footer .ft a:hover {
     filter: grayscale(0%);
   }
 }
+
+#cookie-consent {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  display: -ms-flexbox;
+  outline: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+#cookie-consent .modal-dialog {
+  width: 600px;
+  background-color: #fff;
+}
+
+#cookie-consent .modal-dialog .modal-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+#cookie-consent .modal-dialog .modal-header .modal-title {
+  font-weight: 400;
+  font-size: 1.625rem;
+  color: #2d303e;
+  padding: 0;
+  margin: 0;
+}
+
+#cookie-consent .modal-dialog .modal-body {
+  padding: 20px;
+  line-height: 1.875rem;
+}
+
+#cookie-consent .modal-dialog .modal-footer {
+  padding: 19px 20px 20px;
+  border-top: 1px solid #e5e5e5;
+}
+
+#cookie-consent .modal-dialog .modal-footer .btn-con {
+  display: flex;
+  display: -ms-flexbox;
+}
+
+#cookie-consent .modal-dialog .modal-footer .btn-con .btn {
+  display: inline-block;
+  flex-grow: 1;
+  color: #fff;
+  text-align: center;
+}
+
+#cookie-consent .modal-dialog .modal-footer .btn-con .btn:first-child {
+  background-color: #67809f;
+  margin-right: 1em;
+}
+
+#cookie-consent .modal-dialog .modal-footer .btn-con .btn:last-child {
+  background-color: #926fb1;
+  margin-left: 1em;
+}
 /*# sourceMappingURL=main.css.map */
