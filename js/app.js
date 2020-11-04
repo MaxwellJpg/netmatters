@@ -1,22 +1,10 @@
 
 //IE check
 if (window.document.documentMode) {
-    alert('Please consider using a different browser');
+    //alert('Please consider using a different browser');
     $('.hd-wrapper').addClass('ie-hd-style');
     $('.service-list').addClass('ie-service-grid');
     $('.news').addClass('ie-news-grid');
-
-    new Mmenu("#side-nav", {
-        // options
-        "slidingSubmenus": false,
-        "navbars": [{
-            "use": "false",
-        }],
-        "extensions": [
-            "pagedim-black",
-            "position-right",
-        ]
-    });
 }
 
 
@@ -26,7 +14,7 @@ if (window.document.documentMode) {
 Mmenu.configs.offCanvas.page.selector = ".wrapper";
 
 document.addEventListener(
-    "DOMContentLoaded", () => {
+    "DOMContentLoaded", function () {
         new Mmenu("#side-nav", {
             // options
             "slidingSubmenus": false,
@@ -61,10 +49,9 @@ function PopUp(hideOrshow) {
     if (hideOrshow == 'hide') {
         popWrap.css('display', 'none');
     }
-    else if (localStorage.getItem("popupWasShown") == null) {
+    else if (!localStorage.getItem("popupWasShown")) {
         localStorage.setItem("popupWasShown", 1);
         popWrap.removeAttr("style");
-        console.log('logginnggggg');
     }
 }
 window.onload = function () {
@@ -73,4 +60,6 @@ window.onload = function () {
     }, 0);
 }
 
-$("#accept-cookies").on('click', () => PopUp('hide'));
+$("#accept-cookies").on('click', function () {
+    PopUp('hide')
+});
