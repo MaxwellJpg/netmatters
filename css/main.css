@@ -1557,8 +1557,14 @@ footer .ft a:hover {
   background-color: #f62559;
 }
 
+#side-nav .divider {
+  background-color: #333645;
+  color: #fff;
+}
+
 #side-nav .sub {
   background-color: #262834;
+  color: #fff;
 }
 
 #side-nav .sub i {
@@ -1624,6 +1630,10 @@ footer .ft a:hover {
   font-size: 1.2em;
   border-bottom: 1px solid rgba(140, 130, 115, 0.25);
   border-top: 1px solid rgba(140, 130, 115, 0.25);
+}
+
+.mm-panel {
+  background-color: #333645;
 }
 
 .carousel {

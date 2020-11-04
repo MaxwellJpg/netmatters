@@ -295,8 +295,14 @@
 //SIDE NAV
 #side-nav {
     @include nav-style();
+    
+    .divider {
+        background-color: $dark;
+        color: $white;
+    }
     .sub {
         background-color: #262834;
+        color: $white;
         i {
             padding: 0.9em;
         }
@@ -358,6 +364,9 @@
         font-size: 1.2em;
         border-bottom: 1px solid rgba(140, 130, 115, 0.25);
         border-top: 1px solid rgba(140, 130, 115, 0.25);
+    }
+    &-panel {
+        background-color: #333645;
     }
 }
 //SIDE NAV end
@@ -578,7 +587,7 @@
         background-color: #3b5998;
     }
 }
-//social icon
+//social icon end
 
 //CLIENTS
 .accreditations {
@@ -623,6 +632,8 @@
     }
 }
 //Clients end
+
+//COOKIE POPUP
 #cookie-consent {
     position: fixed;
     top: 0;
@@ -691,3 +702,4 @@
         }
     }
 }
+//cookie popup end
