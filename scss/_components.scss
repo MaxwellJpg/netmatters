@@ -128,10 +128,10 @@
 .menu {
     order: 4;
     height: 3.75em;
+    height: 3.75em;
     padding: 0.2em 0.75em;
     border-radius: 0.25em;
     text-align: center;
-    vertical-align: center;
     color: white;
     background-color: $dark;
 
@@ -331,6 +331,12 @@
                 font-size: 1.125rem;
             }
         }
+
+        &:hover {
+            i {
+                color: $white;
+            }
+        }
     }
 
     .l2 {
@@ -380,6 +386,7 @@
     
     color: $white;
     background-color: $dark;
+    @include carouselStyle();
     
     &-content {
         position: absolute;
@@ -404,7 +411,6 @@
         .btn {
             font-size: 1.3em;
             color: $white;
-            background-color: get-color(web);
         }
     }
     .img-con:before {

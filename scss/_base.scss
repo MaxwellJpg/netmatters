@@ -630,6 +630,27 @@ button {
     }
 }
 
+@mixin carouselStyle() {
+    .webbtn {
+        background-color: get-color(web);
+    }
+    .itbtn {
+        background-color: get-color(it);
+    }
+    .telecomsbtn {
+        background-color: get-color(telecoms);
+    }
+    .softwarebtn {
+        background-color: get-color(software);
+    }
+    .digitalbtn {
+        background-color: get-color(digital);
+    }
+    .cyberbtn {
+        background-color: get-color(security);
+    }
+}
+
 //===============
 //FUNCTIONS
 //===============
