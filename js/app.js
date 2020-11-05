@@ -3,10 +3,10 @@
 if (window.document.documentMode) {
     //alert('Please consider using a different browser');
     $('.hd-wrapper').addClass('ie-hd-style');
+    $('.Divider').addClass('divider');
     $('.service-list').addClass('ie-service-grid');
     $('.news').addClass('ie-news-grid');
 }
-
 
 /*
 *   SIDE MENU

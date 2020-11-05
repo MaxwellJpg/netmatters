@@ -128,10 +128,10 @@
 .menu {
     order: 4;
     height: 3.75em;
+    height: 3.75em;
     padding: 0.2em 0.75em;
     border-radius: 0.25em;
     text-align: center;
-    vertical-align: center;
     color: white;
     background-color: $dark;
 
@@ -295,8 +295,14 @@
 //SIDE NAV
 #side-nav {
     @include nav-style();
+    
+    .divider {
+        background-color: $dark;
+        color: $white;
+    }
     .sub {
         background-color: #262834;
+        color: $white;
         i {
             padding: 0.9em;
         }
@@ -323,6 +329,12 @@
             font-size: .8em;
             &:after {
                 font-size: 1.125rem;
+            }
+        }
+
+        &:hover {
+            i {
+                color: $white;
             }
         }
     }
@@ -359,6 +371,9 @@
         border-bottom: 1px solid rgba(140, 130, 115, 0.25);
         border-top: 1px solid rgba(140, 130, 115, 0.25);
     }
+    &-panel {
+        background-color: #333645;
+    }
 }
 //SIDE NAV end
 
@@ -371,6 +386,7 @@
     
     color: $white;
     background-color: $dark;
+    @include carouselStyle();
     
     &-content {
         position: absolute;
@@ -395,7 +411,6 @@
         .btn {
             font-size: 1.3em;
             color: $white;
-            background-color: get-color(web);
         }
     }
     .img-con:before {
@@ -578,7 +593,7 @@
         background-color: #3b5998;
     }
 }
-//social icon
+//social icon end
 
 //CLIENTS
 .accreditations {
@@ -623,6 +638,8 @@
     }
 }
 //Clients end
+
+//COOKIE POPUP
 #cookie-consent {
     position: fixed;
     top: 0;
@@ -691,3 +708,4 @@
         }
     }
 }
+//cookie popup end
