@@ -8,6 +8,15 @@ if (window.document.documentMode) {
     $('.news').addClass('ie-news-grid');
 }
 
+function disableScroll() {
+    document.body.style.overflow = 'hidden';
+    document.querySelector('html').scrollTop = window.scrollY;
+}
+    
+function enableScroll() {
+    document.body.style.overflow = null;
+}
+
 /*
 *   SIDE MENU
 */
@@ -48,10 +57,12 @@ const popWrap = $('#cookie-consent');
 function PopUp(hideOrshow) {
     if (hideOrshow == 'hide') {
         popWrap.css('display', 'none');
+        enableScroll();
     }
     else if (!localStorage.getItem("popupWasShown")) {
         localStorage.setItem("popupWasShown", 1);
         popWrap.removeAttr("style");
+        disableScroll();
     }
 }
 window.onload = function () {
