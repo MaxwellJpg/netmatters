@@ -489,7 +489,6 @@ header {
   max-width: 400px;
   height: auto;
   max-height: 70px;
-  margin-bottom: 0.5em;
   cursor: pointer;
 }
 
@@ -1320,7 +1319,6 @@ footer .ft a:hover {
       -ms-flex-order: 4;
           order: 4;
   height: 3.75em;
-  height: 3.75em;
   padding: 0.2em 0.75em;
   border-radius: 0.25em;
   text-align: center;
@@ -1782,8 +1780,14 @@ footer .ft a:hover {
 }
 
 .carousel-content h2 {
-  font-size: 3em;
+  font-size: 2em;
   margin-bottom: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .carousel-content h2 {
+    font-size: 3em;
+  }
 }
 
 .carousel-content p {

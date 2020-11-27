@@ -128,7 +128,6 @@
 .menu {
     order: 4;
     height: 3.75em;
-    height: 3.75em;
     padding: 0.2em 0.75em;
     border-radius: 0.25em;
     text-align: center;
@@ -396,8 +395,11 @@
         right: 10%;
 
         h2 {
-            font-size: 3em;
+            font-size: 2em;
             margin-bottom: 0;
+            @include mq(med) {
+                font-size: 3em;
+            }
         }
         p {
             font-size: 1.2em;
