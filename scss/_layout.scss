@@ -80,7 +80,7 @@ header {
 
 //sevice list start
 .service-list{
-    @include card-grid();
+    @include card-grid(); //in base.scss
 
     .service-icon {
         display: inline-block;
