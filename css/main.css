@@ -1781,13 +1781,6 @@ footer .ft a:hover {
   right: 10%;
 }
 
-@media only screen and (min-width: 992px) {
-  .carousel-content {
-    left: 20%;
-    right: 35%;
-  }
-}
-
 .carousel-content h2 {
   font-size: 3em;
   margin-bottom: 0;

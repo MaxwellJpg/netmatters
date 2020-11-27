@@ -395,10 +395,6 @@
         left: 10%;
         right: 10%;
 
-        @include mq(lg) {
-            left: 20%;
-            right: 35%;
-        }
         h2 {
             font-size: 3em;
             margin-bottom: 0;
