@@ -93,15 +93,13 @@ $(document).ready(function() {
 
     $(window).on("scroll", function() {
         let fromTop = $(window).scrollTop();
-        let scolling = 0;
 
         if(fromTop > position) { //down
-            scrolling = 0;
-            $("body").addClass("down", (fromTop > 400));
-        } else { //up
-            scrolling = 1;
             $("body").removeClass("down");
+        } else { //up
+            $("body").addClass("down", (fromTop > 400));
         }
+        position = fromTop;
     });
 });
 //sticky header end
