@@ -82,3 +82,30 @@ window.onload = function () {
 $("#accept-cookies").on('click', function () {
     PopUp('hide')
 });
+
+//Sticky header
+let position = $(window).scrollTop();
+$(document).ready(function() {
+    const $header = $("header"),
+        $clone = $header.before($header.clone().addClass("clone")); 
+        let position = $(window).scrollTop();
+
+    $(window).on("scroll", function() {
+        let fromTop = $(window).scrollTop();
+        let scolling = 0;
+
+          if(fromTop > position) { //down
+            scrolling = 0;
+        } else { //up
+            scrolling = 1;
+        }
+
+        if(scrolling == 1) { //if up drop down
+            $("body").addClass("down", (fromTop > 400));
+        } else { //if down slide up
+            $("body").removeClass("down");
+        }
+        position = fromTop;
+    });
+});
+//sticky header end

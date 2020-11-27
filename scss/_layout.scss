@@ -2,6 +2,22 @@
 header {
     background-color: $white;
     padding-top: 1em;
+
+    position: relative;
+}
+
+header.clone {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    transform: translateY(-100%);
+    transition: 0.2s transform cubic-bezier(.3,.73,.3,.74);
+}
+
+body.down header.clone {
+    transform: translateY(0);
 }
 
 .center-hd {
@@ -143,7 +159,7 @@ header {
     }
 }
 
-//IE support for layout
+//IE support for la yout
 .ie-service-grid {
     @include ie-service-card-layout();
 }
