@@ -8,12 +8,14 @@ if (window.document.documentMode) {
     $('.news').addClass('ie-news-grid');
 }
 
+//hover for sponsor image to toggle greyscale
 $('.list .item').hover(
     function(){
         $(this).children().toggleClass('grayscale-off');
     }
 );
 
+//Scroll locks
 function disableScroll() {
     document.body.style.overflow = 'hidden';
     document.querySelector('html').scrollTop = window.scrollY;
