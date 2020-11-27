@@ -1927,8 +1927,6 @@ footer .ft a:hover {
   }
   .clients .container .list .item {
     position: relative;
-    -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
   }
   .clients .container .list .item .tooltip {
     visibility: hidden;
@@ -1976,10 +1974,6 @@ footer .ft a:hover {
     border-color: #333645 transparent transparent;
     border-style: solid;
     border-width: 35px 36px 0;
-  }
-  .clients .container .list .item:hover {
-    -webkit-filter: grayscale(0%);
-            filter: grayscale(0%);
   }
   .clients .container .list .item:hover .tooltip {
     visibility: visible;
@@ -2058,14 +2052,8 @@ footer .ft a:hover {
             justify-content: space-between;
   }
   .accreditations .container .list .item img {
-    -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
     width: 90%;
     height: auto;
-  }
-  .accreditations .container .list .item img:hover {
-    -webkit-filter: grayscale(0%);
-            filter: grayscale(0%);
   }
 }
 

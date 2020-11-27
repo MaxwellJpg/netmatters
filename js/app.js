@@ -8,6 +8,12 @@ if (window.document.documentMode) {
     $('.news').addClass('ie-news-grid');
 }
 
+$('.list .item').hover(
+    function(){
+        $(this).children().toggleClass('grayscale-off');
+    }
+);
+
 function disableScroll() {
     document.body.style.overflow = 'hidden';
     document.querySelector('html').scrollTop = window.scrollY;
