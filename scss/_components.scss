@@ -44,6 +44,7 @@
         height: 2.8em;
         flex-grow: 4;
         order: 5;
+        margin-top: 0.5em;
 
         @include mq(med) {
             flex-basis: 25%; 
@@ -127,24 +128,35 @@
 //menu button start
 .menu {
     order: 4;
-    height: 3.75em;
-    padding: 0.2em 0.75em;
+    height: 3em;
+    width: 3.5em;
+    padding: 0.2em 0;
     border-radius: 0.25em;
     text-align: center;
     color: white;
     background-color: $dark;
+    @include mq(sm) {
+        height: 3.75em;
+        width: 3.75em;
+    }
 
     i {
         margin: 0;
         padding: 0;
-        font-size: 2em;
-        font-weight: 400;
+        font-size: 1.3em;
+        font-weight: 200;
+        @include mq(sm) {
+            font-size: 2em;
+        }
     }
     h5 {
         margin:0;
         padding: 0;
-        font-weight: 400;
         text-transform: uppercase;
+        font-weight: 400;
+        @include mq(sm) {
+            font-weight: 400;
+        }
     }
 }
 // menu end
@@ -152,8 +164,12 @@
 //header telephone icon
 .telephone {
     font-size: 2em;
-    @include mq(med) {
-        display: none;
+    margin: 0 0.5em;
+    @include mq(sm) {
+        margin: 0;
+        @include mq(med) {
+            display: none; 
+        }
     }
 }
 

@@ -1191,6 +1191,7 @@ footer .ft a:hover {
   -webkit-box-ordinal-group: 6;
       -ms-flex-order: 5;
           order: 5;
+  margin-top: 0.5em;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1318,33 +1319,60 @@ footer .ft a:hover {
   -webkit-box-ordinal-group: 5;
       -ms-flex-order: 4;
           order: 4;
-  height: 3.75em;
-  padding: 0.2em 0.75em;
+  height: 3em;
+  width: 3.5em;
+  padding: 0.2em 0;
   border-radius: 0.25em;
   text-align: center;
   color: white;
   background-color: #333645;
 }
 
+@media only screen and (min-width: 600px) {
+  .menu {
+    height: 3.75em;
+    width: 3.75em;
+  }
+}
+
 .menu i {
   margin: 0;
   padding: 0;
-  font-size: 2em;
-  font-weight: 400;
+  font-size: 1.3em;
+  font-weight: 200;
+}
+
+@media only screen and (min-width: 600px) {
+  .menu i {
+    font-size: 2em;
+  }
 }
 
 .menu h5 {
   margin: 0;
   padding: 0;
-  font-weight: 400;
   text-transform: uppercase;
+  font-weight: 400;
+}
+
+@media only screen and (min-width: 600px) {
+  .menu h5 {
+    font-weight: 400;
+  }
 }
 
 .telephone {
   font-size: 2em;
+  margin: 0 0.5em;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
+  .telephone {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 600px) and (min-width: 768px) {
   .telephone {
     display: none;
   }
