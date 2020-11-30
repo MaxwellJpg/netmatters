@@ -94,10 +94,10 @@ $(document).ready(function() {
     $(window).on("scroll", function() {
         let fromTop = $(window).scrollTop();
 
-        if(fromTop > position) { //down
+        if(fromTop > position && fromTop > 200) { //down
             $("body").removeClass("down");
         } else { //up
-            $("body").addClass("down", (fromTop > 400));
+            $("body").addClass("down");
         }
         position = fromTop;
     });
