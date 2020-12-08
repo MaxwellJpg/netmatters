@@ -917,7 +917,7 @@ body.down header.clone {
 
 .news .card .img-container {
   overflow: hidden;
-  height: 250px;
+  max-height: 250px;
   position: relative;
 }
 

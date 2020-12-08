@@ -214,7 +214,7 @@ body.down header.clone {
         .img {
             &-container {
                 overflow: hidden;
-                height:250px;
+                max-height:250px;
                 position: relative;
                
                 .category {
@@ -234,7 +234,7 @@ body.down header.clone {
                 img {
                     width: 100%;
                     height: 250px;
-                     transition: transform 0.2s;
+                    transition: transform 0.2s;
                     &:hover {
                         transform: scale(1.1);
                         cursor: pointer;
@@ -265,7 +265,7 @@ body.down header.clone {
             }
 
         }
-
+        /////////////////////////////////// dynamic colors needed!
         &:nth-child(2n + 1) {
             h4 {
                 color: map-get($service-colors, '2'); //blue
@@ -284,6 +284,7 @@ body.down header.clone {
                 background-color: map-get($service-colors, '5'); //purple
             }
         }
+        /////////////////////////////////
         
         .author {
             text-align: left;
@@ -315,6 +316,7 @@ body.down header.clone {
 
     //News card layout
     @include mq(med){
+        //use last child instead, so the class names aren't needed
         .news3 {
             display: none;
 

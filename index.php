@@ -194,7 +194,7 @@ include_once('template/header.php');?>
                     ?>
                         <article class="card news1">
                             <div class="img-container">
-                                <a class="category" href="#">Careers</a>
+                                <a class="category" href="#"><?= $article['type'] ?></a>
                                 <!-- img -->
                                 <img src="<?= $article['img'] ?>" alt="Article1">
                             </div>
@@ -205,11 +205,12 @@ include_once('template/header.php');?>
                                 <p>
                                     <?php echo preg_replace('/\s+?(\S+)?$/', '', substr($article['description'], 0, 100)) . '...'; ?>
                                 </p>
+                                
                                 <a class="btn" href="#">Read more</a>
 
                                 <div class="author">
                                     <div class="avatar">
-                                        <img src="<?= $article['author_img'] ?>" alt="netmatters avatar">
+                                        <img src="<?= $article['author_img'] ?>" alt="<?= $article['name'] ?> avatar">
                                     </div>
                                     <div class="details">
                                         <!-- author -->
