@@ -566,9 +566,7 @@
                             }
                         }
                     }
-                   // filter: grayscale(100%);
                     &:hover {
-                       // filter: grayscale(0%);
                         .tooltip {
                         visibility: visible;
                         }
@@ -638,13 +636,8 @@
 
                 .item {
                     img {
-                        //filter: grayscale(100%);
                         width: 90%;
                         height: auto;
-
-                        &:hover {
-                         //  filter: grayscale(0%);
-                        }
                     }
                 }
             }

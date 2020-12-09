@@ -185,22 +185,25 @@ include_once('template/header.php');?>
                         $stmt = $conn->prepare("
                             SELECT * FROM `news_article` AS article 
                             INNER JOIN `news_author` AS author 
-                            ON article.author_id = author.author_id;"); 
+                            ON article.author_id = author.author_id
+                            ORDER BY `date_published` DESC
+                            LIMIT 3;"); 
                         $stmt->execute(); 
                         $dbresults = $stmt->fetchAll(PDO::FETCH_ASSOC); 
 
                         foreach($dbresults as $article)  
                         {   
                     ?>
-                        <article class="card news1">
+                        <article class="card prfx-color--<?= $article['service'] ?>">
                             <div class="img-container">
-                                <a class="category" href="#"><?= $article['type'] ?></a>
+                                <!-- type -->
+                                <a class="category-type" href="#"><?= $article['type'] ?></a>
                                 <!-- img -->
                                 <img src="<?= $article['img'] ?>" alt="Article1">
                             </div>
                             <div class="container">
-                                <!-- Title -->
-                                <h4><?= $article['title'] ?></h4>
+                                <!-- Title, truncated to 45chars -->
+                                <h4><?php echo preg_replace('/\s+?(\S+)?$/', '', substr($article['title'], 0, 50)) . '...'; ?></h4>
                                 <!-- description, truncated to 100chars -->
                                 <p>
                                     <?php echo preg_replace('/\s+?(\S+)?$/', '', substr($article['description'], 0, 100)) . '...'; ?>
@@ -222,7 +225,11 @@ include_once('template/header.php');?>
                             </div>
                         </article>
                         <?php } ?>
-                        <article class="card news2">
+
+
+<!-- 
+
+                        <article class="card">
                             <div class="img-container">
                                 <a class="category" href="#">Insights</a>
                                 <img src="http://placeimg.com/500/500/tech" alt="Article2">
@@ -245,7 +252,7 @@ include_once('template/header.php');?>
                                 </div>
                             </div>
                         </article>
-                        <article class="card news3">
+                        <article class="card">
                             <div class="img-container">
                                 <a class="category" href="#">Careers</a>
                                 <img src="http://placeimg.com/500/500/tech" alt="Article3">
@@ -267,7 +274,7 @@ include_once('template/header.php');?>
                                     </div>
                                 </div>
                             </div>
-                        </article>
+                        </article> -->
                     </div>
                 </div>
             </main>

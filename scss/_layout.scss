@@ -211,37 +211,35 @@ body.down header.clone {
 
     .card {
         padding: 0;
-        .img {
-            &-container {
-                overflow: hidden;
-                max-height:250px;
-                position: relative;
-               
-                .category {
-                    position: absolute;
-                    top: 10px;
-                    right: 0;
-                    z-index: 1;
-                    
-                    font-size: .75rem;
-                    padding: 0 10px;
-                    line-height: 1.438rem;
-                    text-transform: uppercase;
+        .img-container {
+            overflow: hidden;
+            //height:250px;
+            position: relative;
+            
+            .category-type {
+                position: absolute;
+                top: 10px;
+                right: 0;
+                z-index: 1;
+                
+                font-size: .75rem;
+                padding: 0 10px;
+                line-height: 1.438rem;
+                text-transform: uppercase;
 
-                    color: $white;
-                    background-color: #333645;//default           
-                }
-                img {
-                    width: 100%;
-                    height: 250px;
-                    transition: transform 0.2s;
-                    &:hover {
-                        transform: scale(1.1);
-                        cursor: pointer;
-                    }
+                color: $white;         
+            }
+            img {
+                width: 100%;
+                height: auto;
+                transition: transform 0.2s;
+                &:hover {
+                    transform: scale(1.1);
+                    cursor: pointer;
                 }
             }
         }
+
         .container {
             text-align: left;
             padding: 1.5em;
@@ -253,6 +251,7 @@ body.down header.clone {
                 font-weight: 600;
                 margin-top: 0;
                 padding-top: 0;
+                text-transform: capitalize;
                 @include mq (med) {
                     display: inline-block;
                     height: 3em;
@@ -265,26 +264,6 @@ body.down header.clone {
             }
 
         }
-        /////////////////////////////////// dynamic colors needed!
-        &:nth-child(2n + 1) {
-            h4 {
-                color: map-get($service-colors, '2'); //blue
-            }
-            .btn,
-            .category {
-                background-color: map-get($service-colors, '2'); //blue
-            }
-        }
-        &:nth-child(2) {
-            h4 {
-                color: map-get($service-colors, '5'); //purple
-            }
-            .btn,
-            .category {
-                background-color: map-get($service-colors, '5'); //purple
-            }
-        }
-        /////////////////////////////////
         
         .author {
             text-align: left;
@@ -296,9 +275,10 @@ body.down header.clone {
                 img {
                     width: 3em;
                     height: 3em;
+                    border-radius: 50%;
                 }
 
-                border-radius: 50%;
+                
                 display: inline-block;        
             }
             .details {
@@ -314,10 +294,25 @@ body.down header.clone {
         }
     }
 
+    //gets color for each news card
+    .prfx-color {
+        @each $service in map-keys($color-key) {
+          &--#{$service} {
+            h4 {
+                color: get-color($service);
+            }
+            .btn,
+            .category-type {
+                background-color: get-color($service);
+            }
+          }
+        }
+    }
+
     //News card layout
     @include mq(med){
         //use last child instead, so the class names aren't needed
-        .news3 {
+        article:last-of-type {
             display: none;
 
             @include mq(xlg) {
