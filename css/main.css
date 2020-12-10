@@ -2191,4 +2191,15 @@ footer .ft a:hover {
   background-color: #926fb1;
   margin-left: 1em;
 }
+
+.section-hd {
+  background-color: #333645;
+  color: #fff;
+}
+
+.section-hd h1 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  max-width: 750px;
+}
 /*# sourceMappingURL=main.css.map */

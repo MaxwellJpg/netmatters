@@ -103,3 +103,9 @@ $(document).ready(function() {
     });
 });
 //sticky header end
+
+//nav links
+$('.contact').click(function(){
+    document.location.href ='contact-us.php';
+    console.log('test');
+ });

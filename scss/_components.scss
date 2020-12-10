@@ -716,3 +716,14 @@
     }
 }
 //cookie popup end
+
+//section head - contact us
+.section-hd {
+    background-color: $dark;
+    color: $white;
+    h1 {
+        font-size: 2.25rem;
+        font-weight: 400;
+        max-width: 750px;
+    }
+}
