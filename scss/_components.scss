@@ -727,3 +727,14 @@
         max-width: 750px;
     }
 }
+
+.contact-list {
+    strong {
+        font-weight: 600;
+    }
+    a {
+        font-weight: 600;
+        color: map-get($service-colors, '5');
+        font-size: 2rem;
+    }
+}

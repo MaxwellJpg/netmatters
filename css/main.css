@@ -2202,4 +2202,14 @@ footer .ft a:hover {
   font-weight: 400;
   max-width: 750px;
 }
+
+.contact-list strong {
+  font-weight: 600;
+}
+
+.contact-list a {
+  font-weight: 600;
+  color: #926fb1;
+  font-size: 2rem;
+}
 /*# sourceMappingURL=main.css.map */
