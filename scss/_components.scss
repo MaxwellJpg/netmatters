@@ -721,10 +721,12 @@
 .section-hd {
     background-color: $dark;
     color: $white;
+    height: 87px;
     h1 {
         font-size: 2.25rem;
         font-weight: 400;
         max-width: 750px;
+        margin: 0;
     }
 }
 

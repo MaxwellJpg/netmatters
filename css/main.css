@@ -2195,12 +2195,14 @@ footer .ft a:hover {
 .section-hd {
   background-color: #333645;
   color: #fff;
+  height: 87px;
 }
 
 .section-hd h1 {
   font-size: 2.25rem;
   font-weight: 400;
   max-width: 750px;
+  margin: 0;
 }
 
 .contact-list strong {
