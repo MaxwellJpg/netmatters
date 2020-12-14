@@ -722,15 +722,21 @@
     background-color: $dark;
     color: $white;
     height: 87px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4em;
+   
     h1 {
         font-size: 2.25rem;
         font-weight: 400;
         max-width: 750px;
-        margin: 0;
     }
 }
 
 .contact-list {
+    p {
+        margin-bottom: 1.5em;
+    }
     strong {
         font-weight: 600;
     }
@@ -738,5 +744,26 @@
         font-weight: 600;
         color: map-get($service-colors, '5');
         font-size: 2rem;
+    }
+    .accordion {
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        i {
+            transition: transform 0.3s ease-in-out;
+        }
+        .rotate { 
+            transform:rotate(180deg);
+        }   
+    }
+    .out-of-hours-content {
+        //max-height: 0;
+        overflow: hidden;
+        display: none;
+       // transition: max-height 0.2s ease-out;
+    }
+    .active {
+        display: block;
     }
 }

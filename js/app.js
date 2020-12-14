@@ -107,5 +107,10 @@ $(document).ready(function() {
 //nav links
 $('.contact').click(function(){
     document.location.href ='contact-us.php';
-    console.log('test');
+ });
+
+ //contact-us
+ $('.accordion').click(function(){
+    $('.out-of-hours-content').toggleClass("active");
+    $('.accordion i').toggleClass("rotate");
  });

@@ -2196,13 +2196,23 @@ footer .ft a:hover {
   background-color: #333645;
   color: #fff;
   height: 87px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4em;
 }
 
 .section-hd h1 {
   font-size: 2.25rem;
   font-weight: 400;
   max-width: 750px;
-  margin: 0;
+}
+
+.contact-list p {
+  margin-bottom: 1.5em;
 }
 
 .contact-list strong {
@@ -2213,5 +2223,31 @@ footer .ft a:hover {
   font-weight: 600;
   color: #926fb1;
   font-size: 2rem;
+}
+
+.contact-list .accordion:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.contact-list .accordion i {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.contact-list .accordion .rotate {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.contact-list .out-of-hours-content {
+  overflow: hidden;
+  display: none;
+}
+
+.contact-list .active {
+  display: block;
 }
 /*# sourceMappingURL=main.css.map */
