@@ -46,8 +46,10 @@ include_once($_SERVER['DOCUMENT_ROOT']. '/netmatters/template/header.php');?>
                 provided within 45 minutes of your call.</p>
         </div>
     </div>
+</div>
 
-    <div>
+<div class="wrap">
+    <div class="contact-form">
         <form method="POST" action="" accept-charset="UTF-8" id="contact-form">
             <label for="name" class="required">Your Name</label>
             <input class="form-control" name="name" type="text" value="" id="name">
@@ -64,8 +66,16 @@ include_once($_SERVER['DOCUMENT_ROOT']. '/netmatters/template/header.php');?>
             <label for="message" class="required">Message</label>
             <textarea class="form-control" name="message" cols="50" rows="10" id="message"></textarea>
 
+            <div class="check-container">
+                <input class="checkbox" name="marketing_preference" type="checkbox" value="1">
+                <span class="media-body">
+                    Please tick this box if you wish to receive marketing information from us.
+                    Please see our <a href="https://www.netmatters.co.uk/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> 
+                    for more information on how we use your data
+                </span>
+            </div>
 
-            <button name="submit" class="btn btn-primary">
+            <button name="submit" class="btn">
                 Send Enquiry
             </button>
         </form>

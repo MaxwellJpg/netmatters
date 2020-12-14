@@ -767,3 +767,61 @@
         display: block;
     }
 }
+
+.contact-form {
+    margin: 2em 0;
+    label {
+        font-weight: 600;
+    }
+    .required:after {
+        content: " *";
+        color: #d24d57;
+    }
+    .form-control {
+        width: 100%;
+        height: 47px;
+        padding: 5px 15px;
+        margin-top: 0.125em;
+        margin-bottom: 1em;
+
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        border-radius: 2px;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+    .form-control:focus {
+        border-color: #5bc0de;
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(91,192,222,.6);
+    }
+    .check-container {
+        margin-bottom: 2.5em;
+        input {
+            border-radius: 3px;
+            outline: 3px solid $dark;
+            height: 32px;
+            width: 32px;
+            position: relative;
+            float: left;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        span {
+            font-weight: 600;
+            line-height: 32px;
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+    .btn {
+        background-color: $dark;
+        color: $white;
+        border: none;
+
+        font-weight: 400;
+        font-size: 1em;
+        padding: 1em;
+    }
+}
