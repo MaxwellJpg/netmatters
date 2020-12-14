@@ -795,6 +795,9 @@
         outline: 0;
         box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(91,192,222,.6);
     }
+    .form-control[id='message'] {
+        height: 100px;
+    }
     .check-container {
         margin-bottom: 2.5em;
         input {
@@ -823,5 +826,60 @@
         font-weight: 400;
         font-size: 1em;
         padding: 1em;
+    }
+}
+
+.card {
+    margin-bottom: 2em;
+    .details {
+        background-color: $white;
+        border: 1px solid #ccc;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        text-align: center;
+        padding: 2em;
+    }
+    
+    .location-icon {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        margin-bottom: 0.5em;
+        border-radius: 50%;
+
+        background-color: $dark;
+        color: $white;
+        i {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+    }
+    h2 {
+        padding-bottom: 0.5em;
+        position: relative;
+        font-size: 1.125em;
+    }
+    h2:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 28px;
+        height: 3px;
+        display: block;
+        background-color: $dark;
+    }
+    p {
+        font-size: .8215em;
+        line-height: 1.4rem;
+    }
+    .map {
+        margin:0;
+    }
+    .map iframe {
+        width: 100%;
+        height: 300px;
     }
 }

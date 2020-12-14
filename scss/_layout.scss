@@ -370,3 +370,15 @@ footer {
         }
     }
 }
+//footer end
+
+//contact us
+.card-container {
+    @include mq(med) {
+        display: flex;
+        gap: 2em;
+        .card {
+            width: 50%;
+        }   
+    }
+}

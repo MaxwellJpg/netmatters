@@ -1191,6 +1191,18 @@ footer .ft a:hover {
   text-decoration: underline;
 }
 
+@media only screen and (min-width: 768px) {
+  .card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2em;
+  }
+  .card-container .card {
+    width: 50%;
+  }
+}
+
 .support,
 .contact {
   display: none;
@@ -2288,6 +2300,10 @@ footer .ft a:hover {
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
 }
 
+.contact-form .form-control[id='message'] {
+  height: 100px;
+}
+
 .contact-form .check-container {
   margin-bottom: 2.5em;
 }
@@ -2319,5 +2335,66 @@ footer .ft a:hover {
   font-weight: 400;
   font-size: 1em;
   padding: 1em;
+}
+
+.card {
+  margin-bottom: 2em;
+}
+
+.card .details {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  text-align: center;
+  padding: 2em;
+}
+
+.card .location-icon {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.5em;
+  border-radius: 50%;
+  background-color: #333645;
+  color: #fff;
+}
+
+.card .location-icon i {
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+.card h2 {
+  padding-bottom: 0.5em;
+  position: relative;
+  font-size: 1.125em;
+}
+
+.card h2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 28px;
+  height: 3px;
+  display: block;
+  background-color: #333645;
+}
+
+.card p {
+  font-size: .8215em;
+  line-height: 1.4rem;
+}
+
+.card .map {
+  margin: 0;
+}
+
+.card .map iframe {
+  width: 100%;
+  height: 300px;
 }
 /*# sourceMappingURL=main.css.map */
