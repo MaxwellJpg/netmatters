@@ -111,6 +111,6 @@ $('.contact').click(function(){
 
  //contact-us
  $('.accordion').click(function(){
-    $('.out-of-hours-content').toggleClass("active");
+    $('.out-of-hours').toggleClass("active");
     $('.accordion i').toggleClass("rotate");
  });

@@ -743,6 +743,9 @@
     a {
         font-weight: 600;
         color: map-get($service-colors, '5');
+        font-size: 1.625rem;
+    }
+    .num {
         font-size: 2rem;
     }
     .accordion {
@@ -764,7 +767,12 @@
        // transition: max-height 0.2s ease-out;
     }
     .active {
-        display: block;
+        .out-of-hours-content {
+            display: block;
+        }
+        .accordion {
+            text-decoration: underline;
+        }
     }
 }
 
@@ -839,7 +847,6 @@
         text-align: center;
         padding: 2em;
     }
-    
     .location-icon {
         display: inline-block;
         width: 60px;

@@ -1191,6 +1191,46 @@ footer .ft a:hover {
   text-decoration: underline;
 }
 
+@media only screen and (min-width: 992px) {
+  .contact-container .contact-form form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 2em;
+  }
+  .contact-container .contact-form form .form-group {
+    width: 48%;
+  }
+  .contact-container .contact-form form .form-group-mes {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1260px) {
+  .contact-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    gap: 2em;
+  }
+  .contact-container .contact-list {
+    width: 30%;
+  }
+  .contact-container .contact-form {
+    width: 70%;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .card-container {
     display: -webkit-box;
@@ -2234,6 +2274,10 @@ footer .ft a:hover {
 .contact-list a {
   font-weight: 600;
   color: #926fb1;
+  font-size: 1.625rem;
+}
+
+.contact-list .num {
   font-size: 2rem;
 }
 
@@ -2259,8 +2303,12 @@ footer .ft a:hover {
   display: none;
 }
 
-.contact-list .active {
+.contact-list .active .out-of-hours-content {
   display: block;
+}
+
+.contact-list .active .accordion {
+  text-decoration: underline;
 }
 
 .contact-form {

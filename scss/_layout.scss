@@ -373,6 +373,34 @@ footer {
 //footer end
 
 //contact us
+.contact-container {
+    @include mq(lg) {
+        .contact-form form{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 2em;
+            .form-group {
+                width: 48%;
+                &-mes {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @include mq(xlg) {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 2em;
+        .contact-list {
+            width: 30%;
+        }
+        .contact-form {
+            width: 70%;
+        } 
+    }
+}
+
 .card-container {
     @include mq(med) {
         display: flex;
