@@ -756,11 +756,15 @@
     display: flex;
     align-items: center;
     margin-bottom: 4em;
-   
     h1 {
         font-size: 2.25rem;
         font-weight: 400;
         max-width: 750px;
+    }
+    @include mq(lg) {
+        background-color: transparent;
+        color: $dark;
+        margin: 2em 0;
     }
 }
 
@@ -792,10 +796,10 @@
         }   
     }
     .out-of-hours-content {
-        //max-height: 0;
-        overflow: hidden;
+        // max-height: 0;
+        // overflow: hidden;
+        // transition: max-height 0.2s ease-out;
         display: none;
-       // transition: max-height 0.2s ease-out;
     }
     .active {
         .out-of-hours-content {

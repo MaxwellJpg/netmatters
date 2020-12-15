@@ -111,6 +111,17 @@ $('.contact').click(function(){
 
  //contact-us
  $('.accordion').click(function(){
+    // let panel = $('.out-of-hours-content');
+        
+    // console.log('test' + $('.out-of-hours').scrollHeight);
     $('.out-of-hours').toggleClass("active");
     $('.accordion i').toggleClass("rotate");
+
+    // if (panel.css('max-height') > '0px') {
+    //     panel.css('max-height', '0px'); 
+    //     console.log('test')  
+    // } else {
+    //     panel.css('max-height', '300px'); 
+    //     console.log(panel.css('max-height'));  
+    // }
  });

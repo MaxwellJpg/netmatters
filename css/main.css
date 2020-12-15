@@ -2331,6 +2331,14 @@ footer .ft a:hover {
   max-width: 750px;
 }
 
+@media only screen and (min-width: 992px) {
+  .section-hd {
+    background-color: transparent;
+    color: #333645;
+    margin: 2em 0;
+  }
+}
+
 .contact-list p {
   margin-bottom: 1.5em;
 }
@@ -2367,7 +2375,6 @@ footer .ft a:hover {
 }
 
 .contact-list .out-of-hours-content {
-  overflow: hidden;
   display: none;
 }
 
