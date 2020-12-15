@@ -96,7 +96,7 @@
             <nav id="side-nav">
                 <ul>
                     <li class="l1">
-                        <a class="contactnav" href="#">
+                        <a class="contactnav" href="/netmatters/contact-us.php  ">
                             Contact Us
                         </a>
                     </li>

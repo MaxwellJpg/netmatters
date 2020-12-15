@@ -407,6 +407,20 @@ footer {
         gap: 2em;
         .card {
             width: 50%;
+            .details {
+                height: 390px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1em 2em;
+                @include mq(lg) {
+                    padding: 2em;
+                    @include mq(lg) {
+                        padding: 3em 2em;
+                    }
+                }
+            }
         }   
     }
 }
