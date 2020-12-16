@@ -3,10 +3,6 @@ $title = "Contact Us";
 include_once($_SERVER['DOCUMENT_ROOT']. '/netmatters/template/header.php');?>
 <!-- main start inc from header -->
 
-<!-- TO DO -->
-<!-- add breadcrumb @ 768px  / -->
-<!-- header title changes @ 992px -->
-<!-- split @ 1260px -->
 <div class="breadcrumb">
     <div class="wrap">
     <ul>
@@ -63,8 +59,13 @@ include_once($_SERVER['DOCUMENT_ROOT']. '/netmatters/template/header.php');?>
         </div>
     </div>
 
-    <?php include_once('inc/form.php'); ?>
     <div class="contact-form">
+    <?php include_once('inc/form.php'); ?>
+
+        <div class="message-box">
+            <?= $alert_message ?>
+        </div>
+
         <form method="POST" action="" accept-charset="UTF-8" id="contact-form"action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <div class="form-group">
                 <label for="name" class="required">Your Name</label>
@@ -88,7 +89,7 @@ include_once($_SERVER['DOCUMENT_ROOT']. '/netmatters/template/header.php');?>
 
             <div class="form-group-mes">
                 <label for="message" class="required">Message</label>
-                <textarea class="form-control <?=$message_error?>" name="message" cols="50" rows="10" value="<?= $message ?>" id="message"></textarea>
+                <textarea class="form-control <?=$message_error?>" name="message" cols="50" rows="10" id="message"><?= $message ?></textarea>
             </div>
 
             <div class="check-container">
@@ -104,6 +105,8 @@ include_once($_SERVER['DOCUMENT_ROOT']. '/netmatters/template/header.php');?>
                 Send Enquiry
             </button>
         </form>
+
+        <!-- <h2> test: <?= count($messages) ?></h2> -->
     </div>
 </div>
 
@@ -149,8 +152,6 @@ include_once($_SERVER['DOCUMENT_ROOT']. '/netmatters/template/header.php');?>
         </div>
     </div>
 </div>
-
-
 
 <!-- main end, inc in footer -->
 <?PHP include_once($_SERVER['DOCUMENT_ROOT']. '/netmatters/template/footer.php');?>
