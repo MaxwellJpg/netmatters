@@ -2427,6 +2427,10 @@ footer .ft a:hover {
   height: 100px;
 }
 
+.contact-form .require {
+  border: 1px solid #d24d57;
+}
+
 .contact-form .check-container {
   margin-bottom: 2.5em;
 }

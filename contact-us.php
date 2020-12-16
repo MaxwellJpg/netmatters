@@ -63,31 +63,32 @@ include_once($_SERVER['DOCUMENT_ROOT']. '/netmatters/template/header.php');?>
         </div>
     </div>
 
+    <?php include_once('inc/form.php'); ?>
     <div class="contact-form">
-        <form method="POST" action="" accept-charset="UTF-8" id="contact-form">
+        <form method="POST" action="" accept-charset="UTF-8" id="contact-form"action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <div class="form-group">
                 <label for="name" class="required">Your Name</label>
-                <input class="form-control" name="name" type="text" value="" id="name">
+                <input class="form-control <?=$name_error?>"name="name" type="text" value="<?= $name ?>" id="name">
             </div>
 
             <div class="form-group">
                 <label for="email" class="required">Your Email</label>
-                <input class="form-control" name="email" type="email" value="" id="email">
+                <input class="form-control <?=$email_error?>"name="email" type="email" value="<?= $email ?>" id="email">
             </div>
 
             <div class="form-group">
                 <label for="telephone" class="required">Your Telephone Number</label>
-                <input class="form-control" name="telephone" type="text" value="" id="telephone">
+                <input class="form-control <?=$telephone_error?>" name="telephone" type="text" value="<?= $telephone ?>" id="telephone">
             </div>
 
             <div class="form-group">
                 <label for="subject" class="required">Subject</label>
-                <input class="form-control" name="subject" type="text" id="subject">
+                <input class="form-control <?=$subject_error?>" name="subject" type="text" value="<?= $subject ?>" id="subject">
             </div>
 
             <div class="form-group-mes">
                 <label for="message" class="required">Message</label>
-                <textarea class="form-control" name="message" cols="50" rows="10" id="message"></textarea>
+                <textarea class="form-control <?=$message_error?>" name="message" cols="50" rows="10" value="<?= $message ?>" id="message"></textarea>
             </div>
 
             <div class="check-container">
