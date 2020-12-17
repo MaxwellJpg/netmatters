@@ -1238,10 +1238,10 @@ footer .ft a:hover {
     display: flex;
     gap: 2em;
   }
-  .card-container .card {
+  .card-container .loc-card {
     width: 50%;
   }
-  .card-container .card .details {
+  .card-container .loc-card .details {
     height: 390px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1261,13 +1261,13 @@ footer .ft a:hover {
 }
 
 @media only screen and (min-width: 768px) and (min-width: 992px) {
-  .card-container .card .details {
+  .card-container .loc-card .details {
     padding: 2em;
   }
 }
 
 @media only screen and (min-width: 768px) and (min-width: 992px) and (min-width: 992px) {
-  .card-container .card .details {
+  .card-container .loc-card .details {
     padding: 3em 2em;
   }
 }
@@ -2467,11 +2467,11 @@ footer .ft a:hover {
   padding: 1em;
 }
 
-.card {
+.loc-card {
   margin-bottom: 2em;
 }
 
-.card .details {
+.loc-card .details {
   background-color: #fff;
   border: 1px solid #ccc;
   border-top-left-radius: 3px;
@@ -2480,7 +2480,7 @@ footer .ft a:hover {
   padding: 2em;
 }
 
-.card .location-icon {
+.loc-card .location-icon {
   display: inline-block;
   width: 60px;
   height: 60px;
@@ -2490,18 +2490,18 @@ footer .ft a:hover {
   color: #fff;
 }
 
-.card .location-icon i {
+.loc-card .location-icon i {
   font-size: 1.5em;
   margin-top: 20px;
 }
 
-.card h2 {
+.loc-card h2 {
   padding-bottom: 0.5em;
   position: relative;
   font-size: 1.125em;
 }
 
-.card h2:after {
+.loc-card h2:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -2514,16 +2514,16 @@ footer .ft a:hover {
   background-color: #333645;
 }
 
-.card p {
+.loc-card p {
   font-size: .8215em;
   line-height: 1.4rem;
 }
 
-.card .map {
+.loc-card .map {
   margin: 0;
 }
 
-.card .map iframe {
+.loc-card .map iframe {
   width: 100%;
   height: 300px;
 }

@@ -8,13 +8,6 @@ if (window.document.documentMode) {
     $('.news').addClass('ie-news-grid');
 }
 
-//hover for sponsor image to toggle greyscale
-$('.list .item').hover(
-    function(){
-        $(this).children().toggleClass('grayscale-off');
-    }
-);
-
 //Scroll locks
 function disableScroll() {
     document.body.style.overflow = 'hidden';
@@ -24,6 +17,12 @@ function disableScroll() {
 function enableScroll() {
     document.body.style.overflow = null;
 }
+
+
+//nav links
+$('.contact').click(function(){
+    document.location.href ='contact-us.php';
+ });
 
 /*
 *   SIDE MENU
@@ -104,10 +103,12 @@ $(document).ready(function() {
 });
 //sticky header end
 
-//nav links
-$('.contact').click(function(){
-    document.location.href ='contact-us.php';
- });
+//hover for sponsor image to toggle greyscale
+$('.list .item').hover(
+    function(){
+        $(this).children().toggleClass('grayscale-off');
+    }
+);
 
  //contact-us
  $('.accordion').click(function(){

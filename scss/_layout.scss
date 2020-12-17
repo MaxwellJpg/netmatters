@@ -405,7 +405,7 @@ footer {
     @include mq(med) {
         display: flex;
         gap: 2em;
-        .card {
+        .loc-card {
             width: 50%;
             .details {
                 height: 390px;

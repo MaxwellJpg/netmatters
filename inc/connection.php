@@ -17,6 +17,8 @@ try {
                 PDO::ERRMODE_EXCEPTION); 
       
 } catch(PDOException $e) { 
-    echo "Connection failed: " 
-        . $e->getMessage(); 
+    // echo "Connection failed: " 
+    //     . $e->getMessage();
+    $conn = null;
+    die($e->getMessage());
 }

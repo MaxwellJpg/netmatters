@@ -113,7 +113,7 @@ include_once($_SERVER['DOCUMENT_ROOT']. '/netmatters/template/header.php');?>
 <div class="location-cards wrap">
     <div class="card-container">
         <!-- hover -->
-        <div class="card">
+        <div class="loc-card">
             <div class="details">
                 <div class="location-icon">
                     <i class="fa fa-home" aria-hidden="true"></i>
@@ -132,7 +132,7 @@ include_once($_SERVER['DOCUMENT_ROOT']. '/netmatters/template/header.php');?>
             </div>
         </div>
 
-        <div class="card">
+        <div class="loc-card">
             <div class="details">
                 <div class="location-icon">
                     <i class="fa fa-road" aria-hidden="true"></i>

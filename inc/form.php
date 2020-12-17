@@ -12,6 +12,7 @@ $marketPref = filter_input(INPUT_POST, "marketing_preference");
 
 //Checks if inputs are filled
 //if not > return 'require' to add as class name
+try {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($name)) {
         $name_error = "require";
@@ -92,4 +93,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>';
         }
     }   
+}
+} catch(PDOException $e) {
+    $conn = null;
+    $stmt = null;
+    die($e->getMessage());
 }
