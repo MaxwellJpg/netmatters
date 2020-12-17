@@ -6,6 +6,7 @@ if (window.document.documentMode) {
     $('.Divider').addClass('divider');
     $('.service-list').addClass('ie-service-grid');
     $('.news').addClass('ie-news-grid');
+    $('main').addClass('ie-contact-layout');
 }
 
 //Scroll locks
