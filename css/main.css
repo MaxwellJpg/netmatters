@@ -475,9 +475,24 @@ body.down header.clone {
 }
 
 .ie-hd-style {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ie-hd-style #logo {
+  height: 50px;
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+  .ie-hd-style #logo {
+    max-width: 35%;
+  }
 }
 
 .ie-hd-style .menu,
@@ -488,7 +503,7 @@ body.down header.clone {
 @media only screen and (min-width: 600px) {
   .ie-hd-style .menu,
   .ie-hd-style .telephone {
-    margin: 0 2em;
+    margin: 0 2rem;
   }
 }
 
@@ -502,19 +517,18 @@ body.down header.clone {
 }
 
 #logo {
-  width: 100px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  max-width: 400px;
+  width: 100px;
   height: auto;
+  max-width: 400px;
   max-height: 70px;
   cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
   #logo {
-    height: 100%;
     -ms-flex-preferred-size: 45%;
         flex-basis: 45%;
     margin-bottom: 0;
