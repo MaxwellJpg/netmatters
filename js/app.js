@@ -106,8 +106,7 @@ $("#accept-cookies").on('click', function () {
 });
 
 //hover for sponsor image to toggle greyscale
-$('.list .item').hover(
-    function(){
+$('.list .item').hover(function(){
         $(this).children().toggleClass('grayscale-off');
     }
 );

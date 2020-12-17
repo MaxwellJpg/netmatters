@@ -417,7 +417,7 @@ header.clone {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10000;
+  z-index: 100;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   -webkit-transition: 0.2s -webkit-transform cubic-bezier(0.3, 0.73, 0.3, 0.74);
@@ -1900,6 +1900,7 @@ footer .ft a:hover {
   --mm-color-text: #fff;
   font-size: 0.9em;
   text-transform: uppercase;
+  z-index: 10000;
 }
 
 .mm-divider {
