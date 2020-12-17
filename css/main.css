@@ -417,7 +417,7 @@ header.clone {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 990;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   -webkit-transition: 0.2s -webkit-transform cubic-bezier(0.3, 0.73, 0.3, 0.74);
