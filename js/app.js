@@ -18,10 +18,33 @@ function enableScroll() {
     document.body.style.overflow = null;
 }
 
+//Sticky header
+let position = $(window).scrollTop();
+$(document).ready(function() {
+    const $header = $("header"),
+        $clone = $header.before($header.clone().addClass("clone")); 
+        
+    let position = $(window).scrollTop();
+
+    $(window).on("scroll", function() {
+        let fromTop = $(window).scrollTop();
+
+        if(fromTop > position && fromTop > 200) { //down
+            $("body").removeClass("down");
+        } else { //up
+            $("body").addClass("down");
+        }
+        position = fromTop;
+    });
+});
+//sticky header end
 
 //nav links
-$('.contact').click(function(){
-    document.location.href ='contact-us.php';
+$('#logo').click(function(){
+    document.location.href ='/netmatters';
+ });
+ $('.contact').click(function(){
+    document.location.href ='/netmatters/contact-us.php';
  });
 
 /*
@@ -82,27 +105,6 @@ $("#accept-cookies").on('click', function () {
     PopUp('hide')
 });
 
-//Sticky header
-let position = $(window).scrollTop();
-$(document).ready(function() {
-    const $header = $("header"),
-        $clone = $header.before($header.clone().addClass("clone")); 
-        
-    let position = $(window).scrollTop();
-
-    $(window).on("scroll", function() {
-        let fromTop = $(window).scrollTop();
-
-        if(fromTop > position && fromTop > 200) { //down
-            $("body").removeClass("down");
-        } else { //up
-            $("body").addClass("down");
-        }
-        position = fromTop;
-    });
-});
-//sticky header end
-
 //hover for sponsor image to toggle greyscale
 $('.list .item').hover(
     function(){
@@ -110,12 +112,14 @@ $('.list .item').hover(
     }
 );
 
- //contact-us
- $('.accordion').click(function(){
+//
+//contact-us
+//
+$('.accordion').click(function(){
     $('.out-of-hours').toggleClass("active");
     $('.accordion i').toggleClass("rotate");
- });
+});
 
- $('.close').click(function(e){
+$('.close').click(function(e){
     $(e.target).parent().remove();
- });
+});
