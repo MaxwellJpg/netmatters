@@ -52,15 +52,14 @@ body.down header.clone {
 }
 
 .ie-hd-style {
-    //justify-content: flex-start;
-    flex-direction: row;
-    justify-content: space-between;
-
     #logo {
         height: 50px;
         max-width: 100%;
         @include mq(lg) {
             max-width: 35%;
+            @include mq(xlg) {
+                max-width: 40%;
+            }
         }
     }
     
