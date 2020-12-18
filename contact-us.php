@@ -96,7 +96,7 @@ include_once($_SERVER['DOCUMENT_ROOT']. '/netmatters/template/header.php');?>
                 <input class="checkbox" name="marketing_preference" type="checkbox" value="1">
                 <span class="media-body">
                     Please tick this box if you wish to receive marketing information from us.
-                    Please see our <a href="https://www.netmatters.co.uk/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> 
+                    Please see our <a href="#privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> 
                     for more information on how we use your data
                 </span>
             </div>
