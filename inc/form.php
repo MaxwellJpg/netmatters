@@ -14,18 +14,21 @@ $marketPref = filter_input(INPUT_POST, "marketing_preference");
 //if not > return 'require' to add as class name
 try {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    //NAME
     if (empty($name)) {
         $name_error = "require";
     } else {
         $name_error = "";
     }
 
+    //EMAIL
     if (empty($email)) {
         $email_error = "require";
     } else {
         $email_error = "";
     }
-
+    
+    //TELEPHONE
     //error message for telephone input
     if (empty($telephone)) {
         $telephone_error = "require";
@@ -38,12 +41,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $telephone_error = "";
     }
 
+    //SUBJECT
     if (empty($subject)) {
         $subject_error = "require";
     } else {
         $subject_error = "";
     }
-
+    //MESSAGE
     //error message for message input
     if (empty($message)) {
         $message_error = "require";
@@ -54,11 +58,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message_error = "";
     }
 
+    //MARKET PREFRENCE
     if(empty($marketPref)) {
         $marketPref = 0;
     }
 
-
+    //INPUT VARS INTO DB
     if(empty($name_error) && empty($email_error) && empty($telephone_error) && 
     empty($subject_error) && empty($message_error)) {
         include_once('inc/connection.php'); 
