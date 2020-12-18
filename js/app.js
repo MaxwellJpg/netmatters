@@ -41,10 +41,10 @@ $(document).ready(function() {
 //sticky header end
 
 //nav links
-$('#logo').click(function(){
+$('#logo').on('click', function(){
     document.location.href ='/netmatters';
  });
- $('.contact').click(function(){
+ $('.contact').on('click', function(){
     document.location.href ='/netmatters/contact-us.php';
  });
 
@@ -115,11 +115,11 @@ $('.list .item').hover(function(){
 //
 //contact-us
 //
-$('.accordion').click(function(){
+$('.accordion').on('click', function(){
     $('.out-of-hours').toggleClass("active");
     $('.accordion i').toggleClass("rotate");
 });
 
-$('.close').click(function(e){
+$('.close').on('click', function(e){
     $(e.target).parent().remove();
 });
