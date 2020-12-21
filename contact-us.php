@@ -1,6 +1,7 @@
-<?PHP
+<?php
+
 $title = "Contact Us";
-include_once($_SERVER['DOCUMENT_ROOT']. '/netmatters/template/header.php');?>
+require_once($_SERVER['DOCUMENT_ROOT'] . '/netmatters/template/header.php');?>
 <!-- main start inc from header -->
 
 <div class="breadcrumb">
@@ -46,21 +47,23 @@ include_once($_SERVER['DOCUMENT_ROOT']. '/netmatters/template/header.php');?>
             </div>
 
             <div class="out-of-hours-content">
-                <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
+                <p>Netmatters IT are offering an Out of Hours service
+                for Emergency and Critical tasks.</p>
                 <p>
                     <strong>Monday - Friday 18:00 - 22:00</strong><br>
                     <strong>Saturday 08:00 - 16:00</strong><br>
                     <strong>Sunday 10:00 - 18:00</strong>
                 </p>
-                <p>To log a critical task, you will need to call our main line number and select Option 2 
-                    to leave an Out of Hours  voicemail. A technician will contact you on the number 
+                <p>To log a critical task, you will need to call our main line
+                    number and select Option 2 to leave an Out of Hours  voicemail.
+                    A technician will contact you on the number
                     provided within 45 minutes of your call.</p>
             </div>
         </div>
     </div>
 
     <div class="contact-form">
-    <?php include_once('inc/form.php'); ?>
+    <?php require_once('src/form.php'); ?>
 
         <div class="message-box">
             <?= $alert_message ?>
@@ -154,4 +157,4 @@ include_once($_SERVER['DOCUMENT_ROOT']. '/netmatters/template/header.php');?>
 </div>
 
 <!-- main end, inc in footer -->
-<?PHP include_once($_SERVER['DOCUMENT_ROOT']. '/netmatters/template/footer.php');?>
+<?PHP require_once($_SERVER['DOCUMENT_ROOT'] . '/netmatters/template/footer.php');?>

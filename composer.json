@@ -3,7 +3,7 @@
     "description": "A replica netmatters website",
     "type": "project",
     "require-dev": {
-        "squizlabs/php_codesniffer": "^3.5"
+        "squizlabs/php_codesniffer": "3.*"
     },
     "license": "MIT"
 }

@@ -1,6 +1,6 @@
 <?PHP
 $title = "Netmatters";
-include_once('template/header.php');?>
+require_once('template/header.php');?>
 <!-- main start inc from header -->
 
     <!-- carousel -->
@@ -177,50 +177,48 @@ include_once('template/header.php');?>
     <!-- articles -->
     <div class="wrap">
         <div class="news">
-            <?php 
-                include_once('inc/connection.php'); 
-                $stmt = $conn->prepare("
-                    SELECT * FROM `news_article` AS article 
-                    INNER JOIN `news_author` AS author 
-                    ON article.author_id = author.author_id
-                    ORDER BY `date_published` DESC
-                    LIMIT 3;"); 
-                $stmt->execute(); 
-                $dbresults = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+            <?php
+            include_once('src/connection.php');
+            $stmt = $conn->prepare("
+                SELECT * FROM `news_article` AS article
+                INNER JOIN `news_author` AS author
+                ON article.author_id = author.author_id
+                ORDER BY `date_published` DESC
+                LIMIT 3;");
+            $stmt->execute();
+            $dbresults = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                foreach($dbresults as $article)  
-                {   
-            ?>
-            <article class="card prfx-color--<?= $article['service'] ?>">
-                <div class="img-container">
-                    <!-- type -->
-                    <a class="category-type" href="#"><?= $article['type'] ?></a>
-                    <!-- img -->
-                    <img src="<?= $article['img'] ?>" alt="Article1">
-                </div>
-                <div class="container">
-                    <!-- Title, truncated to 45chars -->
-                    <h4><?php echo preg_replace('/\s+?(\S+)?$/', '', substr($article['title'], 0, 50)) . '...'; ?></h4>
-                    <!-- description, truncated to 100chars -->
-                    <p>
-                        <?php echo preg_replace('/\s+?(\S+)?$/', '', substr($article['description'], 0, 100)) . '...'; ?>
-                    </p>
-                    
-                    <a class="btn" href="#">Read more</a>
+            foreach ($dbresults as $article) { ?>
+                <article class="card prfx-color--<?= $article['service'] ?>">
+                    <div class="img-container">
+                        <!-- type -->
+                        <a class="category-type" href="#"><?= $article['type'] ?></a>
+                        <!-- img -->
+                        <img src="<?= $article['img'] ?>" alt="Article1">
+                    </div>
+                    <div class="container">
+                        <!-- Title, truncated to 45chars -->
+                        <h4><?php echo preg_replace('/\s+?(\S+)?$/', '', substr($article['title'], 0, 50)) . '...'; ?></h4>
+                        <!-- description, truncated to 100chars -->
+                        <p>
+                            <?php echo preg_replace('/\s+?(\S+)?$/', '', substr($article['description'], 0, 100)) . '...'; ?>
+                        </p>
+                        
+                        <a class="btn" href="#">Read more</a>
 
-                    <div class="author">
-                        <div class="avatar">
-                            <img src="<?= $article['author_img'] ?>" alt="<?= $article['name'] ?> avatar">
-                        </div>
-                        <div class="details">
-                            <!-- author -->
-                            <strong>Posted by <?= $article['name'] ?></strong>
-                            <!-- date -->
-                            <p><?= date('d F Y',strtotime($article['date_published'])) ?></p>
+                        <div class="author">
+                            <div class="avatar">
+                                <img src="<?= $article['author_img'] ?>" alt="<?= $article['name'] ?> avatar">
+                            </div>
+                            <div class="details">
+                                <!-- author -->
+                                <strong>Posted by <?= $article['name'] ?></strong>
+                                <!-- date -->
+                                <p><?= date('d F Y', strtotime($article['date_published'])) ?></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </article>
+                </article>
             <?php } ?>
         </div>
     </div>
@@ -277,4 +275,4 @@ include_once('template/header.php');?>
     </div>
 </div>
 <!-- main end, inc in footer -->
-<?PHP include_once('template/footer.php');?>
+<?php require_once('template/footer.php');?>
