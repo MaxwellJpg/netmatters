@@ -52,7 +52,7 @@ body.down header.clone {
 }
 
 .ie-hd-style {
-    #logo {
+    .logo {
         height: 50px;
         max-width: 100%;
         @include mq(lg) {
@@ -84,7 +84,7 @@ body.down header.clone {
     }
 }
 
-#logo {
+.logo {
     flex-grow: 1;
     width: 100px;
     height: auto;
