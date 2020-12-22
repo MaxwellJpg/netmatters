@@ -474,19 +474,19 @@ body.down header.clone {
   }
 }
 
-.ie-hd-style #logo {
+.ie-hd-style .logo {
   height: 50px;
   max-width: 100%;
 }
 
 @media only screen and (min-width: 992px) {
-  .ie-hd-style #logo {
+  .ie-hd-style .logo {
     max-width: 35%;
   }
 }
 
 @media only screen and (min-width: 992px) and (min-width: 1260px) {
-  .ie-hd-style #logo {
+  .ie-hd-style .logo {
     max-width: 40%;
   }
 }
@@ -512,7 +512,7 @@ body.down header.clone {
   }
 }
 
-#logo {
+.logo {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -524,7 +524,7 @@ body.down header.clone {
 }
 
 @media only screen and (min-width: 768px) {
-  #logo {
+  .logo {
     -ms-flex-preferred-size: 45%;
         flex-basis: 45%;
     margin-bottom: 0;
@@ -533,7 +533,7 @@ body.down header.clone {
 }
 
 @media only screen and (min-width: 768px) and (min-width: 992px) {
-  #logo {
+  .logo {
     margin-right: 3em;
   }
 }
