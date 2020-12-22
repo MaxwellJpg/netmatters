@@ -69,15 +69,15 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/netmatters/template/header.php');?>
             <?= $alert_message ?>
         </div>
 
-        <form method="POST" action="" accept-charset="UTF-8" id="contact-form"action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <form method="POST" action="" accept-charset="UTF-8" id="contact-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <div class="form-group">
                 <label for="name" class="required">Your Name</label>
-                <input class="form-control <?=$name_error?>"name="name" type="text" value="<?= $name ?>" id="name">
+                <input class="form-control <?=$name_error?>" name="name" type="text" value="<?= $name ?>" id="name">
             </div>
 
             <div class="form-group">
                 <label for="email" class="required">Your Email</label>
-                <input class="form-control <?=$email_error?>"name="email" type="email" value="<?= $email ?>" id="email">
+                <input class="form-control <?=$email_error?>" name="email" type="email" value="<?= $email ?>" id="email">
             </div>
 
             <div class="form-group">
@@ -108,8 +108,6 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/netmatters/template/header.php');?>
                 Send Enquiry
             </button>
         </form>
-
-        <!-- <h2> test: <?= count($messages) ?></h2> -->
     </div>
 </div>
 

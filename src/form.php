@@ -55,7 +55,7 @@ try {
         if (empty($message)) {
             $message_error = "require";
         } elseif (str_word_count($message) < 5) {
-            $telephone_error = "require";
+            $message_error = "require";
             $alerts[] = "Message must be at least 5 words";
         } else {
             $message_error = "";
