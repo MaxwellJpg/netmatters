@@ -56,7 +56,7 @@
             <div class="center-hd wrap">
                 <div class="hd-wrapper">
                     <!-- logo -->
-                    <img id="logo" src="img/nm-logo.png" alt="Netmatters logo">
+                    <img class="logo" src="img/nm-logo.png" alt="Netmatters logo">
 
                     <!-- Phone logo -->
                     <div class="telephone">
