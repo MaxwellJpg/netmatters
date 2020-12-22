@@ -41,12 +41,16 @@ $(document).ready(function() {
 //sticky header end
 
 //nav links
-$('#logo').on('click', function(){
-    document.location.href ='/netmatters';
- });
- $('.contact').on('click', function(){
-    document.location.href ='/netmatters/contact-us.php';
- });
+$(document).ready(function(){
+    $('.logo').on('click', function(){
+        document.location.href ='/netmatters/';
+        console.log('click');
+    });
+
+    $('.contact').on('click', function(){
+        document.location.href ='/netmatters/contact-us.php';
+    });
+});
 
 /*
 *   SIDE MENU
